@@ -1,0 +1,247 @@
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+:root {
+  --bg-color: #f8fafc;
+
+  --primary-color: #7c3aed;
+  --secondary-color: #1e293b;
+  --tertiary-color: #475569;
+  --quaternary-color: #cbd5e1;
+
+  --primary-divider-color: #e2e8f0;
+  --secondary-divider-color: #334155;
+
+  --card-border-color: #e2e8f0;
+  --main-card-bg-color: #0f172a;
+
+  --tag-color: #0f172a;
+  --tag-bg-color: #fba94c;
+
+  --primary-button-bg-color: #996dff;
+  --primary-button-hover-bg-color: var(--primary-color);
+
+  --secondary-button-border-color: var(--secondary-color);
+  --secondary-button-hover-bg-color: var(--secondary-color);
+
+  --primary-check-color: #1b873f;
+  --secondary-check-color: #04d361;
+
+  font-size: clamp(8px, 1vw, 10px);
+}
+
+body,
+button {
+  font-family: "Titillium Web", sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+button,
+ul,
+li {
+  all: unset;
+}
+
+main {
+  height: inherit;
+  width: 100%;
+
+  padding: 10rem 2rem;
+
+  gap: 2.4rem;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+  background-color: var(--bg-color);
+}
+
+section {
+  width: 35rem;
+
+  padding: 2.4rem;
+
+  gap: 1.6rem;
+  display: grid;
+
+  position: relative;
+
+  border-radius: 10px;
+  border: 1px solid var(--card-border-color);
+
+  background-color: var(--card-bg-color);
+}
+
+section:hover {
+  border: 1px solid var(--primary-color);
+}
+
+section[data-plan="essentials"],
+section[data-plan="enterprise"] {
+  --card-bg-color: white;
+  --title-price-color: var(--secondary-color);
+
+  --button-color: var(--secondary-color);
+  --button-bg-color: transparent;
+  --button-hover-bg-color: var(--secondary-button-hover-bg-color);
+  --buton-focus-outline-color: var(--secondary-color);
+
+  --divider-color: var(--primary-divider-color);
+
+  --check-color: var(--primary-check-color);
+  --feature-color: var(--tertiary-color);
+}
+
+section[data-plan="ultimate"] {
+  padding-top: 4rem;
+
+  --card-bg-color: var(--main-card-bg-color);
+  --title-price-color: white;
+
+  --button-color: white;
+  --button-bg-color: var(--primary-button-bg-color);
+  --button-hover-bg-color: var(--primary-button-hover-bg-color);
+  --buton-focus-outline-color: white;
+
+  --divider-color: var(--secondary-divider-color);
+
+  --feature-color: var(--quaternary-color);
+  --check-color: var(--secondary-check-color);
+}
+
+h1 {
+  margin-top: -1.7rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  padding: 0.8rem 1.6rem;
+
+  border-radius: 6px;
+
+  position: absolute;
+
+  font-size: 1.2rem;
+  color: var(--tag-color);
+
+  background-color: var(--tag-bg-color);
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+h2 {
+  margin-right: 4.8rem;
+  font-size: 2.4rem;
+  color: var(--title-price-color);
+}
+
+.name-pricing {
+  margin-top: 0.8rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  color: var(--title-price-color);
+}
+
+.name-pricing span:first-of-type {
+  font-size: 1.8rem;
+}
+
+.name-pricing span:nth-of-type(2) {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.name-pricing span:last-of-type {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+section[data-plan="essentials"] button,
+section[data-plan="enterprise"] button {
+  border: 1px solid var(--secondary-button-border-color);
+}
+
+button {
+  align-self: start;
+  padding: 1.6rem 2.4rem;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--button-color);
+
+  background-color: var(--button-bg-color);
+}
+
+button:hover {
+  color: white;
+  background-color: var(--button-hover-bg-color);
+}
+
+button:focus {
+  outline-offset: 2px;
+  outline: 2px solid var(--buton-focus-outline-color);
+}
+
+hr {
+  height: 1px;
+
+  align-self: center;
+
+  color: var(--divider-color);
+}
+
+ul {
+  gap: 1.6rem;
+  display: grid;
+}
+
+li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+li i:first-child {
+  margin-right: 0.8rem;
+
+  font-size: 2rem;
+  color: var(--check-color);
+}
+
+li span {
+  font-size: 1.6rem;
+  color: var(--feature-color);
+}
+
+li i:last-child {
+  font-size: 1.6rem;
+  color: var(--secondary-color);
+}
+
+@media (min-width: 630px) {
+  body {
+    height: 100vh;
+  }
+}

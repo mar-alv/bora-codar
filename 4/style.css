@@ -1,0 +1,243 @@
+:root {
+  --chat-background-color: #1a1924;
+
+  --name-color: #fff;
+  --status-online: #00b37e;
+  --close-chat-icon-color: #fff;
+
+  --contact-message-background-color: #633bbc;
+  --own-message-background-color: #07847e;
+  --message-color: #e1e1e6;
+
+  --footer-background-color: #282843;
+  --send-input-color: #fff;
+  --send-input-placeholder-color: #e1e1e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+
+  font-family: "Roboto", sans-serif;
+
+  background-color: var(--chat-background-color);
+}
+
+#chat {
+  height: 100%;
+  
+  position: relative;
+  
+  padding: 1.5rem 2rem;
+}
+
+@media (min-width: 769px) {
+  #chat {
+    padding: 1.5rem 4.5rem;
+  }
+  
+  #chat footer {
+    width: calc(100% - 9rem);
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#contact-info {
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+#contact-avatar {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+}
+
+#contact-name {
+  font-size: 1rem;
+  color: var(--name-color);
+}
+
+#contact-status::before {
+  content: "";
+
+  width: 8px;
+  height: 8px;
+  margin-right: 0.25rem;
+
+  display: inline-block;
+
+  border-radius: 50%;
+
+  background-color: var(--_status-color);
+}
+
+#contact-status {
+  --_status-color: var(--status-color, white);
+
+  margin-top: 0.5rem;
+
+  font-size: 0.75rem;
+  color: var(--_status-color);
+}
+
+#contact-status[data-status="online"] {
+  --status-color: var(--status-online);
+}
+
+#close-chat {
+  border: 0;
+
+  color: var(--close-chat-icon-color);
+  background-color: transparent;
+}
+
+#close-chat:focus,
+#send-input:focus,
+#send-button:focus {
+  outline-offset: 4px;
+  outline: 2px solid var(--close-chat-icon-color);
+}
+
+#messages {
+  max-height: 70vh;
+  overflow-y: auto;
+  
+  margin-top: 2rem;
+
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+#messages::-webkit-scrollbar {
+  width: .5rem;
+  background-color: var(--footer-background-color);
+}
+
+#messages::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  border: 2px solid #282843;
+  
+  background-color: var(--chat-background-color);
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  
+  opacity: 0;
+  
+  animation: appear 0.5s ease-out forwards;
+}
+
+@keyframes appear {
+  from {
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message[data-owner="own"] {
+  margin-right: 1rem;
+  
+  align-items: end;  
+}
+
+.message[data-owner="contact"] {
+  align-items: start;
+}
+
+.message-header {
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: var(--message-color);
+}
+
+.message-content {
+  --_message-background-color: var(--message-background-color, white);
+
+  margin-top: 0.625rem;
+  padding: 0.875rem;
+
+  max-width: 50%;
+
+  color: var(--message-color);
+  background-color: var(--_message-background-color);
+}
+
+.message[data-owner="own"] {
+  text-align: right;
+}
+
+.message[data-owner="own"] .message-content {
+  --message-background-color: var(--own-message-background-color);
+
+  border-radius: 8px 8px 0 8px;
+}
+
+.message[data-owner="contact"] .message-content {
+  --message-background-color: var(--contact-message-background-color);
+
+  border-radius: 0 8px 8px 8px;
+}
+
+#messages-start-date {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: var(--message-color);
+}
+
+footer {
+  width: calc(100% - 4rem);
+  bottom: 1.5rem;
+  position: absolute;
+  
+  margin-top: 3rem;
+  padding: 0.875rem 1.5rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-radius: 30px;
+
+  background-color: var(--footer-background-color);
+}
+
+#send-input::placeholder,
+#send-button i {
+  color: var(--send-input-placeholder-color);
+}
+
+#send-input {
+  width: 95%;
+
+  border: 0;
+
+  font-size: 0.75rem;
+  color: var(--send-input-color);
+  background-color: transparent;
+}
+
+#send-button {
+  border: 0;
+
+  font-size: 1.5rem;
+
+  background-color: transparent;
+}

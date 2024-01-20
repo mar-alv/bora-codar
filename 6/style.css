@@ -1,0 +1,146 @@
+:root {
+  font-size: 62.5%;
+
+  --body-bg-color: linear-gradient(168deg, #8257e5 0%, #271a45 100%);
+
+  --header-color: white;
+
+  --pass-bg-color: white;
+  --pass-info-header-color: #000000a3;
+  --pass-info-content-color: #000000e0;
+  --pass-border-color: #00000052;
+  --pass-boarding-time-bg-color: #633BBC;
+
+  --footer-color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+
+  font-size: 1.6rem;
+  font-family: "Rubik", sans-serif;
+}
+
+#app {
+  padding: 7.8rem 2.4rem;
+
+  gap: 2rem;
+  display: grid;
+  place-items: center;
+
+  background: var(--body-bg-color);
+}
+
+header h1 {
+  font-size: 2.0rem;
+  font-weight: 500;
+  color: var(--header-color);
+}
+
+.pass-info {
+  padding: 2.4rem 3.2rem;
+
+  border-radius: 24px;
+
+  background-color: var(--pass-bg-color);
+}
+
+#pass-passager {
+  border-block: 2px dashed var(--pass-border-color);
+}
+
+.pass-info-header,
+.pass-info-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pass-info-header h3 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  color: var(--pass-info-header-color);
+}
+
+.pass-info-content b {
+  font-weight: 500;
+  color: var(--pass-info-content-color);
+}
+
+.pass-info-content p {
+  color: var(--pass-info-content-color);
+}
+
+.pass-info-content h2 {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--pass-info-content-color);
+}
+
+.pass-info-conten i {
+  font-size: 2.4rem;
+}
+
+#pass-destiny {
+  margin-top: 2.4rem;
+}
+
+#pass-boarding {
+  display: grid;
+  grid-template-areas:
+    "info code"
+    "time time";
+}
+
+#pass-boarding-info {
+  gap: 1.6rem;
+  display: grid;
+  grid-area: info;
+}
+
+#pass-boarding-time {
+  padding: .4rem .8rem;
+  
+  border-radius: 8px;
+  
+  color: white;
+  
+  background-color: var(--pass-boarding-time-bg-color);
+}
+
+#pass-boarding-code {
+  grid-area: code;
+}
+
+#pass-boarding-closing-time {
+  margin-top: 2.4rem;
+
+  grid-area: time;
+  
+  color: var(--pass-info-content-color);
+}
+
+#pass-boarding-closing-time strong {
+  font-weight: 500;  
+}
+
+img {
+  width: 160px;
+  height: 160px;
+}
+
+footer {
+  max-width: 270px;
+
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--footer-color);
+
+  opacity: 0.64;
+}

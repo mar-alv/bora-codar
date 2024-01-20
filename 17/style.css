@@ -1,0 +1,154 @@
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  transition: opacity 0.3s, color 0.3s, background-color 0.3s;
+}
+
+:root {
+  --bg-color: #f5f5f5;
+
+  --primary-color: #6200ee;
+  --secondary-color: #666666;
+
+  --hover-bg-color: #ece0fd;
+
+  font-size: clamp(8px, 1vw, 10px);
+}
+
+body {
+  height: 100vh;
+
+  display: grid;
+  place-content: center;
+
+  font-family: "Lato", sans-serif;
+
+  color: var(--secondary-color);
+  background-color: var(--bg-color);
+}
+
+#app {
+  padding: 3.2rem;
+
+  gap: 2.4rem;
+  display: grid;
+
+  border-radius: 16px;
+
+  background-color: white;
+  box-shadow: 0px 8px 32px 0px rgba(0, 0, 0, 0.16);
+}
+
+.app-days {
+  height: 40rem;
+}
+
+header {
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header button {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+button i {
+  font-size: 2rem;
+}
+
+#previous-period-button,
+#next-period-button {
+  padding: 1.2rem;
+}
+
+#previous-period-button:hover,
+#next-period-button:hover {
+  border-radius: 50%;
+
+  background-color: var(--hover-bg-color);
+}
+
+#choose-period-button {
+  gap: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+#choose-period-button i {
+  font-size: 1.6rem;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  font-size: 1.2rem;
+}
+
+.month-row {
+  gap: 1.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.day,
+.month {
+  font-size: 1.6rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.day[data-selected="true"],
+.month[data-selected="true"] {
+  color: white;
+  font-weight: bold;
+  background-color: var(--primary-color);
+}
+
+.day[data-period="initial"] {
+  border-radius: 0;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.day[data-period="inBetween"] {
+  border-radius: 0;
+}
+
+.day[data-period="final"] {
+  border-radius: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.day.extra-day:not([data-selected="true"]) {
+  opacity: 0.5;
+}
+
+.day button {
+  padding: 1.2rem;
+}
+
+.month button {
+  padding: 1.2rem 1.6rem;
+}
+
+.day:not([data-selected="true"]):hover,
+.month:not([data-selected="true"]):hover {
+  background-color: var(--hover-bg-color);
+}
+
+button {
+  all: unset;
+
+  cursor: pointer;
+}

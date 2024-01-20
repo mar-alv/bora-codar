@@ -1,0 +1,210 @@
+:root {
+  --brand-purple-color: #685ED9;
+  --brand-purple-dark-color: #4439C7;
+  --brand-gradient-light-color-1: #4453B2;
+  --brand-gradient-light-color-2: #502C9E;
+  --brand-gradient-dark-color: linear-gradient(#0F0A31, #3F347E);
+  
+  --base-gray-100-color: #FAFAFA;
+  --base-gray-200-color: #E3E1E4;
+  --base-gray-300-color: #75747A;
+  --base-gray-400-color: #2F2F33;
+  --base-gray-500-color: #0C0C0D;
+  
+  --rating-yellow-light-color: #FAF2E7;
+  --rating-yellow-color: #F5D9AD;
+  --rating-gradient-yellow-color-1: #F9D399;
+  --rating-gradient-yellow-color-2: #D4983E;
+  
+  --heading-font-size: 1.25rem;
+  --heading-line-hieght: 130%;
+  --heading-font-weight: bold;
+  
+  --body-bold-font-size: 1rem;
+  --body-bold-line-hieght: 150%;
+  --body-bold-font-weight: bold;
+  
+  --body-font-size: 1rem;
+  --body-line-hieght: 150%;
+  --body-font-weight: regular;
+  
+  --span-font-size: .75rem;
+  --span-line-hieght: 150%;
+  --span-font-weight: regular;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: var(--brand-gradient-dark-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  text-align: center;
+  border-radius: 1.25rem;
+  background-color: var(--base-gray-100-color);
+}
+
+.product-preview {
+  height: 11.5rem;
+  border-radius: 1.25rem 1.25rem 0 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(to right, var(--brand-gradient-light-color-1), var(--brand-gradient-light-color-2));
+}
+
+.product-preview i {
+  left: 0rem;
+  padding: 1.5rem;
+  
+  cursor: pointer;
+  position: absolute;
+  
+  font-size: 1.5rem;
+  color: var(--base-gray-100-color);
+}
+
+.product-preview img {
+  position: absolute;
+  top: -3rem;
+}
+
+.product-content {
+  padding: 3rem;
+}
+
+h1 {
+  color: var(--base-gray-500-color);
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+  line-height: var(--heading-line-hieght);
+}
+
+p {
+  color: var(--base-gray-400-color);
+}
+
+a {
+  color: var(--brand-purple-dark-color);
+  
+  text-decoration: none;
+}
+
+.rate-description {
+  margin-top: .5rem;
+}
+
+.rating {
+  margin-top: 2rem;
+}
+
+.rating-stars {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-stars i {
+  border-radius: 50%;
+  
+  font-size: 2rem;
+  color: var(--base-gray-200-color);
+  
+  transition: color 300ms ease;
+  transition: background-color 300ms ease;
+}
+
+.rating-stars i:hover {
+  cursor: pointer;
+  color: var(--rating-yellow-color);
+  background-color: var(--rating-yellow-light-color);
+}
+
+.rating-stars i.selected {
+  cursor: pointer;  
+  color: var(--rating-gradient-yellow-color-2);
+}
+
+.rating-stars i.selected:hover {
+  cursor: pointer;  
+  background-color: var(--rating-yellow-light-color);
+}
+
+.rating-description {
+  margin-top: .25rem;
+  
+  display: flex;
+  justify-content: space-between;
+}
+
+.rating-description span {
+  color: var(--base-gray-300-color);
+  font-size: var(--span-font-size);
+  font-weight: var(--span-font-weight);
+  line-height: var(--span-line-hieght);
+}
+
+textarea {
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: .75rem;
+  border-radius: .5rem;
+  
+  border: none;
+  resize: none;
+  
+  color: var(--base-gray-500-color);
+  font-size: var(--body-font-size);
+  font-weight: var(--body-font-weight);
+  line-height: var(--body-line-hieght);
+  background-color: var(--base-gray-200-color);
+}
+
+textarea::placeholder {  
+  color: var(--base-gray-300-color);
+}
+
+textarea:focus {  
+  outline: 1px solid var(--brand-purple-color);
+}
+
+.submit-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  width: 100%;
+  margin-top: 2.5rem;
+  padding: 1rem 1.25rem;
+  border-radius: .5rem;
+  
+  background-color: var(--brand-purple-color);
+  text-align: left;
+  color: var(--base-gray-100-color);
+  font-size: var(--body-bold-font-size);
+  font-weight: var(--body-bold-font-weight);
+  line-height: var(--body-bold-line-hieght);
+}
+
+.submit-button:disabled {
+  cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+  cursor: pointer;
+  transition: background-color 300ms ease;
+  background-color: var(--brand-purple-dark-color);
+}
+
+.submit-button i {
+  font-size: 1.5rem;
+}

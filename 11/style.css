@@ -1,0 +1,183 @@
+:root {
+  --primary-color: #7c3aed;
+  --secondary-color: #475569;
+  --tertiary-color: #1e293b;
+
+  --bg-color: #f8fafc;
+
+  --input-border-color: #e2e8f0;
+  --placeholder-color: #94a3b8;
+  --icon-color: #94a3b8;
+
+  font-size: clamp(8px, 1vw, 10px);
+}
+
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+button {
+  font-family: "Titillium Web", sans-serif;
+}
+
+body {
+  height: 100vh;
+
+  background-color: var(--bg-color);
+  background-image: url('assets/background.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#app {
+  width: fit-content;
+  height: inherit;
+
+  padding: 4rem 10rem;
+
+  display: grid;
+
+  background-color: var(--bg-color);
+}
+
+header {
+  gap: 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+main {
+  margin-top: 10rem;
+}
+
+button,
+input {
+  all: unset;
+}
+
+h2,
+h1,
+label,
+input {
+  color: var(--tertiary-color);
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+> p {
+  margin-top: 1.6rem;
+}
+
+p {
+  font-size: 1.6rem;
+  color: var(--secondary-color);
+}
+
+form {
+  margin-top: 4rem;
+
+  display: grid;
+
+  font-size: 1.4rem;
+}
+
+label {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.input-wrapper {
+  margin-top: 0.8rem;
+
+  border-radius: 4px;
+  border: 1px solid var(--input-border-color);
+
+  position: relative;
+
+  background-color: white;
+}
+
+.input-wrapper:focus-within {
+  outline: 2px solid var(--primary-color);
+}
+
+input {
+  width: 100%;
+
+  padding: 1.6rem 1.2rem;
+}
+
+input::placeholder {
+  color: var(--placeholder-color);
+}
+
+.password-wrapper {
+  margin-top: 1.6rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+i {
+  top: 50%;
+  right: 1.2rem;
+  position: absolute;
+
+  cursor: pointer;
+
+  font-size: 2rem;
+  color: var(--icon-color);
+
+  transform: translate(0%, -50%);
+}
+
+button {
+  margin-top: 3.2rem;
+  padding: 1.6rem;
+
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  background-color: var(--primary-color);
+}
+
+button:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+p:last-child {
+  margin-top: 3.2rem;
+}

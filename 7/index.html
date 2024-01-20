@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>#boraCodar 7</title>
+
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+	<script defer src="script.js"></script>
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+	<div>
+		<header>
+			<h4>
+				FIND YOUR BLOCK
+			</h4>
+	
+			<h1>
+				Encontre os <strong>melhores blocos</strong> de carnaval de 2023
+			</h1>
+	
+			<div id='filters'>
+				<div id='name-input'>
+					<i class="ph ph-magnifying-glass"></i>
+					<input placeholder='Pesquise por nome' />
+				</div>
+	
+				<div id='city-select'>
+					<i class="ph ph-map-pin"></i>
+					<select>
+						<option value="" disabled selected>
+							Selecione uma cidade
+						</option>
+						<option value="Todas">
+							Todas
+						</option>
+						<option value="Curitiba">
+							Curitiba
+						</option>
+						<option value="Florianópolis">
+							Florianópolis
+						</option>
+						<option value="Porto Alegre">
+							Porto Alegre
+						</option>
+						<option value="Rio de Janeiro">
+							Rio de Janeiro
+						</option>
+						<option value="São Paulo">
+							São Paulo
+						</option>
+						<option value="Salvador">
+							Salvador
+						</option>
+					</select>
+				</div>
+	
+				<button id='filter-button' onclick='handleFilter()'>
+					BUSCAR AGORA
+				</button>
+			</div>
+		</header>
+	
+		<main>
+			<div id='blocks-header'>
+				<h2>
+					Blocos recomendados
+				</h2>
+	
+				<div id='blocks-buttons'>
+					<button data-selected='true' onclick='toogleRecommendedBlock()'>LISTA</button>
+					<button data-selected='false' onclick='toogleRecommendedBlock()'>MAPA</button>
+				</div>
+			</div>
+	
+			<section id='blocks'>
+				<article tabindex='0'>
+					<img alt='Imagem ilustrativa do bloco' src='assets/block1.png' />
+	
+					<div class='block-info'>
+						<h3>
+							O Python do vovô não sobe mais
+						</h3>
+	
+						<p>
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+						</p>
+	
+						<div class='block-location'>
+							<i class="ph ph-map-pin"></i>
+							<p class='block-city'>
+								São Paulo - SP
+							</p>
+						</div>
+					</div>
+				</article>
+	
+				<article tabindex='1'>
+					<img alt='Imagem ilustrativa do bloco' src='assets/block2.png' />
+	
+					<div class='block-info'>
+						<h3>
+							Todo mundo null
+						</h3>
+	
+						<p>
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+						</p>
+	
+						<div class='block-location'>
+							<i class="ph ph-map-pin"></i>
+							<p class='block-city'>
+								Florianópolis - SC
+							</p>
+						</div>
+					</div>
+				</article>
+	
+				<article tabindex='2'>
+					<img alt='Imagem ilustrativa do bloco' src='assets/block3.png' />
+	
+					<div class='block-info'>
+						<h3>
+							Hoje dou exception
+						</h3>
+	
+						<p>
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+						</p>
+	
+						<div class='block-location'>
+							<i class="ph ph-map-pin"></i>
+							<p class='block-city'>
+								Curitiba - PR
+							</p>
+						</div>
+					</div>
+				</article>
+	
+				<article tabindex='3'>
+					<img alt='Imagem ilustrativa do bloco' src='assets/block4.png' />
+	
+					<div class='block-info'>
+						<h3>
+							Manda Node
+						</h3>
+	
+						<p>
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+						</p>
+	
+						<div class='block-location'>
+							<i class="ph ph-map-pin"></i>
+							<p class='block-city'>
+								Salvador - BA
+							</p>
+						</div>
+					</div>
+				</article>
+	
+				<article tabindex='4'>
+					<img alt='Imagem ilustrativa do bloco' src='assets/block5.png' />
+	
+					<div class='block-info'>
+						<h3>
+							Só no back-end
+						</h3>
+	
+						<p>
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+						</p>
+	
+						<div class='block-location'>
+							<i class="ph ph-map-pin"></i>
+							<p class='block-city'>
+								São Paulo - SP
+							</p>
+						</div>
+					</div>
+				</article>
+	
+				<article tabindex='5'>
+					<img alt='Imagem ilustrativa do bloco' src='assets/block6.png' />
+	
+					<div class='block-info'>
+						<h3>
+							Esse anel não é de Ruby
+						</h3>
+	
+						<p>
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+						</p>
+	
+						<div class='block-location'>
+							<i class="ph ph-map-pin"></i>
+							<p class='block-city'>
+								São Paulo - SP
+							</p>
+						</div>
+					</div>
+				</article>
+	
+				<article tabindex='6'>
+					<img alt='Imagem ilustrativa do bloco' src='assets/block7.png' />
+	
+					<div class='block-info'>
+						<h3>
+							Pimenta no C# dos outros é refresco
+						</h3>
+	
+						<p>
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+						</p>
+	
+						<div class='block-location'>
+							<i class="ph ph-map-pin"></i>
+							<p class='block-city'>
+								Rio de Janeiro - RJ
+							</p>
+						</div>
+					</div>
+				</article>
+	
+				<article tabindex='7'>
+					<img alt='Imagem ilustrativa do bloco' src='assets/block8.png' />
+	
+					<div class='block-info'>
+						<h3>
+							EnCACHE aqui
+						</h3>
+	
+						<p>
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+						</p>
+	
+						<div class='block-location'>
+							<i class="ph ph-map-pin"></i>
+							<p class='block-city'>
+								Porto Alegre - RS
+							</p>
+						</div>
+					</div>
+				</article>
+	
+				<article tabindex='8'>
+					<img alt='Imagem ilustrativa do bloco' src='assets/block9.png' />
+	
+					<div class='block-info'>
+						<h3>
+							Não valho nada mas JAVA li
+						</h3>
+	
+						<p>
+							Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.
+						</p>
+	
+						<div class='block-location'>
+							<i class="ph ph-map-pin"></i>
+							<p class='block-city'>
+								São Paulo - SP
+							</p>
+						</div>
+					</div>
+				</article>
+			</section>
+		</main>
+	</div>
+</body>
+</html>

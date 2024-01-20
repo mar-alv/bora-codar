@@ -1,0 +1,251 @@
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  transition: opacity 0.3s, color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+:root {
+  font-size: clamp(0.5rem, 1vw, 0.625rem);
+}
+
+body {
+  height: 100vh;
+
+  font-family: "Cabin Sketch", sans-serif;
+}
+
+ul,
+li {
+  all: unset;
+}
+
+main {
+  height: 100%;
+  display: grid;
+  position: relative;
+}
+
+article {
+  width: 42rem;
+  height: 60rem;
+  padding: 4.8rem 4rem;
+  gap: 6rem;
+  display: grid;
+  place-items: center;
+  top: 10%;
+  position: absolute;
+
+  cursor: pointer;
+  border-radius: 2rem;
+  background-color: var(--card-bg-color);
+
+  animation: slideIn 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) forwards,
+    0.5s rotate 1.7s linear forwards;
+}
+
+article:focus {
+  outline-offset: 4px;
+  outline: 2px solid black;
+}
+
+article:not(:last-child):hover {
+  transform: translateY(-12rem) rotate(var(--rotation-degree)) !important;
+}
+
+article[data-name="ena"] {
+  --card-bg-color: #3a3a3a;
+  --name-color: #ffffff;
+  --trivia-title-color: #b7b7b7;
+  --text-color: #b7b7b7;
+
+  z-index: 0;
+}
+
+article[data-name="aoi"] {
+  --card-bg-color: #d2b48c;
+  --name-color: #ffffff;
+  --trivia-title-color: #ffffff;
+  --text-color: #ffffff;
+
+  z-index: 1;
+}
+
+article[data-name="chiaki"] {
+  --card-bg-color: #001f3f;
+  --name-color: #c4e0e5;
+  --trivia-title-color: #b7c9c5;
+  --text-color: #b7c9c5;
+
+  z-index: 2;
+}
+
+article[data-name="rin"] {
+  --card-bg-color: #82c0cc;
+  --name-color: #27221f;
+  --trivia-title-color: #35403d;
+  --text-color: #2e2926;
+
+  z-index: 3;
+}
+
+article[data-name="nadeshiko"] {
+  --card-bg-color: #ffc0cb;
+  --name-color: #282422;
+  --trivia-title-color: #735c3d;
+  --text-color: #2e2926;
+
+  z-index: 4;
+}
+
+article:first-child {
+  --slide-in-position: 30%;
+  --slide-in-inverse-position: -30%;
+
+  --rotation-degree: -25deg;
+}
+
+article:nth-child(2) {
+  --slide-in-position: 35%;
+  --slide-in-inverse-position: -35%;
+
+  --rotation-degree: -15deg;
+}
+
+article:nth-child(3) {
+  --slide-in-position: 40%;
+  --slide-in-inverse-position: -40%;
+
+  --rotation-degree: -5deg;
+}
+
+article:nth-child(4) {
+  --slide-in-position: 45%;
+  --slide-in-inverse-position: -45%;
+
+  --rotation-degree: 5deg;
+}
+
+article:last-child {
+  --slide-in-position: 50%;
+  --slide-in-inverse-position: -50%;
+
+  --rotation-degree: 15deg;
+}
+
+@keyframes slideIn {
+  from {
+    left: var(--slide-in-inverse-position);
+  }
+  to {
+    left: var(--slide-in-position);
+    transform: translateX(var(--slide-in-inverse-position));
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(var(--rotation-degree));
+  }
+}
+
+@keyframes reorder {
+  0% {
+    left: 45%;
+    transform: rotate(calc(var(--rotation-degree) / 2));
+  }
+  50% {
+    left: 85%;
+    transform: translateX(85%) rotate(0);
+  }
+  100% {
+    left: var(--slide-in-position);
+    transform: translateX(var(--slide-in-inverse-position));
+  }
+}
+
+img {
+  height: 45rem;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+
+  border-bottom-right-radius: 2rem;
+}
+
+section {
+  gap: 1.6rem;
+  display: grid;
+}
+
+p,
+h3,
+b,
+span {
+  font-size: 1.4rem;
+}
+
+header {
+  gap: 1.6rem;
+  display: grid;
+}
+
+h2 {
+  font-size: 3.2rem;
+  color: var(--name-color);
+}
+
+p,
+b {
+  max-width: 26rem;
+}
+
+p,
+b,
+span {
+  color: var(--text-color);
+}
+
+h3,
+li {
+  gap: 0.8rem;
+  display: flex;
+  align-items: center;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+h3,
+i {
+  color: var(--trivia-title-color);
+}
+
+b {
+  margin-top: 0.4rem;
+  display: block;
+}
+
+i {
+  font-size: 2rem;
+}
+
+section div {
+  backdrop-filter: blur(2px);
+}
+
+ul {
+  margin-top: 0.8rem;
+  display: grid;
+}
+
+li {
+  margin-left: 2.4rem;
+}

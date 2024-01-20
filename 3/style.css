@@ -1,0 +1,198 @@
+:root {
+  --main-background-color: #0b0911;
+  --aside-background-color: #130f1e;
+
+  --title-color: #fff;
+  --description-color: #b1b0b5;
+
+  --table-header-color: #fff;
+  --table-header-background-color: #1c162c;
+  --table-data-cell-background-color: #0b0911;
+
+  --button-color: #fff;
+  --button-outline-color: #fff;
+  --button-disabled-color: #949396;
+
+  --primary-button-background-color: #8257e5;
+  --primary-button-hover-background-color: #9674e5;
+  --primary-button-disabled-background-color: #4e3588;
+
+  --secondary-button-background-color: #3c3748;
+  --secondary-button-hover-background-color: #6a617f;
+  --secondary-button-disabled-background-color: #262330;
+
+  --tertiary-button-background-color: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  font-family: "Roboto", sans-serif;
+}
+
+body,
+button {
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 4.75rem;
+
+  background-color: var(--main-background-color);
+}
+
+h1,
+h2 {
+  color: var(--title-color);
+  font-family: "Inter", sans-serif;
+}
+
+p {
+  margin-top: 0.5rem;
+
+  color: var(--description-color);
+}
+
+table {
+  margin-top: 2.25rem;
+
+  border-collapse: collapse;
+  border-radius: 8px;
+  border-bottom: 7px solid var(--table-header-background-color);
+  border-right: 7px solid var(--table-header-background-color);
+}
+
+th {
+  padding: 2rem;
+  font-size: 0.75rem;
+  font-weight: normal;
+  color: var(--table-header-color);
+
+  background-color: var(--table-header-background-color);
+}
+
+td {
+  text-align: center;
+  
+  background-color: var(--table-data-cell-background-color);
+}
+
+td button {
+  margin: 2rem;
+}
+
+td svg {
+  width: 15px;
+  height: 25px;
+  font-size: 24px;
+  color: white;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+
+  border: 0;
+  border-radius: 30px;
+
+  color: var(--button-color);
+  transition: background-color 0.2s;
+}
+
+button:focus,
+button[data-focus="true"] {
+  outline: 2px solid var(--button-outline-color);
+}
+
+button:hover {
+  cursor: url("https://i.imgur.com/XUDebjh.png"), auto;
+}
+
+button:disabled {
+  cursor: url("https://i.imgur.com/M7IxEyc.png"), auto;
+  color: var(--button-disabled-color);
+}
+
+button[data-loading="true"] {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+button[data-loading="true"]:hover {
+  cursor: url("https://i.imgur.com/6vCgQM4.png"), auto;
+}
+
+button[data-loading="true"] i {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+button[data-movable="true"]:hover {
+  cursor: url("https://i.imgur.com/RteyH0Y.png"), auto;
+}
+
+button[data-variation="primary"] {
+  background-color: var(--primary-button-background-color);
+}
+
+button[data-variation="primary"][data-hover="true"]:not([data-loading="true"]),
+button:not([data-loading="true"])[data-variation="primary"]:hover {
+  background-color: var(--primary-button-hover-background-color);
+}
+
+button[data-variation="primary"]:disabled {
+  background-color: var(--primary-button-disabled-background-color);
+}
+
+button[data-variation="secondary"] {
+  background-color: var(--secondary-button-background-color);
+}
+
+button[data-variation="secondary"][data-hover="true"]:not([data-loading="true"]),
+button[data-variation="secondary"]:not([data-loading="true"]):hover {
+  background-color: var(--secondary-button-hover-background-color);
+}
+
+button[data-variation="secondary"]:disabled {
+  background-color: var(--secondary-button-disabled-background-color);
+}
+
+button[data-variation="tertiary"] {
+  background-color: var(--tertiary-button-background-color);
+}
+
+button[data-variation="tertiary"]:disabled {
+  background-color: var(--tertiary-button-disabled-background-color);
+}
+
+aside {
+  padding: 2.75rem;
+
+  background-color: var(--aside-background-color);
+}
+
+.aside-buttons {
+  margin-top: 4.25rem;
+
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+aside button {
+  width: 100%;
+}

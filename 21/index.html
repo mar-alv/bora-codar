@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>#boraCodar 21</title>
+
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap" rel="stylesheet">
+
+	<script defer src="script.js"></script>
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+	<div id="app">
+		<header id='app-header'>
+			<button id='open-cart-button' onclick='handleOpenCart()'>
+				<i class="ph-bold ph-shopping-cart-simple"></i>
+				<span id='header-cart-count'></span>
+			</button>
+		</header>
+	
+		<main>
+		</main>
+	
+		<aside data-open='false'>
+			<header id='cart-header'>
+				<h3 id='cart-count' class='heading'>
+				</h3>
+	
+				<button id='close-cart-button' onclick='handleCloseCart()'>
+					<i class="ph-bold ph-x"></i>
+				</button>
+			</header>
+	
+			<section>
+				<article>
+					<img src="https://a-static.mlcdn.com.br/800x560/monitor-gamer-samsung-odyssey-g9-49-curvo-dqhd-240hz-1ms-hdmi-e-displayport-freesync-premium-ajuste-de-altura-lc49g95tsslxzd/kabum/129919/762a7ed6d20f3ecfcc220daa7c5a4f0b.jpeg" alt="Imagem do produto">
+	
+					<div class='product-info'>
+						<p class='product-name paragraph'>
+							Monitor Gamer Curvo 49 DQHD, 240Hz, 1ms, HDMI e DisplayPort, HDR 1000, FreeSync Premium, Ajuste de Altura - LC49G95TSSLXZD
+						</p>
+	
+						<div class='product-price-wrapper'>
+							<span data-price='8599.9' class='product-price number-sm'>
+								R$ 8.599,90
+							</span>
+	
+							<div data-amount='1' class='product-amount-wrapper' onclick='handleDecrementAmount(this)'>
+								<button class='amount-button decrement-button'>
+									<i class="ph-bold ph-minus"></i>
+								</button>
+	
+								<span class='product-amount paragraph'>
+									1
+								</span>
+	
+								<button class='amount-button increment-button' onclick='handleIncrementAmount(this)'>
+									<i class="ph-bold ph-plus"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</article>
+	
+				<article>
+					<img src="https://a-static.mlcdn.com.br/800x560/cadeira-gamer-fox-racer-rgb-preta-com-iluminacao-led/foxonline/33/2e2e6a2c85eb7bc20ba36dd8d771e667.jpeg" alt="Imagem do produto">
+	
+					<div class='product-info'>
+						<p class='product-name paragraph'>
+							Cadeira Gamer RGB - Preta com Iluminação (Led)
+						</p>
+	
+						<div class='product-price-wrapper'>
+							<span data-price='959.9' class='product-price number-sm'>
+								R$ 959,90
+							</span>
+	
+							<div data-amount='1' class='product-amount-wrapper' onclick='handleDecrementAmount(this)'>
+								<button class='amount-button decrement-button'>
+									<i class="ph-bold ph-minus"></i>
+								</button>
+	
+								<span class='product-amount paragraph'>
+									1
+								</span>
+	
+								<button class='amount-button increment-button' onclick='handleIncrementAmount(this)'>
+									<i class="ph-bold ph-plus"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</article>
+	
+				<article>
+					<img src="https://i.dell.com/is/image/DellContent/content/dam/images/products/electronics-and-accessories/dell/keyboards/aw510k/aw510k-ckb-90000td-gy.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=553&qlt=100,1&resMode=sharp2&size=553,402&chrss=full" alt="Imagem do produto">
+	
+					<div class='product-info'>
+						<p class='product-name paragraph'>
+							Teclado Gamer Mecânico Low Profile RGB AW510K 580
+						</p>
+	
+						<div class='product-price-wrapper'>
+							<span data-price='1002' class='product-price number-sm'>
+								R$ 1.002,00
+							</span>
+	
+							<div data-amount='1' class='product-amount-wrapper' onclick='handleDecrementAmount(this)'>
+								<button class='amount-button decrement-button'>
+									<i class="ph-bold ph-minus"></i>
+								</button>
+	
+								<span class='product-amount paragraph'>
+									1
+								</span>
+	
+								<button class='amount-button increment-button' onclick='handleIncrementAmount(this)'>
+									<i class="ph-bold ph-plus"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</article>
+	
+				<article>
+					<img src="https://img.kalunga.com.br/fotosdeprodutos/672122z.jpg?_gl=1*8v65wa*_gcl_au*MjAxODc4NzM0Mi4xNzA1MTUzNjc2" alt="Imagem do produto">
+	
+					<div class='product-info'>
+						<p class='product-name paragraph'>
+							Headset Gamer RGB Preto
+						</p>
+	
+						<div class='product-price-wrapper'>
+							<span data-price='99.9' class='product-price number-sm'>
+								R$ 99,90
+							</span>
+	
+							<div data-amount='1' class='product-amount-wrapper' onclick='handleDecrementAmount(this)'>
+								<button class='amount-button decrement-button'>
+									<i class="ph-bold ph-minus"></i>
+								</button>
+	
+								<span class='product-amount paragraph'>
+									1
+								</span>
+	
+								<button class='amount-button increment-button' onclick='handleIncrementAmount(this)'>
+									<i class="ph-bold ph-plus"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</article>
+	
+				<article>
+					<img src="https://lusopatia.files.wordpress.com/2012/02/patinho-borracha1.jpg" alt="Imagem do produto">
+	
+					<div class='product-info'>
+						<p class='product-name paragraph'>
+							Patinho De Borracha Para Banho
+						</p>
+	
+						<div class='product-price-wrapper'>
+							<span data-price='19.9' class='product-price number-sm'>
+								R$ 19,90
+							</span>
+	
+							<div data-amount='1' class='product-amount-wrapper' onclick='handleDecrementAmount(this)'>
+								<button class='amount-button decrement-button'>
+									<i class="ph-bold ph-minus"></i>
+								</button>
+	
+								<span class='product-amount paragraph'>
+									1
+								</span>
+	
+								<button class='amount-button increment-button' onclick='handleIncrementAmount(this)'>
+									<i class="ph-bold ph-plus"></i>
+								</button>
+							</div>
+						</div>
+					</div>
+				</article>
+	
+				<h2 id='empty-cart-message' class='heading'>
+					"Upgrade seu setup! Confira nossos produtos."
+				</h2>
+			</section>
+	
+			<footer>
+				<div id='total'>
+					<span class='heading'>
+						Total:
+					</span>
+	
+					<span id='total-value' class='number-lg'>
+						R$ 10.681,60
+					</span>
+	
+					<h4 id='discount' data-applied='false' class='number-lg'></h4>
+				</div>
+	
+				<div id='coupon-input-wrapper' class='paragraph'>
+					<i class="ph-bold ph-tag"></i>
+	
+					<input id='coupon-input' maxlength='12' type="text" placeholder='Adicionar cupom'>
+	
+					<button id='clear-coupon-button' onclick='handleClearCouponInput()'>
+						<i class="ph-bold ph-x"></i>
+					</button>
+				</div>
+	
+				<button id='buy-button' class='paragraph' onclick='handleBuy(this)'>
+					Finalizar compra
+				</button>
+			</footer>
+		</aside>
+	</div>
+</body>
+</html>

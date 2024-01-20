@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>#boraCodar 8</title>
+	
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+	<script defer src="script.js"></script>
+</head>
+
+<body>
+	<main id='dashboard'>
+		<section id='meta-indicators'>
+			<article>
+				<h2>
+					NPS geral
+				</h2>
+	
+				<div id='nps' data-indicator='high'>
+					<i class="ph-fill ph-smiley"></i>
+					<h1>
+						Excelente!
+					</h1>
+				</div>
+	
+				<div class='scores'>
+					<div class='score'>
+						<span class='score-type'>
+							NPS Score
+						</span>
+						<span class='score-value'>
+							75
+						</span>
+					</div>
+				</div>
+			</article>
+	
+			<article>
+				<h2>
+					Vendas fechadas
+				</h2>
+	
+				<div class='sales'>
+					<div class="sales-percentage" data-sales='total'>
+						<div class="sales-percentage-fill">
+							<p class="sales-percentage-value">70%</p>
+							<p>alcançada</p>
+						</div>
+					</div>
+				</div>
+	
+				<div class='scores'>
+					<div class='score'>
+						<div class='score-icon' data-sales='expected'></div>
+						<span class='score-type'>
+							Esperado
+						</span>
+						<span class='score-value'>
+							100
+						</span>
+					</div>
+	
+					<div class='score'>
+						<span class='score-icon' data-sales='total'></span>
+						<span class='score-type'>
+							Alcançado
+						</span>
+						<span class='score-value'>
+							70
+						</span>
+					</div>
+				</div>
+			</article>
+	
+			<article>
+				<h2>
+					Meta mensal
+				</h2>
+	
+				<div class='sales'>
+					<div class="sales-percentage" data-sales='monthly'>
+						<div class="sales-percentage-fill">
+							<p class="sales-percentage-value">90%</p>
+							<p>alcançada</p>
+						</div>
+					</div>
+				</div>
+	
+				<div class='scores'>
+					<div class='score'>
+						<div class='score-icon' data-sales='expected'></div>
+						<span class='score-type'>
+							Esperado
+						</span>
+						<span class='score-value'>
+							R$ 70K
+						</span>
+					</div>
+	
+					<div class='score'>
+						<span class='score-icon' data-sales='monthly'></span>
+						<span class='score-type'>
+							Alcançado
+						</span>
+						<span class='score-value'>
+							R$ 63K
+						</span>
+					</div>
+				</div>
+			</article>
+		</section>
+	
+		<section id='weekly-indicators'>
+			<h2>
+				Vendas por dia da semana
+			</h2>
+	
+			<div id='week-sales'>
+				<div id='main-week-days'>
+					<div id='most-sales-day'>
+						<h3>
+							<i class="ph-fill ph-triangle"></i>
+							Dia com mais vendas
+						</h3>
+	
+						<p>
+							quarta-feira
+						</p>
+					</div>
+	
+					<div id='least-sales-day'>
+						<h3>
+							<i class="ph-fill ph-triangle"></i>
+							Dia com menos vendas
+						</h3>
+	
+						<p>
+							domingo
+						</p>
+					</div>
+				</div>
+	
+				<div id='week-sales-days'>
+					<hr />
+					<div id='week-days'>
+						<div class='week-day'>
+							<span>dom</span>
+							<div class='week-day-percentage' data-indicator='low'>
+							</div>
+						</div>
+	
+						<div class='week-day'>
+							<span>seg</span>
+							<div class='week-day-percentage' data-indicator='high'>
+							</div>
+						</div>
+	
+						<div class='week-day'>
+							<span>ter</span>
+							<div class='week-day-percentage' data-indicator='medium'>
+							</div>
+						</div>
+	
+						<div class='week-day'>
+							<span>qua</span>
+							<div class='week-day-percentage' data-indicator='high'>
+							</div>
+						</div>
+	
+						<div class='week-day'>
+							<span>qui</span>
+							<div class='week-day-percentage' data-indicator='high'>
+							</div>
+						</div>
+	
+						<div class='week-day'>
+							<span>sex</span>
+							<div class='week-day-percentage' data-indicator='high'>
+							</div>
+						</div>
+	
+						<div class='week-day'>
+							<span>sab</span>
+							<div class='week-day-percentage' data-indicator='medium'>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>

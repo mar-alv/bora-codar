@@ -1,0 +1,235 @@
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  transition: opacity 0.3s, color 0.3s, background-color 0.3s, transform 0.3s;
+}
+
+:root {
+  --bg-color: #111827;
+  --form-bg-color: #1f2937;
+  --border-color: #374151;
+  --placeholder-color: #9ca3af;
+  --invalid-color: #fb7185;
+
+  --primary-color: #9333ea;
+  --secondary-color: #e5e7eb;
+  --tertiary-color: #f3f4f6;
+
+  font-size: clamp(8px, 1vw, 10px);
+}
+
+body,
+button,
+input {
+  font-family: "Source Sans 3", sans-serif;
+}
+
+body {
+  height: 100vh;
+
+  background-color: var(--bg-color);
+}
+
+button,
+input {
+  all: unset;
+}
+
+main {
+  height: 100%;
+
+  display: grid;
+  place-content: center;
+}
+
+form {
+  height: inherit;
+
+  padding: 9.6rem 2.4rem 2.4rem;
+
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+
+  gap: 4.4rem;
+  display: grid;
+
+  background-color: var(--form-bg-color);
+}
+
+#form-content {
+  gap: 4.8rem;
+  display: grid;
+}
+
+#credit-card {
+  justify-self: center;
+
+  border-radius: 16px;
+}
+
+#input-wrappers {
+  gap: 2.4rem;
+  display: grid;
+}
+
+.input-wrapper {
+  gap: 0.4rem;
+  display: grid;
+  align-content: start;
+}
+
+label {
+  gap: 0.4rem;
+  display: flex;
+  align-items: center;
+
+  font-size: 1.4rem;
+  font-weight: 600;
+  height: fit-content;
+  color: var(--secondary-color);
+}
+
+input {
+  padding: 1.2rem;
+
+  border-radius: 4px;
+  outline: 1px solid var(--border-color);
+
+  font-size: 1.6rem;
+  color: var(--tertiary-color);
+
+  background-color: var(--bg-color);
+}
+
+input::placeholder {
+  color: var(--placeholder-color);
+}
+
+input:focus {
+  border: 0;
+  outline: 2px solid var(--primary-color);
+}
+
+.invalid-message {
+  margin-top: 0.8rem;
+
+  gap: 0.4rem;
+  display: none;
+  align-items: center;
+
+  font-size: 1.4rem;
+  color: var(--invalid-color);
+}
+
+input[data-valid="false"] {
+  outline: 2px solid var(--invalid-color);
+}
+
+input[data-valid="false"] ~ .invalid-message {
+  display: flex;
+}
+
+.input-row-wrapper {
+  gap: 1.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#safety-check {
+  gap: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#safety-check span {
+  font-size: 1.4rem;
+  color: var(--secondary-color);
+}
+
+#add-button {
+  padding: 1.6rem 4.8rem;
+
+  border-radius: 4px;
+
+  display: flex;
+  align-self: end;
+  justify-content: center;
+
+  cursor: pointer;
+
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--tertiary-color);
+
+  background-color: var(--primary-color);
+
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.1);
+}
+
+#add-button:not(:disabled):hover {
+  filter: brightness(1.2);
+}
+
+#add-button:focus {
+  outline-offset: 5px;
+  outline: 2px solid var(--tertiary-color);
+}
+
+#add-button:disabled {
+  cursor: not-allowed;
+
+  opacity: 0.5;
+}
+
+#add-button i {
+  font-size: 2.4rem;
+
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#toast-container > div {
+  padding: 2rem !important;
+  padding-left: 5.5rem !important;
+
+  font-size: 1.6rem;
+
+  background-size: 10% auto;
+}
+
+@media (min-width: 620px) {
+  #form-content {
+    gap: 4.8rem;
+    display: grid;
+    grid-template-areas:
+      "input-wrappers credit-card"
+      "input-wrappers safety-check";
+  }
+
+  #credit-card {
+    align-self: end;
+    grid-area: credit-card;
+  }
+
+  #input-wrappers {
+    grid-area: input-wrappers;
+  }
+
+  #safety-check {
+    align-self: start;
+    grid-area: safety-check;
+  }
+}

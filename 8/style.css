@@ -1,0 +1,467 @@
+:root {
+  --bg-color: #292738;
+
+  --indicator-bg-color: #363447;
+
+  --high-indicator-main-color: #81fbb8;
+  --high-indicator-color: linear-gradient(90deg, #81fbb8, #28c76f);
+  --medium-indicator-color: linear-gradient(90deg, #ffd700, #ffbf00);
+  --low-indicator-main-color: #ff5733;
+  --low-indicator-color: linear-gradient(90deg, #ff5733, #ff2400);
+
+  --expected-sales-color: #4a4556;
+  --total-sales-color: #7367f0;
+  --monthly-sales-color: #df9780;
+
+  --week-sales-divisor-color: #4a4556;
+  --high-week-sales-color: linear-gradient(180deg, #90f7ec 0%, #32ccbc 100%);
+  --medium-week-sales-color: linear-gradient(180deg, #ffd700 0%, #ffa500 100%);
+  --low-week-sales-color: linear-gradient(180deg, #ff5733 0%, #ff0000 100%);
+
+  font-size: clamp(8px, 1vw, 10px);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+
+  font-size: 1.6rem;
+  font-family: "Inter", sans-serif;
+  color: white;
+
+  background-color: var(--bg-color);
+}
+
+#dashboard {
+  height: inherit;
+
+  padding: 10rem;
+
+  display: grid;
+  place-items: center;
+
+  background-color: var(--bg-color);
+}
+
+#meta-indicators,
+#weekly-indicators {
+  max-width: 1120px;
+}
+
+h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+#weekly-indicators,
+#meta-indicators article {
+  padding: 3rem 4.8rem;
+
+  background-color: var(--indicator-bg-color);
+  box-shadow: 3px 4px 26px 0px rgba(0, 0, 0, 0.25);
+}
+
+#meta-indicators {
+  gap: 3.2rem;
+  display: grid;
+}
+
+article {
+  border-radius: 16px;
+
+  gap: 3.2rem;
+  display: grid;
+
+  text-align: center;
+}
+
+#nps {
+  display: grid;
+}
+
+#nps[data-indicator="high"] {
+  --indicator-color: var(--high-indicator-color);
+}
+
+#nps[data-indicator="medium"] {
+  --indicator-color: var(--medium-indicator-color);
+}
+
+#nps[data-indicator="low"] {
+  --indicator-color: var(--low-indicator-color);
+}
+
+#nps h1,
+#nps i {
+  --_indicator-color: var(--indicator-color, white);
+
+  display: inline;
+
+  color: transparent;
+
+  background: var(--_indicator-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+#nps i {
+  font-size: 6.4rem;
+}
+
+article h1 {
+  margin-top: 1rem;
+
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 160%;
+}
+
+article i {
+  font-size: 5.4rem;
+}
+
+.sales {
+  display: flex;
+  justify-content: center;
+}
+
+.sales-percentage {
+  width: 20rem;
+  height: 20rem;
+
+  border-radius: 50%;
+
+  position: relative;
+
+  background: conic-gradient(
+    var(--sales-color) 0% 70%,
+    var(--expected-sales-color) 70% 100%
+  );
+
+  transition: transform 0.3s;
+}
+
+.sales-percentage:hover {
+  transform: scale(1.2);
+}
+
+.score-icon[data-sales="total"],
+.sales-percentage[data-sales="total"] {
+  --sales-color: var(--total-sales-color);
+}
+
+.score-icon[data-sales="monthly"],
+.sales-percentage[data-sales="monthly"] {
+  --sales-color: var(--monthly-sales-color);
+}
+
+.sales-percentage-value {
+  font-size: 3.4rem;
+  font-weight: bold;
+  line-height: 160%;
+}
+
+.sales-percentage-fill {
+  width: 70%;
+  height: 70%;
+
+  top: 15%;
+  left: 15%;
+  position: absolute;
+
+  display: grid;
+  place-content: center;
+
+  border-radius: 50%;
+
+  background: var(--indicator-bg-color);
+}
+
+.scores {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.score {
+  display: flex;
+  align-items: center;
+
+  font-size: 1.4rem;
+  line-height: 160%;
+}
+
+.score-icon {
+  width: 15px;
+  height: 15px;
+
+  margin-right: 0.4rem;
+
+  border-radius: 50%;
+
+  background: var(--sales-color);
+}
+
+.score-icon[data-sales="expected"] {
+  --sales-color: var(--expected-sales-color);
+}
+
+.score-type {
+  margin-right: 1rem;
+
+  font-weight: 500;
+}
+
+#weekly-indicators {
+  margin-top: 6rem;
+
+  width: 100%;
+  max-width: 1120px;
+}
+
+#week-sales {
+  margin-top: 3.2rem;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#main-week-days {
+  gap: 3.2rem;
+  display: grid;
+
+  font-weight: 500;
+  line-height: 160%;
+}
+
+#main-week-days i {
+  margin-right: 0.4rem;
+}
+
+#most-sales-day i {
+  color: var(--high-indicator-main-color);
+}
+
+#least-sales-day i {
+  display: inline-block;
+  transform: rotate(180deg);
+  color: var(--low-indicator-main-color);
+}
+
+#main-week-days h3 {
+  font-size: 1.4rem;
+}
+
+#main-week-days p {
+  margin-top: 0.8rem;
+
+  font-size: 2.4rem;
+}
+
+#week-sales-days {
+  margin-top: 3.2rem;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  position: relative;
+}
+
+#week-sales-days hr {
+  width: 3px;
+  height: 100%;
+
+  position: absolute;
+
+  background: var(--week-sales-divisor-color);
+
+  transform: rotate(180deg);
+}
+
+#week-days {
+  width: 100%;
+
+  gap: 6rem;
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+
+  padding-bottom: 3.2rem;
+}
+
+.week-day {
+  display: flex;
+  align-items: center;
+}
+
+.week-day span {
+  margin-right: 0.8rem;
+}
+
+.week-day-percentage,
+.week-day-percentage::before {
+  height: 1.6rem;
+  border-radius: 30px;
+}
+
+.week-day-percentage {
+  width: 100%;
+
+  display: grid;
+
+  position: relative;
+}
+
+.week-day-percentage::before {
+  content: "";
+
+  bottom: 0;
+  position: absolute;
+
+  background: var(--indicator-color);
+}
+
+.week-day:first-child .week-day-percentage::before {
+  width: 25%;
+}
+
+.week-day:nth-child(2) .week-day-percentage::before {
+  width: 70%;
+}
+
+.week-day:nth-child(3) .week-day-percentage::before {
+  width: 47%;
+}
+
+.week-day:nth-child(4) .week-day-percentage::before {
+  width: 100%;
+}
+
+.week-day:nth-child(5) .week-day-percentage::before {
+  width: 80%;
+}
+
+.week-day:nth-child(6) .week-day-percentage::before {
+  width: 75%;
+}
+
+.week-day:last-child .week-day-percentage::before {
+  width: 43%;
+}
+
+.week-day-percentage[data-indicator="high"] {
+  --indicator-color: var(--high-week-sales-color);
+}
+
+.week-day-percentage[data-indicator="medium"] {
+  --indicator-color: var(--medium-week-sales-color);
+}
+
+.week-day-percentage[data-indicator="low"] {
+  --indicator-color: var(--low-week-sales-color);
+}
+
+@media (min-width: 850px) {
+  #meta-indicators {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #week-sales-days {
+    margin-top: 3.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #meta-indicators {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #week-sales {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #week-sales-days {
+    width: 60%;
+
+    align-items: center;
+
+    justify-content: center;
+  }
+
+  #week-sales-days hr {
+    height: 3px;
+    width: 100%;
+
+    transform: rotate(180deg);
+  }
+
+  #week-days {
+    flex-direction: row;
+    justify-content: center;
+
+    position: absolute;
+  }
+
+  .week-day {
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .week-day span {
+    margin-right: 0;
+    margin-top: 0.8rem;
+
+    order: 1;
+  }
+
+  .week-day-percentage {
+    width: 1.6rem;
+    height: 16rem;
+  }
+
+  .week-day:first-child .week-day-percentage::before {
+    width: 1.6rem;
+    height: 25%;
+  }
+
+  .week-day:nth-child(2) .week-day-percentage::before {
+    width: 1.6rem;
+    height: 70%;
+  }
+
+  .week-day:nth-child(3) .week-day-percentage::before {
+    width: 1.6rem;
+    height: 47%;
+  }
+
+  .week-day:nth-child(4) .week-day-percentage::before {
+    width: 1.6rem;
+    height: 100%;
+  }
+
+  .week-day:nth-child(5) .week-day-percentage::before {
+    width: 1.6rem;
+    height: 80%;
+  }
+
+  .week-day:nth-child(6) .week-day-percentage::before {
+    width: 1.6rem;
+    height: 75%;
+  }
+
+  .week-day:last-child .week-day-percentage::before {
+    width: 1.6rem;
+    height: 43%;
+  }
+}

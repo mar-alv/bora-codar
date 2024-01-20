@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>#boraCodar 6</title>
+
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
+
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+	<div id='app'>
+		<header>
+			<h1>
+				Cartão de embarque
+			</h1>
+		</header>
+	
+		<main id='pass'>
+			<section class='pass-info'>
+				<div class='pass-info-header'>
+					<h3>Voo</h3>
+					<h3>Data</h3>
+				</div>
+	
+				<div class='pass-info-content'>
+					<b>RS995</b>
+					<b>18/10/2023</b>
+				</div>
+	
+				<div id='pass-destiny'>
+					<div class='pass-info-header'>
+						<h3>POA, Brasil</h3>
+						<h3>São Francisco, EUA</h3>
+					</div>
+	
+					<div class='pass-info-content'>
+						<h2>GRU</h2>
+						<i class="ph-fill ph-airplane-in-flight"></i>
+						<h2>SFO</h2>
+					</div>
+	
+					<div class='pass-info-content'>
+						<p>17:00</p>
+						<p>04:48<sup>+1</sup></p>
+					</div>
+				</div>
+			</section>
+	
+			<section id='pass-passager' class='pass-info'>
+				<div class='pass-info-header'>
+					<h3>Passageiro</h3>
+					<h3>Assento</h3>
+				</div>
+	
+				<div class='pass-info-content'>
+					<b>Marcelo Alvarez</b>
+					<b>28A</b>
+				</div>
+			</section>
+	
+			<section id='pass-boarding' class='pass-info'>
+				<div id='pass-boarding-info'>
+					<div>
+						<div class='pass-info-header'>
+							<h3>Embarque</h3>
+						</div>
+	
+						<div class='pass-info-content'>
+							<b id='pass-boarding-time'>16:15</b>
+						</div>
+					</div>
+	
+					<div>
+						<div class='pass-info-header'>
+							<h3>Terminal</h3>
+						</div>
+	
+						<div class='pass-info-content'>
+							<b>2</b>
+						</div>
+					</div>
+	
+					<div>
+						<div class='pass-info-header'>
+							<h3>Portão</h3>
+						</div>
+	
+						<div class='pass-info-content'>
+							<b>15</b>
+						</div>
+					</div>
+				</div>
+	
+				<div>
+					<img alt='Código QR para validar grupo de embarque' src='https://i.pinimg.com/736x/60/c1/4a/60c14a43fb4745795b3b358868517e79.jpg' />
+					<div class='pass-info-header'>
+						<h3>Grupo de embarque: 3</h3>
+					</div>
+				</div>
+	
+				<p id='pass-boarding-closing-time'>
+					<strong>Atenção:</strong> o portão fecha 16:45
+				</p>
+			</section>
+		</main>
+	
+		<footer>
+			<p>
+				Qualquer problema procure o balcão de atendimento da sua companhia aérea
+			</p>
+		</footer>
+	</div>
+</body>
+</html>

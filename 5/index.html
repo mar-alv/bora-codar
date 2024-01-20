@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>#boraCodar 5</title>
+
+	<link rel="stylesheet" href="style.css" />
+	<link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+
+	<script defer src="script.js"></script>
+</head>
+
+<body>
+	<div>
+		<header>
+			<h2>
+				0
+			</h2>
+			<h1>
+				0
+			</h1>
+		</header>
+	
+		<main>
+			<button data-key='clear-entry' onclick='clearEntry()'>
+				CE
+			</button>
+			<button data-key='number' onclick='clearLast()'>
+				C
+			</button>
+			<button data-key='number' onclick="addOperator('%')">
+				%
+			</button>
+			<button data-key='operator' onclick="addOperator('/')">
+				/
+			</button>
+	
+			<button data-key='number' onclick="addNumber('7')">
+				7
+			</button>
+			<button data-key='number' onclick="addNumber('8')">
+				8
+			</button>
+			<button data-key='number' onclick="addNumber('9')">
+				9
+			</button>
+			<button data-key='operator' onclick="addOperator('x')">
+				x
+			</button>
+	
+			<button data-key='number' onclick="addNumber('4')">
+				4
+			</button>
+			<button data-key='number' onclick="addNumber('5')">
+				5
+			</button>
+			<button data-key='number' onclick="addNumber('6')">
+				6
+			</button>
+			<button data-key='operator' onclick="addOperator('-')">
+				-
+			</button>
+	
+			<button data-key='number' onclick="addNumber('1')">
+				1
+			</button>
+			<button data-key='number' onclick="addNumber('2')">
+				2
+			</button>
+			<button data-key='number' onclick="addNumber('3')">
+				3
+			</button>
+			<button data-key='operator' onclick="addOperator('+')">
+				+
+			</button>
+	
+			<button data-key='number' onclick='changeSign()'>
+				+/-
+			</button>
+			<button data-key='number' onclick="addNumber('0')">
+				0
+			</button>
+			<button data-key='number' onclick='addComma()'>
+				,
+			</button>
+			<button data-key='result' onclick='result()'>
+				=
+			</button>
+		</main>
+	</div>
+</body>
+</html>

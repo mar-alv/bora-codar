@@ -1,0 +1,278 @@
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+:root {
+  --primary-bg-color: #1a1924;
+  --secondary-bg-color: #16151e;
+
+  --input-bg-color: #24243d;
+
+  --primary-color: #e1e1e6;
+  --secondary-color: #8c8cba;
+
+  --alphabet-section-color-1: #633bbc;
+  --alphabet-section-color-2: #07847e;
+  --alphabet-section-color-3: #9a00b3;
+  --alphabet-section-color-4: #0088b3;
+  --alphabet-section-color-5: #b38c00;
+
+  --delete-icon-color: #ff5252;
+
+  --scroll-color: #282843;
+
+  --add-button-bg-color: #633bbc;
+
+  font-size: clamp(8px, 1vw, 10px);
+}
+
+body,
+input {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  height: 100vh;
+
+  overflow: hidden;
+}
+
+body,
+button,
+input {
+  color: var(--primary-color);
+}
+
+button,
+input[type="text"],
+ul,
+li,
+dialog {
+  all: unset;
+}
+
+#app {
+  height: 100%;
+
+  position: relative;
+}
+
+#modal-overlay::before {
+  content: "";
+
+  width: 100%;
+  height: 100%;
+
+  display: none;
+
+  top: 0;
+  left: 0;
+  z-index: 1;
+  position: fixed;
+
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#app:has(dialog[data-open="true"]) #modal-overlay::before {
+  display: block;
+}
+
+header,
+main {
+  padding: 4rem;
+}
+
+header {
+  gap: 2.4rem;
+  display: grid;
+
+  background-color: var(--secondary-bg-color);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+#shortcuts {
+  display: flex;
+  justify-content: space-between;
+}
+
+#shortcut-buttons {
+  gap: 1.6rem;
+  display: flex;
+}
+
+button {
+  cursor: pointer;
+
+  font-size: 2.4rem;
+}
+
+button:hover {
+  opacity: 0.7;
+  transform: translate(0, -0.5rem);
+}
+
+button:focus,
+.input-wrapper:focus-within {
+  outline-offset: 2px;
+  outline: 2px solid var(--primary-color);
+}
+
+.input-wrapper {
+  padding: 1.6rem 2.4rem;
+
+  gap: 1rem;
+  display: flex;
+
+  border-radius: 5px;
+
+  background-color: var(--input-bg-color);
+}
+
+.input-wrapper i {
+  font-size: 1.6rem;
+}
+
+.input-wrapper input {
+  width: 100%;
+
+  font-size: 1.2rem;
+}
+
+main {
+  height: 100%;
+  background-color: var(--primary-bg-color);
+}
+
+section {
+  max-height: 70%;
+
+  gap: 5.6rem;
+  display: grid;
+  align-content: start;
+
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scroll-color) transparent;
+}
+
+section::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+section::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+
+  background-color: var(--scroll-color);
+}
+
+article {
+  gap: 5.2rem;
+  display: flex;
+  align-items: start;
+}
+
+h3 {
+  padding: 1.6rem 2.4rem;
+
+  border-radius: 8px;
+  font-size: 1.6rem;
+}
+
+article:nth-child(1) h3 {
+  background-color: var(--alphabet-section-color-1);
+}
+
+article:nth-child(2) h3 {
+  background-color: var(--alphabet-section-color-2);
+}
+
+article:nth-child(3) h3 {
+  background-color: var(--alphabet-section-color-3);
+}
+
+article:nth-child(4) h3 {
+  background-color: var(--alphabet-section-color-4);
+}
+
+article:nth-child(5) h3 {
+  background-color: var(--alphabet-section-color-5);
+}
+
+ul {
+  gap: 3.2rem;
+  display: grid;
+}
+
+li {
+  gap: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.delete-button {
+  display: none;
+
+  color: var(--delete-icon-color);
+}
+
+img {
+  border-radius: 50%;
+}
+
+.contact-info {
+  gap: 0.4rem;
+  display: grid;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+p {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+}
+
+dialog[data-open="false"] {
+  display: none;
+}
+
+dialog[data-open="true"] {
+  width: 80%;
+
+  top: 25%;
+  left: 50%;
+  z-index: 2;
+  position: absolute;
+
+  transform: translate(-50%, 0);
+
+  background-color: var(--secondary-bg-color);
+}
+
+form {
+  padding: 3.2rem;
+
+  gap: 3.2rem;
+  display: grid;
+}
+
+dialog button {
+  padding: 1.6rem;
+
+  border-radius: 4px;
+
+  font-size: 2rem;
+  text-align: center;
+
+  background-color: var(--add-button-bg-color);
+}
