@@ -2,32 +2,30 @@ const app = document.querySelector("#app");
 const returnButton = document.querySelector("#return-button");
 const continueButton = document.querySelector("#next-button");
 const MSITE_THRESHOLD_WIDTH = 450;
-const form = document.querySelector('form');
+const form = document.querySelector("form");
 const stepSection = [...form.querySelectorAll("section")];
 const fields = [...document.querySelectorAll("input, textarea")];
 
-fields.forEach(i => {
-  i.addEventListener('input', () => {
+fields.forEach((i) => {
+  i.addEventListener("input", () => {
     continueButton.disabled = !areStepFieldsFulfilled(getCurrentStepValue());
   });
 
-  i.addEventListener("keydown", function(event) {
+  i.addEventListener("keydown", function (event) {
     if (event.key === "Enter" && areStepFieldsFulfilled(getCurrentStepValue()))
       handleContinue();
   });
 });
 
 function areStepFieldsFulfilled(currentStep) {
-  const currentStepSection = stepSection[
-    currentStep
-  ];
+  const currentStepSection = stepSection[currentStep];
   const currentStepFields = [
     ...currentStepSection.querySelectorAll("input, textarea")
   ];
 
   return currentStepFields.every((i) => {
     const value = i.value;
-    const pattern = new RegExp(i.getAttribute('pattern'));
+    const pattern = new RegExp(i.getAttribute("pattern"));
 
     return pattern.test(value);
   });
@@ -96,10 +94,10 @@ function setStepNumberAsDone() {
 function showConclusionSection() {
   const currentStepValue = getCurrentStepValue();
   const nextStepValue = currentStepValue + 1;
-  const footer = document.querySelector('footer');
+  const footer = document.querySelector("footer");
 
   app.dataset.step = nextStepValue;
-  footer.style.display = 'none';
+  footer.style.display = "none";
 }
 
 function goToNextStep() {
@@ -120,7 +118,6 @@ function showReturnButton() {
   returnButton.style.display = "block";
 }
 
-
 function changeNextButtonText() {
-  continueButton.innerText = isAtLastStep() ? 'ENVIAR PROPOSTA' :'CONTINUAR';
+  continueButton.innerText = isAtLastStep() ? "ENVIAR PROPOSTA" : "CONTINUAR";
 }
