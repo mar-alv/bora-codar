@@ -2,7 +2,8 @@ const app = document.querySelector("#app");
 const returnButton = document.querySelector("#return-button");
 const continueButton = document.querySelector("#next-button");
 const MSITE_THRESHOLD_WIDTH = 450;
-const stepSection = [...document.querySelectorAll("section")];
+const form = document.querySelector('form');
+const stepSection = [...form.querySelectorAll("section")];
 const fields = [...document.querySelectorAll("input, textarea")];
 
 fields.forEach(i => {
@@ -33,7 +34,7 @@ function areStepFieldsFulfilled(currentStep) {
 }
 
 function getCurrentStepValue() {
-  return  parseInt(app.dataset.step);
+  return parseInt(app.dataset.step);
 }
 
 function handleReturn() {
@@ -68,29 +69,47 @@ function isAtLastStep() {
 function sendData() {
   continueButton.disabled = true;
   continueButton.innerHTML = '<i class="ph-bold ph-spinner-gap"></i>';
+
+  setTimeout(() => {
+    setStepNumberAsDone();
+    showConclusionSection();
+  }, 2000);
+}
+
+function setStepNumberAsDone() {
+  const steps = [...document.querySelectorAll(".step")];
+  const currentStepValue = getCurrentStepValue();
+  const currentStep = steps[currentStepValue];
+  const currentStepNumber = currentStep.querySelector(".step-number");
+  const nextStepValue = currentStepValue + 1;
+  const nextStep = steps[nextStepValue];
+
+  if (nextStep) {
+    app.dataset.step = nextStepValue;
+    nextStep.dataset.status = "pending";
+  }
+
+  currentStep.dataset.status = "done";
+  currentStepNumber.innerHTML = '<i class="ph-bold ph-check"></i>';
+}
+
+function showConclusionSection() {
+  const currentStepValue = getCurrentStepValue();
+  const nextStepValue = currentStepValue + 1;
+  const footer = document.querySelector('footer');
+
+  app.dataset.step = nextStepValue;
+  footer.style.display = 'none';
 }
 
 function goToNextStep() {
   const currentStepValue = getCurrentStepValue();
 
   if (areStepFieldsFulfilled(currentStepValue)) {
-    const steps = [...document.querySelectorAll(".step")];
-    const currentStep = steps[currentStepValue];
-    const currentStepNumber = currentStep.querySelector(".step-number");
-    const nextStepValue = currentStepValue + 1;
-    const nextStep = steps[nextStepValue];
-
-    currentStep.dataset.status = "done";
-    currentStepNumber.innerHTML = '<i class="ph-bold ph-check"></i>';
-
-    if (nextStep) {
-      app.dataset.step = nextStepValue;
-      nextStep.dataset.status = "pending";
-    }
-
+    setStepNumberAsDone();
     showReturnButton();
 
-    continueButton.disabled = !areStepFieldsFulfilled(nextStepValue);
+    continueButton.disabled = !areStepFieldsFulfilled(getCurrentStepValue());
 
     changeNextButtonText();
   }

@@ -66,23 +66,34 @@ textarea {
 }
 
 #app[data-step="0"] {
-  section:nth-child(2),
-  section:last-child {
+  form section:nth-child(2),
+  form section:last-child {
     display: none;
   }
 }
 
 #app[data-step="1"] {
-  section:first-child,
-  section:last-child {
+  form section:first-child,
+  form section:last-child {
     display: none;
   }
 }
 
 #app[data-step="2"] {
-  section:first-child,
-  section:nth-child(2) {
+  form section:first-child,
+  form section:nth-child(2) {
     display: none;
+  }
+}
+
+#app[data-step="3"] {
+  form {
+    display: none;
+  }
+
+  #conclusion {
+    display: flex;
+    align-items: center;
   }
 }
 
@@ -151,9 +162,6 @@ hr {
   border: 0.1rem solid var(--gray-100);
 }
 
-form {
-}
-
 section {
   gap: 1.6rem;
   display: grid;
@@ -173,6 +181,10 @@ section {
   .field-error-message {
     visibility: initial;
   }
+}
+
+label {
+  color: var(--gray-400);
 }
 
 input,
@@ -217,6 +229,20 @@ textarea {
   visibility: hidden;
 }
 
+#conclusion {
+  height: 20rem;
+  max-width: 80rem;
+  display: none;
+
+  font-size: 1.8rem;
+  color: var(--gray-400);
+  text-align: center;
+
+  span {
+    color: var(--success-color);
+  }
+}
+
 footer {
   margin-top: 3.2rem;
   gap: 1.6rem;
@@ -232,6 +258,11 @@ button {
   cursor: pointer;
   border-radius: 0.6rem;
   text-align: center;
+}
+
+button:focus {
+  outline-offset: .2rem;
+  outline: .2rem solid var(--gray-400);
 }
 
 #return-button {
