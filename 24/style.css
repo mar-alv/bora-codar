@@ -1,0 +1,147 @@
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transition: contrast 0.3s, brightness 0.3s, background-color 0.3s;
+}
+
+:root {
+  --heading1-size: 3.2rem;
+  --heading1-leading: 3.8rem;
+  --heading1-weight: normal;
+
+  --bg-color: #151515;
+  --color-thumb-color: #8b03fb;
+  --illumination-thumb-color: #151515;
+  --color-slider-color: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet,
+    pink,
+    red
+  );
+  --illumination-slider-color: #d9d9d9;
+
+  font-size: clamp(0.5rem, 1vw, 0.625rem);
+}
+
+body {
+  height: 100vh;
+
+  color: white;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--bg-color);
+}
+
+main {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+#color-preview {
+  height: 100%;
+  width: 100%;
+
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 53px 13px white;
+}
+
+.heading1 {
+  font-size: var(--heading1-size);
+  font-weight: var(--heading1-weight);
+  line-height: var(--heading1-leading);
+}
+
+section {
+  gap: 8.2rem;
+  display: grid;
+}
+
+.input-wrapper {
+  gap: 1.6rem;
+  display: flex;
+  align-items: center;
+
+  font-size: 2.4rem;
+}
+
+input {
+  all: unset;
+  apperance: none;
+  -webkit-appearance: none;
+
+  width: 100%;
+  height: 0.6rem;
+
+  border-radius: 1.2rem;
+  outline: none;
+  background: var(--slider-color);
+}
+
+input[data-type="illumination"],
+input[data-type="contrast"] {
+  --slider-color: var(--illumination-slider-color);
+  --thumb-color: var(--illumination-thumb-color);
+}
+
+input[data-type="color"] {
+  --slider-color: var(--color-slider-color);
+  --thumb-color: var(--color-thumb-color);
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+
+  width: 1.8rem;
+  height: 1.8rem;
+
+  cursor: pointer;
+  border: 0.25rem solid white;
+  border-radius: 50%;
+  background-color: var(--thumb-color);
+}
+
+input::-moz-range-thumb {
+  width: 1.8rem;
+  height: 1.8rem;
+
+  cursor: pointer;
+  border: 0.25rem solid white;
+  border-radius: 50%;
+  background-color: var(--thumb-color);
+}
+
+input::-ms-thumb {
+  width: 1.8rem;
+  height: 1.8rem;
+
+  cursor: pointer;
+  border: 0.25rem solid white;
+  border-radius: 50%;
+  background-color: var(--thumb-color);
+}
+
+input:focus::-webkit-slider-thumb {
+  border: 0.15rem solid white;
+}
+
+input:focus::-ms-thumb {
+  border: 0.15rem solid white;
+}
+
+input:focus::-moz-range-thumb {
+  border: 0.15rem solid white;
+}
