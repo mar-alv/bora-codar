@@ -80,7 +80,7 @@ section {
 
 input {
   all: unset;
-  apperance: none;
+  appearance: none;
   -webkit-appearance: none;
 
   width: 100%;
