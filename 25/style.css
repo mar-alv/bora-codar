@@ -34,17 +34,17 @@ body {
       rgba(0, 0, 0, 0.4) 0%,
       rgba(0, 0, 0, 0.4) 100%
     ),
-    url('assets/background.jpg') no-repeat;
+    url(https://i.imgur.com/OWdGQxa.jpg) no-repeat;
   background-size: cover;
 }
 
-body:has(iframe) body {
+body:has(iframe) {
   background: radial-gradient(
       50% 50% at 50% 50%,
       rgba(0, 0, 0, 0.4) 0%,
-      rgba(0, 0, 0, 0.6) 100%
+      rgba(0, 0, 0, 0.8) 100%
     ),
-    url('assets/background.jpg') no-repeat;
+    url(https://i.imgur.com/OWdGQxa.jpg) no-repeat;
 }
 
 button,
@@ -69,10 +69,11 @@ li {
 }
 
 #video-overlay {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
 
   opacity: 0.4;
+  filter: blur(1rem);
   pointer-events: none;
 }
 

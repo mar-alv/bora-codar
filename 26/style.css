@@ -1,0 +1,207 @@
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transition: background-color 0.3s, color 0.3s, scale 0.3s, transform 0.3s;
+}
+
+:root {
+  --brown-100: #fff;
+  --brown-200: #feece0;
+  --brown-300: #9b6647;
+  --brown-400: #58190a;
+
+  font-size: clamp(0.5rem, 1vw, 0.625rem);
+}
+
+html {
+  hanging-punctuation: first last;
+  color-scheme: dark light;
+}
+
+body,
+button {
+  font-family: "Source Serif 4", system-ui, sans-serif;
+}
+
+body {
+  height: 100vh;
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  max-width: 62ch;
+
+  text-wrap: pretty;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button,
+ol,
+ul {
+  all: unset;
+  appearance: none;
+}
+
+main {
+  height: 100%;
+  display: grid;
+
+  text-align: center;
+}
+
+section {
+  display: grid;
+}
+
+.plate {
+  padding: 2rem;
+  gap: 5.6rem;
+  place-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, auto));
+
+  background-color: var(--brown-200);
+}
+
+.plate-info {
+  gap: 3.2rem;
+  display: grid;
+}
+
+.plate-portions {
+  gap: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3.2rem;
+  color: var(--brown-300);
+}
+
+button {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+
+  &:hover {
+    scale: 1.5;
+    transform: translateY(-0.4rem);
+
+    i {
+      background-color: var(--brown-300);
+      color: var(--brown-200);
+    }
+  }
+
+  &:focus {
+    outline: 0.3rem solid var(--brown-400);
+  }
+
+  i {
+    border-radius: 50%;
+    font-size: 3.2rem;
+  }
+}
+
+h1,
+h2 {
+  color: var(--brown-400);
+}
+
+h1 {
+  font-size: 7.2rem;
+}
+
+h2 {
+  font-size: 3.8rem;
+  font-weight: normal;
+}
+
+.preparation {
+  padding: 2rem;
+  gap: 6.4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  align-items: start;
+  container-type: inline-size;
+
+  background-color: var(--brown-300);
+
+  article {
+    gap: 3.2rem;
+    display: grid;
+
+    &:last-child {
+      justify-self: end;
+    }
+  }
+}
+
+h3 {
+  gap: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 3.8rem;
+  color: var(--brown-200);
+}
+
+ul,
+ol {
+  gap: 0.8rem;
+  display: grid;
+
+  text-align: left;
+  list-style-position: inside;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+li {
+  font-size: 2.8rem;
+  color: var(--brown-100);
+}
+
+/* Scale when hovering over the button can be done by "scale: x y;", but don't forget to include it on the transition up there */
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+  }
+}
+
+@media (min-width: 50rem) {
+  main {
+    text-align: left;
+  }
+
+  .plate-portions,
+  h3 {
+    justify-content: start;
+  }
+}
