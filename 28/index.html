@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel='preconnect' href='https://fonts.googleapis.com'>
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>#boraCodar 28</title>
+
+	<link rel="stylesheet" href="style.css" />
+	<link href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap' rel='stylesheet'>
+
+	<script defer src="script.js"></script>
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+	<div id="app">
+		<header>
+			<i class="ph ph-magic-wand"></i>
+
+			<h1>
+				Experimente o poder da Inteligência Artificial
+			</h1>
+		</header>
+
+		<main>
+			<ul>
+				<li>
+					<button>
+						<i class="ph ph-code"></i>
+
+						<span>
+							Gerador de códigos
+						</span>
+
+						<i class="ph ph-arrow-right"></i>
+					</button>
+				</li>
+
+				<li>
+					<button>
+						<i class="ph ph-image"></i>
+
+						<span>
+							Edição de foto
+						</span>
+
+						<i class="ph ph-arrow-right"></i>
+					</button>
+				</li>
+
+				<li>
+					<button>
+						<i class="ph ph-play-circle"></i>
+
+						<span>
+							Geração de vídeos
+						</span>
+
+						<i class="ph ph-arrow-right"></i>
+					</button>
+				</li>
+
+				<li>
+					<button>
+						<i class="ph ph-music-notes"></i>
+
+						<span>
+							Criador de áudios e musicas
+						</span>
+
+						<i class="ph ph-arrow-right"></i>
+					</button>
+				</li>
+			</ul>
+		</main>
+
+		<hr>
+
+		<footer>
+			<form>
+				<div class="input-wrapper">
+					<button type="button">
+						<i class="ph ph-plus-circle"></i>
+					</button>
+					
+					<input id="prompt" name="prompt" placeholder="Envie uma mensagem ou digite “/” para exibir os comandos" type="text">
+				</div>
+	
+				<button id='submit-button' disabled type="submit">
+					<i class="ph ph-paper-plane-right"></i>
+				</button>
+			</form>
+		</footer>
+	</div>
+</body>
+</html>
