@@ -1,0 +1,106 @@
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #0f172a;
+
+  font-size: clamp(0.5rem, 1vw, 0.625rem);
+}
+
+html {
+  hanging-punctuation: first last;
+  color-scheme: dark light;
+}
+
+body,
+button,
+textarea {
+  font-family: "Roboto", system-ui, sans-serif;
+}
+
+body {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+
+  background-color: var(--bg-color);
+}
+
+main {
+  width: 80vw;
+  position: relative;
+
+  border: 0.8rem solid white;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+
+.img-wrapper {
+  position: absolute;
+}
+
+img {
+  width: 80vw;
+  height: 100%;
+  object-fit: cover;
+}
+
+.before-img-wrapper {
+  width: 50%;
+  overflow: hidden;
+}
+
+input {
+  all: unset;
+  appearance: none;
+
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 0.8rem;
+  height: 100vh;
+
+  background-color: white;
+}
+
+input::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+
+  width: 0.8rem;
+  height: 100vh;
+
+  background-color: white;
+}
+
+.slider-thumb {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+  }
+}
