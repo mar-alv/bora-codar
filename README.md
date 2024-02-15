@@ -33,5 +33,11 @@
 | 27 | [Not Found Page](https://www.rocketseat.com.br/boracodar/desafios-anteriores/uma-pagina-de-erro-404-desafio-27) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/27) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/qBvxpYM?editors=1100) | January 30th, 2024 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/27/cover.jpg) |
 | 28 | [AI Platform](https://www.rocketseat.com.br/boracodar/desafios-anteriores/uma-plataforma-de-ia-desafio-28) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/28) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/abMqqLx) | February 13th, 2024 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/28/cover.jpg) |
 | 29 | [AI Before & After Image](https://www.rocketseat.com.br/boracodar/desafios-anteriores/um-antes-e-depois-com-ia-desafio-29) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/29) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/abMQxRM) | February 13th, 2024 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/29/cover.jpg) |
+| 30 | [AI Movies Recommendation](https://www.rocketseat.com.br/boracodar/desafios-anteriores/gerador-de-sugestao-de-filmes-com-ia-desafio-30) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/30) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/WNmYBgY?editors=1100) | February 15th, 2024 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/30/cover.jpg) |
 | 39 | [Product Rating Widget](https://www.rocketseat.com.br/boracodar/desafios-anteriores/um-widget-de-avaliacao-de-produto-desafio-39) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/39) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/BavqyaY) | October 4th, 2023 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/39/cover.jpg) |
 | 40 | [Newsletter Page](https://www.rocketseat.com.br/boracodar/desafios-anteriores/uma-pagina-de-newsletter-desafio-40) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/40) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/dywgKGd) | October 6th, 2023 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/40/cover.jpg) |
+
+
+
+
+
