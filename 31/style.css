@@ -1,0 +1,241 @@
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transition: background-color 0.3s, color 0.3s, opacity 0.3s, scale 0.3s,
+    transform 0.3s;
+}
+
+:root {
+  --brand-primary: #9705ea;
+  --background: #030712;
+  --surface-primary: #111827;
+  --surface-secondary: #1f2937;
+  --surface-tertiary: #374151;
+  --video-background: #000000;
+  --text-primary: #f9fafb;
+  --text-secondary: #e5e7eb;
+  --text-tertiary: #9ca3af;
+
+  --button-size: 1.6rem;
+  --button-weight: 600;
+  --button-leading: 1.6rem;
+
+  --paragraph-size: 1.6rem;
+  --paragraph-weight: normal;
+  --paragraph-leading: 2.4rem;
+
+  --timestamp-size: 1.2rem;
+  --timestamp-weight: normal;
+  --timestamp-leading: 1.2rem;
+
+  font-size: clamp(0.5rem, 1vw, 0.625rem);
+}
+
+html {
+  hanging-punctuation: first last;
+  color-scheme: dark light;
+}
+
+body,
+button,
+textarea {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+button,
+input,
+ol,
+li {
+  all: unset;
+  appearance: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+#app {
+  height: 100%;
+  padding-top: 7.2rem;
+  padding-inline: 8rem;
+
+  gap: 4.8rem;
+  display: grid;
+  justify-items: center;
+  background-color: var(--background);
+}
+
+header {
+  gap: 0.8rem;
+  display: flex;
+  align-items: center;
+
+  color: var(--text-primary);
+
+  i {
+    font-size: 3.2rem;
+  }
+}
+
+h1 {
+  text-wrap: balance;
+  font-size: 2rem;
+  font-weight: 300;
+
+  span {
+    font-weight: bold;
+  }
+}
+
+main {
+  &:not(:has(iframe)) {
+    width: 100%;
+    max-width: 128rem;
+  }
+}
+
+form {
+  gap: 1.6rem;
+  display: flex;
+  justify-content: center;
+}
+
+.input-wrapper {
+  width: 100%;
+  max-width: 46rem;
+  padding: 1.6rem;
+  gap: 1.8rem;
+  display: flex;
+
+  border: 0.2rem solid var(--surface-secondary);
+  border-radius: 0.8rem;
+  background-color: var(--surface-primary);
+
+  button i {
+    border-radius: 50%;
+    font-size: 2.4rem;
+    color: var(--text-primary);
+  }
+}
+
+.input-wrapper:focus-within,
+#transcript-button:focus {
+  outline-offset: 0.2rem;
+  outline: 0.2rem solid var(--text-primary);
+}
+
+input {
+  width: 100%;
+
+  font-size: var(--paragraph-size);
+  font-weight: var(--paragraph-weight);
+  line-height: var(--paragraph-leading);
+  color: var(--text-primary);
+
+  &::placeholder {
+    color: var(--text-tertiary);
+  }
+}
+
+#transcript-button {
+  padding: 2rem 2.4rem;
+
+  border-radius: 0.8rem;
+  font-size: var(--button-size);
+  font-weight: var(--button-weight);
+  line-height: var(--button-leading);
+  color: var(--text-primary);
+  background-color: var(--brand-primary);
+  box-shadow: 0px 0px 16px 0px rgba(151, 5, 234, 0.5);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 0px 32px 0px #9705ea;
+    transform: translateY(-0.6rem);
+    scale: 1.1;
+  }
+}
+
+section {
+  height: max-content;
+  margin-top: 4rem;
+  padding: 4rem;
+  gap: 3.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(58rem, 1fr));
+  align-items: start;
+  justify-items: center;
+  position: relative;
+
+  border-top-left-radius: 6.4rem;
+  border-top-right-radius: 6.4rem;
+  background-color: var(--surface-primary);
+}
+
+#copy-transcription-button {
+  padding: 1.2rem;
+  top: 4rem;
+  right: 4rem;
+  position: absolute;
+
+  border-radius: 0.8rem;
+  font-size: 2.4rem;
+  color: var(--text-primary);
+  background-color: var(--surface-secondary);
+}
+
+div#video {
+  width: 100%;
+  max-width: 58rem;
+  height: 40rem;
+
+  border-radius: 3.2rem;
+  background-color: var(--background);
+}
+
+ol {
+  gap: 1.6rem;
+  display: grid;
+
+  li {
+    gap: 1.2rem;
+    display: flex;
+    align-items: center;
+
+    color: var(--text-secondary);
+
+    time {
+      padding: 0.4rem 0.8rem;
+
+      border-radius: 0.4rem;
+      font-size: var(--timestamp-size);
+      font-weight: var(--timestamp-weight);
+      line-height: var(--timestamp-leading);
+      background-color: var(--surface-secondary);
+    }
+
+    .transcription {
+      font-size: var(--paragraph-size);
+      font-weight: var(--paragraph-weight);
+      line-height: var(--paragraph-leading);
+
+      .transcription-current {
+        border-radius: 0.4rem;
+        background-color: var(--brand-primary);
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+  }
+}

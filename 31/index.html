@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel='preconnect' href='https://fonts.googleapis.com'>
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>#boraCodar 31</title>
+
+	<link rel="stylesheet" href="style.css" />
+	<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' rel='stylesheet'>
+
+	<script defer src="script.js"></script>
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+	<div id="app">
+		<header>
+			<i class="ph ph-magic-wand"></i>
+	
+			<h1>
+				YouTube<span>Transcription</span>
+			</h1>
+		</header>
+	
+		<main>
+			<form>
+				<div class="input-wrapper">
+					<input type="text" onchange='handleLoadVideo(this)' placeholder='Cole a url de um vídeo para transcrever'>
+	
+					<button type='button'>
+						<i class="ph ph-x-circle"></i>
+					</button>
+				</div>
+	
+				<button id='transcript-button' type="submit">
+					Transcrever
+				</button>
+			</form>
+	
+			<section>
+				<button id='copy-transcription-button'>
+					<i class="ph ph-copy"></i>
+				</button>
+	
+				<div id="video"></div>
+	
+				<ol>
+					<li>
+						<time>
+							00:00
+						</time>
+	
+						<span class='transcription'>
+							Consciousness <span class='transcription-current'>is perhaps</span> the biggest riddle in nature.
+						</span>
+					</li>
+	
+					<li>
+						<time>
+							00:04
+						</time>
+	
+						<span class='transcription'>
+							Stripped to its core meaning,
+						</span>
+					</li>
+	
+					<li>
+						<time>
+							00:06
+						</time>
+	
+						<span class='transcription'>
+							consciousness is what allows us to be aware both of our surroundings
+						</span>
+					</li>
+				</ol>
+			</section>
+		</main>
+	</div>
+</body>
+</html>
