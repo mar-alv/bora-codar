@@ -1,0 +1,217 @@
+*::before,
+*,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  transition: background-color 0.3s, color 0.3s, scale 0.3s, transform 0.3s;
+}
+
+:root {
+  --inter-300-size: 1.8rem;
+  --inter-300-weight: 300;
+  --inter-300-leading: 2.8rem;
+
+  --inter-200-size: 1.6rem;
+  --inter-200-weight: 300;
+  --inter-200-leading: 2.4rem;
+
+  --inter-100-size: 1.6rem;
+  --inter-100-weight: 600;
+  --inter-100-leading: 2.4rem;
+
+  --ubuntu-100-size: 1.6rem;
+  --ubuntu-100-weight: normal;
+  --ubuntu-100-leading: 2rem;
+
+  --blueberry: #07061d;
+  --cotton-candy: #66d9ef;
+  --lemon: #2dff0b;
+  --gum: #fd78c4;
+  --background: #030712;
+  --pistachio: #d3ffcc;
+  --cream: #e2dfcd;
+  --foam: #d7dae2;
+  --snow: #ffffff;
+  --8-lemon: rgba(194, 255, 184, 0.08);
+  --20-guava: rgba(220, 255, 214, 0.2);
+  --80-snow: rgba(255, 255, 255, 0.8);
+
+  font-size: clamp(0.5rem, 1vw, 0.625rem);
+}
+
+html {
+  hanging-punctuation: first last;
+  color-scheme: dark light;
+}
+
+body,
+button,
+textarea {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+button,
+textarea {
+  all: unset;
+  appearance: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-0.4rem);
+  scale: 1.1;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+body {
+  display: grid;
+  min-height: 100svh;
+  background-color: var(--blueberry);
+}
+
+#app {
+  width: 100%;
+  max-width: 80vw;
+  margin-inline: auto;
+  padding: 6.4rem 2.4rem 1.8rem;
+  gap: 3.2rem;
+  display: grid;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#clear-btn {
+  font-size: 3.2rem;
+  color: var(--snow);
+}
+
+main {
+  gap: 4.2rem;
+  display: grid;
+}
+
+section {
+  gap: 2.4rem;
+  display: grid;
+
+  &:first-child .CodeMirror {
+    font-family: "Ubuntu Mono", monospace;
+    font-size: var(--ubuntu-100-size);
+    font-weight: var(--ubuntu-100-weight);
+    line-height: var(--ubuntu-100-leading);
+  }
+
+  &:nth-child(2) textarea {
+    font-size: var(--inter-200-size);
+    font-weight: var(--inter-200-weight);
+    line-height: var(--inter-200-leading);
+  }
+}
+
+h2 {
+  text-wrap: balance;
+  color: var(--foam);
+  font-size: var(--inter-300-size);
+  font-weight: var(--inter-300-weight);
+  line-height: var(--inter-300-leading);
+}
+
+textarea,
+#answer {
+  min-height: 9rem;
+  max-height: 16rem;
+  padding-block: 1.2rem;
+  padding-inline: 1.6rem 3.2rem;
+
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--20-guava);
+  color: var(--80-snow);
+  background-color: var(--8-lemon);
+}
+
+.CodeMirror {
+  min-height: 9rem;
+  max-height: 16rem;
+  padding-block: 1.2rem;
+  padding-inline: 1.6rem 3.2rem;
+
+  border-radius: 0.5rem;
+  border: 0.1rem solid var(--20-guava);
+  background-color: var(--8-lemon) !important;
+}
+
+.CodeMirror-scroll {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.CodeMirror-code {
+  color: var(--cream) !important;
+}
+
+.cm-s-default {
+  .cm-atom,
+  .cm-builtin,
+  .cm-keyword {
+    color: var(--cotton-candy) !important;
+  }
+}
+
+.cm-s-default .cm-string {
+  color: var(--lemon) !important;
+}
+
+.cm-s-default .cm-variable-2 {
+  color: green !important;
+}
+
+.cm-s-default .cm-variable {
+  color: pink !important;
+}
+
+#ask-btn {
+  width: fit-content;
+  gap: 1rem;
+  padding: 1.4rem 4.8rem;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+
+  border: 0.1rem solid var(--pistachio);
+  border-radius: 1rem;
+  font-size: var(--inter-100-size);
+  font-weight: var(--inter-100-weight);
+  line-height: var(--inter-100-leading);
+  color: var(--pistachio);
+
+  i {
+    font-size: 2.4rem;
+  }
+
+  &:hover {
+    color: var(--blueberry);
+    background-color: var(--pistachio);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :has(:target) {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
+  }
+}
