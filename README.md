@@ -37,10 +37,6 @@
 | 31 | [AI YouTube Video Transcription](https://www.rocketseat.com.br/boracodar/desafios-anteriores/transcricao-de-video-com-ia-desafio-31) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/31) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/XWGOjKa) | February 17th, 2024 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/31/cover.jpg) |
 | 32 | [AI SQL Queries Questions Answer](https://www.rocketseat.com.br/boracodar/desafios-anteriores/app-de-traducao-de-sql-com-ia-desafio-32) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/32) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/YzgBmLB) | February 17th, 2024 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/32/cover.jpg) |
 | 33 | [Ticket Generator](https://www.rocketseat.com.br/boracodar/desafios-anteriores/gerador-de-ticket-desafio-33) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/33) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/GReYMxG) | February 17th, 2024 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/33/cover.jpg) |
+| 34 | [Shopping List](https://www.rocketseat.com.br/boracodar/desafios-anteriores/uma-lista-de-compras-desafio-34) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/34) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/XWGGbVy) | February 18th, 2024 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/34/cover.jpg) |
 | 39 | [Product Rating Widget](https://www.rocketseat.com.br/boracodar/desafios-anteriores/um-widget-de-avaliacao-de-produto-desafio-39) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/39) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/BavqyaY) | October 4th, 2023 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/39/cover.jpg) |
 | 40 | [Newsletter Page](https://www.rocketseat.com.br/boracodar/desafios-anteriores/uma-pagina-de-newsletter-desafio-40) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/40) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/dywgKGd) | October 6th, 2023 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/40/cover.jpg) |
-
-
-
-
-

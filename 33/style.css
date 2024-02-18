@@ -65,7 +65,7 @@ body {
   display: grid;
   place-items: center;
 
-  background-image: url(https://i.imgur.com/Fy40ZJI.png);
+  background-image: url(assets/bg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -184,7 +184,7 @@ button {
   flex-wrap: wrap;
   justify-content: center;
 
-  background-image: url(https://i.imgur.com/V8EaMFP.png);
+  background-image: url(assets/ticketBg.png);
   background-repeat: no-repeat;
   background-size: cover;
 }

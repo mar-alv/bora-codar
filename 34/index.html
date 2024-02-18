@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<link rel='preconnect' href='https://fonts.googleapis.com'>
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>#boraCodar 34</title>
+
+	<link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+	<script defer src="script.js"></script>
+	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+  <div id="app">
+  <header>
+    <h1>
+      Lista de Compras
+    </h1>
+
+    <form onsubmit='handleAddItem(event)'>
+      <div class="input-wrapper item-wrapper">
+        <label for="item">
+          Item
+        </label>
+
+        <input id='item' type="text" required>
+      </div>
+
+      <div class="input-wrapper modal-wrapper amount-wrapper">
+        <label for="amount-input">
+          Quantidade
+        </label>
+
+        <input id="amount-input" required type="number" value='1'>
+
+        <button class="amount-select-wrapper" onclick='handleToggleModal(this)' type='button'>
+          <span id="amount-select-value">
+            Un.
+          </span>
+
+          <i class="ph ph-caret-down"></i>
+        </button>
+
+        <dialog data-open='false' class='amount-modal'>
+          <ul class="amount-select">
+            <li data-chosen='true' data-unit='Un.' data-amount='unidade' class='amount'>
+              <button onclick='handleChooseAmount(this)' type='button'>
+                <span>
+                  Un.
+                </span>
+
+                <i class="ph ph-check"></i>
+              </button>
+            </li>
+
+            <li data-chosen='false' data-unit='L' data-amount='litro' class='amount'>
+              <button onclick='handleChooseAmount(this)' type='button'>
+                <span>
+                  L
+                </span>
+
+                <i class="ph ph-check"></i>
+              </button>
+            </li>
+
+            <li data-chosen='false' data-unit='Kg' data-amount='kg' class='amount'>
+              <button onclick='handleChooseAmount(this)' type='button'>
+                <span>
+                  Kg
+                </span>
+
+                <i class="ph ph-check"></i>
+              </button>
+            </li>
+          </ul>
+        </dialog>
+      </div>
+
+      <div class="modal-wrapper category-wrapper">
+        <label for="category-select-button">
+          Categoria
+        </label>
+
+        <button id='category-select-button' onclick='handleToggleModal(this)' class='category-select-wrapper' type='button'>
+          <span id="category-select-value">
+            Selecione
+          </span>
+
+          <i class="ph ph-caret-down"></i>
+        </button>
+
+        <dialog data-open='false' class='category-modal'>
+          <ul class="category-select">
+            <li data-chosen='false' data-tag='Padaria' class='category'>
+              <button onclick='handleChooseCategory(this)' type='button'>
+                <i class="ph ph-coffee"></i>
+
+                <span>
+                  Padaria
+                </span>
+
+                <i class="ph ph-check"></i>
+              </button>
+            </li>
+
+            <li data-chosen='false' data-tag='Legume' class='category'>
+              <button onclick='handleChooseCategory(this)' type='button'>
+                <i class="ph ph-carrot"></i>
+
+                <span>
+                  Legume
+                </span>
+
+                <i class="ph ph-check"></i>
+              </button>
+            </li>
+
+            <li data-chosen='false' data-tag='Carne' class='category'>
+              <button onclick='handleChooseCategory(this)' type='button'>
+                <i class="ph ph-hamburger"></i>
+
+                <span>
+                  Carne
+                </span>
+
+                <i class="ph ph-check"></i>
+              </button>
+            </li>
+
+            <li data-chosen='false' data-tag='Fruta' class='category'>
+              <button onclick='handleChooseCategory(this)' type='button'>
+                <i class="ph ph-apple-logo"></i>
+
+                <span>
+                  Fruta
+                </span>
+
+                <i class="ph ph-check"></i>
+              </button>
+            </li>
+
+            <li data-chosen='false' data-tag='Bebida' class='category'>
+              <button onclick='handleChooseCategory(this)' type='button'>
+                <i class="ph ph-beer-bottle"></i>
+
+                <span>
+                  Bebida
+                </span>
+
+                <i class="ph ph-check"></i>
+              </button>
+            </li>
+          </ul>
+        </dialog>
+      </div>
+
+      <div class="button-wrapper">
+        <button id='add-item-btn' disabled type='submit'>
+          <i class="ph ph-plus"></i>
+        </button>
+      </div>
+    </form>
+  </header>
+
+  <main>
+    <ul class='items'>
+      <li class='item'>
+        <div>
+          <input type="checkbox">
+          <h2>Maçã</h2>
+          <p>2 unidades</p>
+        </div>
+
+        <div>
+          <span data-tag='Fruta' class='tag'>
+            <i class="ph ph-apple-logo"></i>
+
+            Fruta
+          </span>
+
+          <div data-open='false' class='options'>
+            <button onclick='handleIncreaseAmount(this)'>
+              <i class="ph ph-plus"></i>
+            </button>
+            <button onclick="handleDecreaseAmount(this)">
+              <i class="ph ph-minus"></i>
+            </button>
+            <button onclick="handleRemoveItem(this)">
+              <i class="ph ph-trash"></i>
+            </button>
+          </div>
+
+          <button class='options-button' onclick='handleToggleOptions(this)'>
+            <i class="ph-fill ph-dots-three-outline-vertical"></i>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </main>
+</div>
+</body>
+</html>
