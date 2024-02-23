@@ -1,6 +1,8 @@
 let interval = null;
 let minuteCounter = 60;
 let hoursCounter = 3600;
+const amountPerTimer = document.getElementById("amount-per-timer");
+const dailyMeta = document.getElementById("daily-meta");
 const timerInputs = [...document.querySelectorAll('input[type="number"]')];
 const timerButton = document.getElementById("timer-btn");
 
@@ -81,8 +83,6 @@ function handleStart() {
 
       updateTimer(timerInputs[1], minutesLeft);
     }
-
-    console.log(hoursLeft + ":" + minutesLeft, minuteCounter);
   }, 1000);
 
   toggleInputsDisabled();
@@ -124,16 +124,16 @@ function updatePercentage() {
 }
 
 function formatPercentage() {
-  const dailyMeta = document.getElementById("daily-meta");
   const percentage = (parseInt(dailyMeta.value) * 100) / 3000;
 
   return `${percentage.toFixed(0)}%`;
 }
 
 function increaseDailyMeta() {
-  console.log("increasing daily meta");
-  const amountPerTimer = document.getElementById("amount-per-timer");
-  const dailyMeta = document.getElementById("daily-meta");
-
   dailyMeta.value = parseInt(dailyMeta.value) + parseInt(amountPerTimer.value);
+}
+
+function updateAmountValue() {
+  const amountValue = document.getElementById("amount-value");
+  amountValue.innerText = `${amountPerTimer.value}ml`;
 }
