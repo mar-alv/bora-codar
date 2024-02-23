@@ -2,10 +2,8 @@ let interval = null;
 let minuteCounter = 60;
 let hoursCounter = 3600;
 const timerInputs = [...document.querySelectorAll('input[type="number"]')];
-const timerButton = document.querySelector('#timer-btn');
+const timerButton = document.getElementById("timer-btn");
 
-// TODO: More animation on buttons and input hover
-// TODO: Add mask of 00:01 to inputs
 timerInputs.forEach((i) => {
   i.addEventListener("keydown", (e) => {
     const key = e.key;
@@ -15,17 +13,46 @@ timerInputs.forEach((i) => {
   });
 
   i.addEventListener("input", () => {
-    let newValue = i.value.replace(/\D/g, "");
     const maxValue = parseInt(i.getAttribute("max"), 10) || Infinity;
-    newValue = Math.min(parseInt(newValue, 10), maxValue);
-    i.value = newValue;
+    let newValue = i.value.replace(/\D/g, "");
 
-    if (!i.value) i.value = "0";
+    newValue = Math.min(parseInt(newValue, 10), maxValue);
+
+    i.value = newValue < 10 ? `0${newValue}` : newValue;
+    i.dataset.initialValue = newValue < 10 ? `0${newValue}` : newValue;
+
+    if (!i.value) {
+      i.value = "00";
+      i.dataset.initialValue = "00";
+    }
+
+    toggleTimerButtonDisabled();
   });
 });
 
+function toggleTimerButtonDisabled() {
+  timerButton.disabled =
+    timerInputs[1].value === "0" || timerInputs[1].value === "00";
+}
+
 function handleTimer() {
   interval ? handlePause() : handleStart();
+}
+
+function handlePause() {
+  clearInterval(interval);
+  toggleInputsDisabled();
+
+  interval = null;
+  timerButton.innerHTML = 'Começar <i class="ph ph-caret-right"></i>';
+}
+
+function toggleInputsDisabled() {
+  const inputs = [...document.querySelectorAll("input")];
+
+  inputs.forEach((i) => {
+    i.disabled = !i.disabled;
+  });
 }
 
 function handleStart() {
@@ -35,6 +62,12 @@ function handleStart() {
   let minutesLeft = parseInt(timerInputs[1].value);
 
   interval = setInterval(() => {
+    if (!hoursLeft && !minutesLeft) onTimerEnd();
+    else {
+      hoursCounter--;
+      minuteCounter--;
+    }
+
     if (!hoursCounter) {
       hoursLeft--;
       hoursCounter = 3600;
@@ -49,33 +82,26 @@ function handleStart() {
       updateTimer(timerInputs[1], minutesLeft);
     }
 
-    if (!hoursLeft && !minutesLeft) {
-      // TODO: Create function onTimerEnd() and handle there whats below, daily meta increase, inputs disabled, percentage and "Meta: 3L"
-      clearInterval(interval);
-      toggleModal();
-
-      interval = null;
-    } else {
-      hoursCounter--;
-      minuteCounter--;
-    }
-
-    console.log(hoursLeft + ':' + minutesLeft, minuteCounter);
+    console.log(hoursLeft + ":" + minutesLeft, minuteCounter);
   }, 1000);
 
   toggleInputsDisabled();
 }
 
-function handlePause() {
-  clearInterval(interval);
-  toggleInputsDisabled();
-  
-  interval = null;
-  timerButton.innerHTML = 'Começar <i class="ph ph-caret-right"></i>';
+function updateTimer(timer, time) {
+  timer.value = `${time < 10 ? "0" : ""}${time}`;
 }
 
-function updateTimer(timer, time) {
-  timer.value = time;
+function onTimerEnd() {
+  clearInterval(interval);
+  increaseDailyMeta();
+  resetTimer();
+  toggleInputsDisabled();
+  toggleModal();
+  updatePercentage();
+  timerButton.innerHTML = 'Começar <i class="ph ph-caret-right"></i>';
+
+  interval = null;
 }
 
 function toggleModal() {
@@ -85,10 +111,29 @@ function toggleModal() {
   modal.dataset.open = isModalOpen ? "false" : "true";
 }
 
-function toggleInputsDisabled() {
-  const inputs = [...document.querySelectorAll("input")];
-
-  inputs.forEach((i) => {
-    i.disabled = !i.disabled;
+function resetTimer() {
+  timerInputs.forEach((i) => {
+    i.value = i.dataset.initialValue;
   });
+}
+
+function updatePercentage() {
+  const percentage = document.getElementById("percentage");
+
+  percentage.innerText = formatPercentage();
+}
+
+function formatPercentage() {
+  const dailyMeta = document.getElementById("daily-meta");
+  const percentage = (parseInt(dailyMeta.value) * 100) / 3000;
+
+  return `${percentage.toFixed(0)}%`;
+}
+
+function increaseDailyMeta() {
+  console.log("increasing daily meta");
+  const amountPerTimer = document.getElementById("amount-per-timer");
+  const dailyMeta = document.getElementById("daily-meta");
+
+  dailyMeta.value = parseInt(dailyMeta.value) + parseInt(amountPerTimer.value);
 }
