@@ -18,226 +18,225 @@
 
 <body>
   <div id="app">
-
-  <section data-open='false' class='details'>
-    <div class='details-header'></div>
-
-    <h2>
-      Mais detalhes
-    </h2>
-
-    <ul>
-      <li>
-        <h3>Energia</h3>
-
-        <span>221,15 kcal</span>
-      </li>
-
-      <li>
-        <h3>Proteínas</h3>
-
-        <span>15,13 g</span>
-      </li>
-
-      <li>
-        <h3>Carboidratos</h3>
-
-        <span>18,40 g</span>
-      </li>
-
-      <li>
-        <span>Fibra Alimentar</span>
-
-        <span>5,83 g</span>
-      </li>
-
-      <li>
-        <span>Açúcar</span>
-
-        <span>4,88 g</span>
-      </li>
-
-      <li>
-        <h3>Gorduras Totais</h3>
-
-        <span>5,18 g</span>
-      </li>
-
-      <li>
-        <span>Gorduras Saturadas</span>
-
-        <span>0,86 g</span>
-      </li>
-
-      <li>
-        <span>Gorduras Trans</span>
-
-        <span>0 g</span>
-      </li>
-
-      <li>
-        <h3>Colesterol</h3>
-
-        <span>0 mg</span>
-      </li>
-
-      <li>
-        <h3>Sódio</h3>
-
-        <span>243,03 mg</span>
-      </li>
-
-      <li>
-        <h3>Potássio</h3>
-
-        <span>291,85 mg</span>
-      </li>
-
-      <li>
-        <h3>Cálcio</h3>
-
-        <span>49,02 mg</span>
-      </li>
-
-      <li>
-        <h3>Ferro</h3>
-
-        <span>2,91 mg</span>
-      </li>
-
-      <li>
-        <h3>Magnésio</h3>
-
-        <span>48,23 mg</span>
-      </li>
-
-      <li>
-        <h3>Vitamina C</h3>
-
-        <span>29,49 mg</span>
-      </li>
-
-      <li>
-        <h3>Vitamina D</h3>
-
-        <span>24,88 mg</span>
-      </li>
-
-      <li>
-        <h3>Vitamina B6</h3>
-
-        <span>32,40 mg</span>
-      </li>
-    </ul>
-  </section>
-
-  <header>
-    <button>
-      <i class="ph ph-arrow-left"></i>
-    </button>
-
-    <button>
-      <i class="ph ph-heart"></i>
-    </button>
-  </header>
-
-  <main>
-    <img src="https://i.imgur.com/y7YPozV.png" alt="Imagem de uma salada variada">
-
-    <h1>
-      Salada variada
-    </h1>
-
-    <section class='plate-amount'>
-      <h3>
-        Energia
-      </h3>
-      <p>
-        221,15 kcal
-      </p>
-
-      <h3>
-        Porção total
-      </h3>
-      <p>
-        240 g
-      </p>
+    <section data-open='false' class='details'>
+      <div class='details-header'></div>
+  
+      <h2>
+        Mais detalhes
+      </h2>
+  
+      <ul>
+        <li>
+          <h3>Energia</h3>
+  
+          <span>221,15 kcal</span>
+        </li>
+  
+        <li>
+          <h3>Proteínas</h3>
+  
+          <span>15,13 g</span>
+        </li>
+  
+        <li>
+          <h3>Carboidratos</h3>
+  
+          <span>18,40 g</span>
+        </li>
+  
+        <li>
+          <span>Fibra Alimentar</span>
+  
+          <span>5,83 g</span>
+        </li>
+  
+        <li>
+          <span>Açúcar</span>
+  
+          <span>4,88 g</span>
+        </li>
+  
+        <li>
+          <h3>Gorduras Totais</h3>
+  
+          <span>5,18 g</span>
+        </li>
+  
+        <li>
+          <span>Gorduras Saturadas</span>
+  
+          <span>0,86 g</span>
+        </li>
+  
+        <li>
+          <span>Gorduras Trans</span>
+  
+          <span>0 g</span>
+        </li>
+  
+        <li>
+          <h3>Colesterol</h3>
+  
+          <span>0 mg</span>
+        </li>
+  
+        <li>
+          <h3>Sódio</h3>
+  
+          <span>243,03 mg</span>
+        </li>
+  
+        <li>
+          <h3>Potássio</h3>
+  
+          <span>291,85 mg</span>
+        </li>
+  
+        <li>
+          <h3>Cálcio</h3>
+  
+          <span>49,02 mg</span>
+        </li>
+  
+        <li>
+          <h3>Ferro</h3>
+  
+          <span>2,91 mg</span>
+        </li>
+  
+        <li>
+          <h3>Magnésio</h3>
+  
+          <span>48,23 mg</span>
+        </li>
+  
+        <li>
+          <h3>Vitamina C</h3>
+  
+          <span>29,49 mg</span>
+        </li>
+  
+        <li>
+          <h3>Vitamina D</h3>
+  
+          <span>24,88 mg</span>
+        </li>
+  
+        <li>
+          <h3>Vitamina B6</h3>
+  
+          <span>32,40 mg</span>
+        </li>
+      </ul>
     </section>
-
-    <section class='plate-stats'>
-      <div class='stat'>
+  
+    <header>
+      <button>
+        <i class="ph ph-arrow-left"></i>
+      </button>
+  
+      <button data-favorited='false' onclick='handleToggleFavorite(this)'>
+        <i class="ph ph-heart"></i>
+      </button>
+    </header>
+  
+    <main>
+      <img src="assets/plate.png" alt="Imagem de uma salada variada">
+  
+      <h1>
+        Salada variada
+      </h1>
+  
+      <section class='plate-amount'>
         <h3>
-          Proteínas
+          Energia
         </h3>
-
-        <span>
-          15,13g
-        </span>
-
-        <div class='scale reached'></div>
-        <div class='scale reached'></div>
-        <div class='scale reached'></div>
-        <div class='scale'></div>
-        <div class='scale'></div>
-        <div class='scale'></div>
-      </div>
-
-      <div class='stat'>
+        <p>
+          221,15 kcal
+        </p>
+  
         <h3>
-          Carboidratos
+          Porção total
         </h3>
-
-        <span>
-          18,40g
-        </span>
-
-        <div class='scale reached'></div>
-        <div class='scale reached'></div>
-        <div class='scale reached'></div>
-        <div class='scale'></div>
-        <div class='scale'></div>
-        <div class='scale'></div>
-      </div>
-
-      <div class='stat'>
-        <h3>
-          Açucar
-        </h3>
-
-        <span>
-          4,88g
-        </span>
-
-        <div class='scale reached'></div>
-        <div class='scale'></div>
-        <div class='scale'></div>
-        <div class='scale'></div>
-        <div class='scale'></div>
-        <div class='scale'></div>
-      </div>
-
-      <div class='stat'>
-        <h3>
-          Gorduras
-        </h3>
-
-        <span>
-          5,18g
-        </span>
-
-        <div class='scale reached'></div>
-        <div class='scale'></div>
-        <div class='scale'></div>
-        <div class='scale'></div>
-        <div class='scale'></div>
-        <div class='scale'></div>
-      </div>
-    </section>
-
-    <button id='details-button' onclick='handleSeeDetails()'>
-      Mais detalhes
-    </button>
-  </main>
-</div>
+        <p>
+          240 g
+        </p>
+      </section>
+  
+      <section class='plate-stats'>
+        <div class='stat'>
+          <h3>
+            Proteínas
+          </h3>
+  
+          <span>
+            15,13g
+          </span>
+  
+          <div class='scale reached'></div>
+          <div class='scale reached'></div>
+          <div class='scale reached'></div>
+          <div class='scale'></div>
+          <div class='scale'></div>
+          <div class='scale'></div>
+        </div>
+  
+        <div class='stat'>
+          <h3>
+            Carboidratos
+          </h3>
+  
+          <span>
+            18,40g
+          </span>
+  
+          <div class='scale reached'></div>
+          <div class='scale reached'></div>
+          <div class='scale reached'></div>
+          <div class='scale'></div>
+          <div class='scale'></div>
+          <div class='scale'></div>
+        </div>
+  
+        <div class='stat'>
+          <h3>
+            Açucar
+          </h3>
+  
+          <span>
+            4,88g
+          </span>
+  
+          <div class='scale reached'></div>
+          <div class='scale'></div>
+          <div class='scale'></div>
+          <div class='scale'></div>
+          <div class='scale'></div>
+          <div class='scale'></div>
+        </div>
+  
+        <div class='stat'>
+          <h3>
+            Gorduras
+          </h3>
+  
+          <span>
+            5,18g
+          </span>
+  
+          <div class='scale reached'></div>
+          <div class='scale'></div>
+          <div class='scale'></div>
+          <div class='scale'></div>
+          <div class='scale'></div>
+          <div class='scale'></div>
+        </div>
+      </section>
+  
+      <button id='details-button' onclick='handleSeeDetails()'>
+        Mais detalhes
+      </button>
+    </main>
+  </div>
 </body>
 </html>
