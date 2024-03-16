@@ -1,4 +1,4 @@
-# <center> #boraCodar</center>
+<h1 align="center">#boraCodar</h1>
 
 <div align='center'>
 
