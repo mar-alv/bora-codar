@@ -24,10 +24,9 @@
 
 #### <a id='pt-br-instrucoes' style="text-decoration: none; color: inherit;">📖 Instruções</a>
 ##### <a id='pt-br-instalar' style="text-decoration: none; color: inherit;">📥 Instalar</a>
-Cole o 1º comando em um terminal aberto dentro de uma pasta de sua preferência para clonar o projeto, em seguida rode uma das versões do 2º comando para instalar as dependências
+Cole o comando em um terminal aberto dentro de uma pasta de sua preferência para clonar o projeto
 ```sh
 git clone https://github.com/mar-alv/bora-codar.git
-npm i # Ou npm install
 ```
 
 ##### <a id='pt-br-localmente' style="text-decoration: none; color: inherit;">🚀 Rodar Localmente</a>
@@ -57,10 +56,9 @@ Instale a extensão "Live Server" para o Visual Studio Code, embaixo à direita 
 
 #### <a id='en-instructions' style="text-decoration: none; color: inherit;">📖 Instructions</a>
 ##### <a id='en-instalar' style="text-decoration: none; color: inherit;">📥 Install</a>
-Paste the 1º command into a terminal open within a folder of your preference to clone the project, then run one of the versions of the 2º command to install the dependencies
+Paste thet command into a terminal open within a folder of your preference to clone the project
 ```sh
 git clone https://github.com/mar-alv/bora-codar.git
-npm i # Or npm install
 ```
 
 ##### <a id='en-locally' style="text-decoration: none; color: inherit;">🚀 Run Locally</a>
