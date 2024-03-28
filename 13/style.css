@@ -25,7 +25,7 @@
 body,
 button,
 input {
-  font-family: "Source Sans 3", sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 body {
@@ -125,11 +125,11 @@ input:focus {
   color: var(--invalid-color);
 }
 
-input[data-valid="false"] {
+input[data-valid='false'] {
   outline: 2px solid var(--invalid-color);
 }
 
-input[data-valid="false"] ~ .invalid-message {
+input[data-valid='false'] ~ .invalid-message {
   display: flex;
 }
 
@@ -215,8 +215,8 @@ input[data-valid="false"] ~ .invalid-message {
     gap: 4.8rem;
     display: grid;
     grid-template-areas:
-      "input-wrappers credit-card"
-      "input-wrappers safety-check";
+      'input-wrappers credit-card'
+      'input-wrappers safety-check';
   }
 
   #credit-card {

@@ -1,15 +1,15 @@
-const cards = [...document.querySelectorAll("article")];
+const cards = [...document.querySelectorAll('article')];
 const propertiesToSwap = [
-  "--slide-in-position",
-  "--slide-in-inverse-position",
-  "--rotation-degree",
-  "z-index"
+  '--slide-in-position',
+  '--slide-in-inverse-position',
+  '--rotation-degree',
+  'z-index'
 ];
 
 function handleSeeCard(event) {
-  const chosenCard = event.target.closest("article");
+  const chosenCard = event.target.closest('article');
 
-  if (chosenCard.dataset.onTop === "true") return;
+  if (chosenCard.dataset.onTop === 'true') return;
 
   const cardsSortedByZIndex = getCardsSortedByZIndex();
 
@@ -24,8 +24,8 @@ function handleSeeCard(event) {
 
 function getCardsSortedByZIndex() {
   return cards.slice().sort((a, b) => {
-    const zIndexA = parseInt(getComputedStyle(a).getPropertyValue("z-index"));
-    const zIndexB = parseInt(getComputedStyle(b).getPropertyValue("z-index"));
+    const zIndexA = parseInt(getComputedStyle(a).getPropertyValue('z-index'));
+    const zIndexB = parseInt(getComputedStyle(b).getPropertyValue('z-index'));
 
     return zIndexB - zIndexA;
   });
@@ -89,11 +89,11 @@ function getOriginalComputedStyles(cardsToUpdate) {
 
 function setCardOnTop() {
   getCardsSortedByZIndex().forEach((card, i) => {
-    card.dataset.onTop = i === 0 ? "true" : "false";
+    card.dataset.onTop = i === 0 ? 'true' : 'false';
   });
 }
 
 function animateCardSwap(chosenCard) {
   chosenCard.style.animation =
-    "reorder .7s linear forwards, .5s rotate .5s linear forwards";
+    'reorder .7s linear forwards, .5s rotate .5s linear forwards';
 }

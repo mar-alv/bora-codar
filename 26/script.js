@@ -1,6 +1,6 @@
-const portions = document.querySelector("#portions");
-const ingredientsAmount = [...document.querySelectorAll(".ingredients-amount")];
-const countableNouns = [...document.querySelectorAll(".countable-noun")];
+const portions = document.querySelector('#portions');
+const ingredientsAmount = [...document.querySelectorAll('.ingredients-amount')];
+const countableNouns = [...document.querySelectorAll('.countable-noun')];
 
 function handleDecreaseAmount() {
   const portionsValue = parseInt(portions.innerText);
@@ -35,7 +35,7 @@ function setIngredients(portionsValue) {
 }
 
 function setPrepareMode(portionsValue) {
-  const nounForm = portionsValue > 1 ? "data-plural" : "data-singular";
+  const nounForm = portionsValue > 1 ? 'data-plural' : 'data-singular';
 
   countableNouns.forEach((i) => {
     i.innerText = i.getAttribute(nounForm);

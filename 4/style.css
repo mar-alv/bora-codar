@@ -23,7 +23,7 @@
 body {
   height: 100vh;
 
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 
   background-color: var(--chat-background-color);
 }
@@ -70,7 +70,7 @@ header {
 }
 
 #contact-status::before {
-  content: "";
+  content: '';
 
   width: 8px;
   height: 8px;
@@ -92,7 +92,7 @@ header {
   color: var(--_status-color);
 }
 
-#contact-status[data-status="online"] {
+#contact-status[data-status='online'] {
   --status-color: var(--status-online);
 }
 
@@ -152,13 +152,13 @@ header {
   }
 }
 
-.message[data-owner="own"] {
+.message[data-owner='own'] {
   margin-right: 1rem;
   
   align-items: end;  
 }
 
-.message[data-owner="contact"] {
+.message[data-owner='contact'] {
   align-items: start;
 }
 
@@ -180,17 +180,17 @@ header {
   background-color: var(--_message-background-color);
 }
 
-.message[data-owner="own"] {
+.message[data-owner='own'] {
   text-align: right;
 }
 
-.message[data-owner="own"] .message-content {
+.message[data-owner='own'] .message-content {
   --message-background-color: var(--own-message-background-color);
 
   border-radius: 8px 8px 0 8px;
 }
 
-.message[data-owner="contact"] .message-content {
+.message[data-owner='contact'] .message-content {
   --message-background-color: var(--contact-message-background-color);
 
   border-radius: 0 8px 8px 8px;

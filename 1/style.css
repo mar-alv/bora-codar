@@ -29,8 +29,8 @@ main {
   grid-template-columns: 266px 358px;
   justify-content: center;
   grid-template-areas: 
-    "vertical horizontal-1"
-    "vertical horizontal-2";
+    'vertical horizontal-1'
+    'vertical horizontal-2';
 }
 
 .horizontal-player,

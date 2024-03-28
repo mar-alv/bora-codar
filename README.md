@@ -1,4 +1,4 @@
-<h1 align="center">#boraCodar</h1>
+<h1 align='center'>#boraCodar</h1>
 
 <div align='center'>
 
@@ -10,7 +10,7 @@
 
 </div>
 
-## <a id='pt-br' style="text-decoration: none; color: inherit;">🇧🇷 Português</a>
+## <a id='pt-br' style='text-decoration: none; color: inherit;'>🇧🇷 Português</a>
 
 ### 📚 Sumário
 - [❕ Sobre](#pt-br-sobre)
@@ -19,20 +19,20 @@
   - [🚀 Rodar Localmente](#pt-br-localmente)
 - [📂 Estrutura](#pt-br-estrutura)
 
-#### <a id='pt-br-sobre' style="text-decoration: none; color: inherit;">❕ Sobre</a>
+#### <a id='pt-br-sobre' style='text-decoration: none; color: inherit;'>❕ Sobre</a>
 [40 desafios de código](https://www.rocketseat.com.br/boracodar) pela [Rocketseat](https://www.rocketseat.com.br/) para elevar o seu portifólio para o próximo nível
 
-#### <a id='pt-br-instrucoes' style="text-decoration: none; color: inherit;">📖 Instruções</a>
-##### <a id='pt-br-instalar' style="text-decoration: none; color: inherit;">📥 Instalar</a>
+#### <a id='pt-br-instrucoes' style='text-decoration: none; color: inherit;'>📖 Instruções</a>
+##### <a id='pt-br-instalar' style='text-decoration: none; color: inherit;'>📥 Instalar</a>
 Cole o comando em um terminal aberto dentro de uma pasta de sua preferência para clonar o projeto
 ```sh
 git clone https://github.com/mar-alv/bora-codar.git
 ```
 
-##### <a id='pt-br-localmente' style="text-decoration: none; color: inherit;">🚀 Rodar Localmente</a>
-Instale a extensão "Live Server" para o Visual Studio Code, embaixo à direita da IDE, clique em "Go Live" e escolha o projeto que deseja visualizar, link de exemplo: http://127.0.0.1:5500/bora-codar/1
+##### <a id='pt-br-localmente' style='text-decoration: none; color: inherit;'>🚀 Rodar Localmente</a>
+Instale a extensão 'Live Server' para o Visual Studio Code, embaixo à direita da IDE, clique em 'Go Live' e escolha o projeto que deseja visualizar, link de exemplo: http://127.0.0.1:5500/bora-codar/1
 
-#### <a id='pt-br-estrutura' style="text-decoration: none; color: inherit;">📂 Estrutura</a>
+#### <a id='pt-br-estrutura' style='text-decoration: none; color: inherit;'>📂 Estrutura</a>
 ```
 │ 1-40/
 │   ├── assets/
@@ -42,7 +42,7 @@ Instale a extensão "Live Server" para o Visual Studio Code, embaixo à direita 
 │   └── style.css
 ```
 
-## <a id='en' style="text-decoration: none; color: inherit;">🇬🇧 English</a>
+## <a id='en' style='text-decoration: none; color: inherit;'>🇬🇧 English</a>
 
 ### 📚 Summary
 - [❕ About](#en-about)
@@ -51,20 +51,20 @@ Instale a extensão "Live Server" para o Visual Studio Code, embaixo à direita 
   - [🚀 Run Locally](#en-locally)
 - [📂 Structure](#en-structure)
 
-#### <a id='en-about' style="text-decoration: none; color: inherit;">❕ About</a>
+#### <a id='en-about' style='text-decoration: none; color: inherit;'>❕ About</a>
 [40 coding challenges](https://www.rocketseat.com.br/boracodar) by [Rocketseat](https://www.rocketseat.com.br/) to elevate your portfolio to the next level
 
-#### <a id='en-instructions' style="text-decoration: none; color: inherit;">📖 Instructions</a>
-##### <a id='en-instalar' style="text-decoration: none; color: inherit;">📥 Install</a>
+#### <a id='en-instructions' style='text-decoration: none; color: inherit;'>📖 Instructions</a>
+##### <a id='en-instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
 Paste thet command into a terminal open within a folder of your preference to clone the project
 ```sh
 git clone https://github.com/mar-alv/bora-codar.git
 ```
 
-##### <a id='en-locally' style="text-decoration: none; color: inherit;">🚀 Run Locally</a>
-Install the Visual Studio Code extension "Live Server", on the bottom right of the IDE, hit "Go Live" and select which project you would like to test, link example: http://127.0.0.1:5500/bora-codar/1
+##### <a id='en-locally' style='text-decoration: none; color: inherit;'>🚀 Run Locally</a>
+Install the Visual Studio Code extension 'Live Server', on the bottom right of the IDE, hit 'Go Live' and select which project you would like to test, link example: http://127.0.0.1:5500/bora-codar/1
 
-#### <a id='en-structure' style="text-decoration: none; color: inherit;">📂 Structure</a>
+#### <a id='en-structure' style='text-decoration: none; color: inherit;'>📂 Structure</a>
 ```
 │ 1-40/
 │   ├── assets/
@@ -125,15 +125,15 @@ Install the Visual Studio Code extension "Live Server", on the bottom right of t
 | 40 | [Newsletter Page](https://www.rocketseat.com.br/boracodar/desafios-anteriores/uma-pagina-de-newsletter-desafio-40) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/40) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/dywgKGd) | October 6th, 2023 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/40/cover.jpg) |
 
 ## Author
-<div style="display: flex; align-items: center;">
-    <img src="https://github.com/mar-alv.png" alt="Marcelo Alvarez GitHub profile picture" style="width: 150px; border-radius: 50%; margin-right: 20px;">
+<div style='display: flex; align-items: center;'>
+    <img src='https://github.com/mar-alv.png' alt='Marcelo Alvarez GitHub profile picture' style='width: 150px; border-radius: 50%; margin-right: 20px;'>
     <div>
         <strong>Marcelo Alvarez</strong>
         <br>
         <em>Front-end Developer</em><br>
-        <span>"Programming: where the coffee is strong and the bugs are weak."</span><br>
-        <a href="https://www.linkedin.com/in/marcelo-dos-santos-alvarez-474406180/">LinkedIn</a> |
-        <a href="/">Portfolio</a>
+        <span>'Programming: where the coffee is strong and the bugs are weak.'</span><br>
+        <a href='https://www.linkedin.com/in/marcelo-dos-santos-alvarez-474406180/'>LinkedIn</a> |
+        <a href='/'>Portfolio</a>
     </div>
 </div>
 

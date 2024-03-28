@@ -1,34 +1,34 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang='pt-br'>
 <head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel='preconnect' href='https://fonts.googleapis.com'>
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
 	<title>#boraCodar 39</title>
 
-	<link rel="stylesheet" href="style.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='style.css' />
+	<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap' rel='stylesheet'>
 
-	<script defer src="script.js"></script>
-	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+	<script defer src='script.js'></script>
+	<script src='https://unpkg.com/@phosphor-icons/web'></script>
 </head>
 
 <body>
 	<main>
-		<div class="product">
-			<div class="product-preview">
-				<i class="ph ph-arrow-left" onclick="changePage()"></i>
-				<img alt="Imagem do produto" src="assets/watch.png" />
+		<div class='product'>
+			<div class='product-preview'>
+				<i class='ph ph-arrow-left' onclick='changePage()'></i>
+				<img alt='Imagem do produto' src='assets/watch.png' />
 			</div>
 		</div>
-		<div class="product-content">
-			<h1 class="rate-title">
+		<div class='product-content'>
+			<h1 class='rate-title'>
 				Avalie o produto
 			</h1>
-			<div class="rate-description">
+			<div class='rate-description'>
 				<p>
 					O que você achou do produto
 				</p>
@@ -39,23 +39,23 @@
 					?
 				</p>
 			</div>
-			<div class="rating">
-				<div class="rating-stars">
-					<i class="ph-fill ph-star" onclick="rate(1)"/></i>
-					<i class="ph-fill ph-star" onclick="rate(2)"/></i>
-					<i class="ph-fill ph-star" onclick="rate(3)"/></i>
-					<i class="ph-fill ph-star" onclick="rate(4)"/></i>
-					<i class="ph-fill ph-star" onclick="rate(5)"/></i>
+			<div class='rating'>
+				<div class='rating-stars'>
+					<i class='ph-fill ph-star' onclick='rate(1)'/></i>
+					<i class='ph-fill ph-star' onclick='rate(2)'/></i>
+					<i class='ph-fill ph-star' onclick='rate(3)'/></i>
+					<i class='ph-fill ph-star' onclick='rate(4)'/></i>
+					<i class='ph-fill ph-star' onclick='rate(5)'/></i>
 				</div>
-				<div class="rating-description">
+				<div class='rating-description'>
 					<span>Ruim</span>
 					<span>Ótimo</span>
 				</div>
 			</div>
-			<textarea placeholder='Escreva aqui seu comentário' onkeyup="handleComment()"></textarea>
-			<button class="submit-button" onclick="changePage()">
+			<textarea placeholder='Escreva aqui seu comentário' onkeyup='handleComment()'></textarea>
+			<button class='submit-button' onclick='changePage()'>
 				Confirmar
-				<i class="ph ph-arrow-right"></i>
+				<i class='ph ph-arrow-right'></i>
 			</button>
 		</div>
 	</main>

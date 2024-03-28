@@ -25,7 +25,7 @@ body {
   display: grid;
   place-content: center;
 
-  font-family: "Lato", sans-serif;
+  font-family: 'Lato', sans-serif;
 
   color: var(--secondary-color);
   background-color: var(--bg-color);
@@ -107,30 +107,30 @@ th {
   border-radius: 8px;
 }
 
-.day[data-selected="true"],
-.month[data-selected="true"] {
+.day[data-selected='true'],
+.month[data-selected='true'] {
   color: white;
   font-weight: bold;
   background-color: var(--primary-color);
 }
 
-.day[data-period="initial"] {
+.day[data-period='initial'] {
   border-radius: 0;
   border-top-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
 
-.day[data-period="inBetween"] {
+.day[data-period='inBetween'] {
   border-radius: 0;
 }
 
-.day[data-period="final"] {
+.day[data-period='final'] {
   border-radius: 0;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
 }
 
-.day.extra-day:not([data-selected="true"]) {
+.day.extra-day:not([data-selected='true']) {
   opacity: 0.5;
 }
 
@@ -142,8 +142,8 @@ th {
   padding: 1.2rem 1.6rem;
 }
 
-.day:not([data-selected="true"]):hover,
-.month:not([data-selected="true"]):hover {
+.day:not([data-selected='true']):hover,
+.month:not([data-selected='true']):hover {
   background-color: var(--hover-bg-color);
 }
 

@@ -33,7 +33,7 @@ body {
 body,
 button,
 input {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 
 button,
@@ -107,36 +107,36 @@ button:focus {
   transform: translateY(4px);
 }
 
-button[data-key="clear-entry"] {
+button[data-key='clear-entry'] {
   --button-color: var(--tertiary-text-color);
   --button-background-color: var(--key-primary-background-color);
 }
 
-button[data-key="number"] {
+button[data-key='number'] {
   --button-color: var(--primary-text-color);
   --button-background-color: var(--key-primary-background-color);
 }
 
-button[data-key="clear-entry"],
-button[data-key="number"] {
+button[data-key='clear-entry'],
+button[data-key='number'] {
   box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.06) inset,
     0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
     0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),
     0px 11px 7px 0px rgba(0, 0, 0, 0.01);
 }
 
-button[data-key="operator"] {
+button[data-key='operator'] {
   --button-color: var(--primary-text-color);
   --button-background-color: var(--key-secondary-background-color);
 }
 
-button[data-key="result"] {
+button[data-key='result'] {
   --button-color: var(--primary-text-color);
   --button-background-color: var(--key-tertiary-background-color);
 }
 
-button[data-key="operator"],
-button[data-key="result"] {
+button[data-key='operator'],
+button[data-key='result'] {
   box-shadow: 0px 2px 3px 0px rgba(255, 255, 255, 0.1) inset,
     0px 0px 2px 0px rgba(0, 0, 0, 0.29), 0px 2px 4px 0px rgba(0, 0, 0, 0.26),
     0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 7px 7px 0px rgba(0, 0, 0, 0.04),

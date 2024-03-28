@@ -34,7 +34,7 @@
 
 body,
 input {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -50,7 +50,7 @@ input {
 }
 
 button,
-input[type="text"],
+input[type='text'],
 ul,
 li,
 dialog {
@@ -64,7 +64,7 @@ dialog {
 }
 
 #modal-overlay::before {
-  content: "";
+  content: '';
 
   width: 100%;
   height: 100%;
@@ -79,7 +79,7 @@ dialog {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-#app:has(dialog[data-open="true"]) #modal-overlay::before {
+#app:has(dialog[data-open='true']) #modal-overlay::before {
   display: block;
 }
 
@@ -242,11 +242,11 @@ p {
   font-size: 1.2rem;
 }
 
-dialog[data-open="false"] {
+dialog[data-open='false'] {
   display: none;
 }
 
-dialog[data-open="true"] {
+dialog[data-open='true'] {
   width: 80%;
 
   top: 25%;

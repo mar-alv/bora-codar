@@ -27,7 +27,7 @@ body {
   place-content: center;
 
   font-size: 1.6rem;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   color: var(--secondary-color);
 
   background-color: var(--bod-bg-color);
@@ -140,7 +140,7 @@ h2 {
 }
 
 .currency-field-select-container::before {
-  content: "";
+  content: '';
 
   width: 1px;
   height: 24px;

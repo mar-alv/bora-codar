@@ -26,7 +26,7 @@ body {
   display: grid;
   place-items: center;
 
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   background-color: var(--gray-400);
 }
 
@@ -137,7 +137,7 @@ main {
   right: 10%;
 }
 
-.car-wheel[data-rolling="true"] {
+.car-wheel[data-rolling='true'] {
   animation: roll 2s linear infinite;
 }
 

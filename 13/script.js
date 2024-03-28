@@ -1,36 +1,36 @@
 toastr.options = {
   progressBar: true,
-  positionClass: "toast-top-right",
-  showDuration: "300",
-  hideDuration: "2000",
-  hideEasing: "linear",
-  showMethod: "slideDown",
-  hideMethod: "slideUp"
+  positionClass: 'toast-top-right',
+  showDuration: '300',
+  hideDuration: '2000',
+  hideEasing: 'linear',
+  showMethod: 'slideDown',
+  hideMethod: 'slideUp'
 };
 
-const numberInput = document.getElementById("input-number");
-const expiringDateInput = document.getElementById("input-expiring-date");
-const cvvInput = document.getElementById("input-cvv");
+const numberInput = document.getElementById('input-number');
+const expiringDateInput = document.getElementById('input-expiring-date');
+const cvvInput = document.getElementById('input-cvv');
 
-const addButton = document.getElementById("add-button");
+const addButton = document.getElementById('add-button');
 
-const inputs = [...document.getElementsByTagName("input")];
+const inputs = [...document.getElementsByTagName('input')];
 
 inputs.map((i) => {
-  i.addEventListener("blur", handleBlur);
-  i.addEventListener("input", toggleButtonEnableability);
+  i.addEventListener('blur', handleBlur);
+  i.addEventListener('input', toggleButtonEnableability);
 });
 
-numberInput.addEventListener("input", () => {
+numberInput.addEventListener('input', () => {
   numberInput.value = maskNumberInput(numberInput.value);
 
   toggleButtonEnableability();
 });
 
 function maskNumberInput(value) {
-  const numberOnlyValue = value.replace(/[^0-9]/g, "");
+  const numberOnlyValue = value.replace(/[^0-9]/g, '');
   const numberOnlyseparatedBySpacesValue = numberOnlyValue
-    .replace(/(\d{4})/g, "$1 ")
+    .replace(/(\d{4})/g, '$1 ')
     .trim();
 
   return numberOnlyseparatedBySpacesValue;
@@ -55,17 +55,17 @@ function isInputEmpty(input) {
 }
 
 function invalidateInput(input) {
-  input.setAttribute("data-valid", "false");
+  input.setAttribute('data-valid', 'false');
 }
 
 function validateInput(input) {
-  input.setAttribute("data-valid", "true");
+  input.setAttribute('data-valid', 'true');
 }
 
 function handleAddCard(event) {
   event.preventDefault();
 
-  const button = document.getElementById("add-button");
+  const button = document.getElementById('add-button');
 
   changeButtonTextForIcon(button);
 
@@ -79,11 +79,11 @@ function handleAddCard(event) {
 }
 
 function changeButtonTextForIcon(button) {
-  button.innerHTML = '<i class="ph-bold ph-spinner-gap"></i>';
+  button.innerHTML = '<i class='ph-bold ph-spinner-gap'></i>';
 }
 
 function changeButtonIconForText(button) {
-  button.innerHTML = "Adicionar cartão";
+  button.innerHTML = 'Adicionar cartão';
 }
 
 function validateInputs() {
@@ -101,20 +101,20 @@ function isInputValid(input) {
 }
 
 function valueEqualsExpected(input) {
-  const expectedValue = input.getAttribute("data-expected-value");
+  const expectedValue = input.getAttribute('data-expected-value');
 
   return input.value === expectedValue;
 }
 
 function addCard() {
   inputs.map((i) => {
-    i.value = "";
+    i.value = '';
   });
 
-  toastr.success("Cartão adicionado com sucesso");
+  toastr.success('Cartão adicionado com sucesso');
 }
 
-$("#add-button").submit((event) => {
+$('#add-button').submit((event) => {
   handleAddCard(event);
 });
 
@@ -130,7 +130,7 @@ camera.position.z = 270;
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
 renderer.setSize(280, 168);
 
-document.getElementById("credit-card").appendChild(renderer.domElement);
+document.getElementById('credit-card').appendChild(renderer.domElement);
 
 const geometry = new THREE.BoxGeometry(280, 168, 5);
 
@@ -140,10 +140,10 @@ const materials = [
   new THREE.MeshBasicMaterial({ transparent: true, opacity: 0 }),
   new THREE.MeshBasicMaterial({ transparent: true, opacity: 0 }),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load("assets/card-back.png")
+    map: new THREE.TextureLoader().load('assets/card-back.png')
   }),
   new THREE.MeshBasicMaterial({
-    map: new THREE.TextureLoader().load("assets/card-front.png")
+    map: new THREE.TextureLoader().load('assets/card-front.png')
   })
 ];
 
@@ -159,13 +159,13 @@ scene.add(card);
 
 card.rotation.y = Math.PI;
 
-renderer.domElement.addEventListener("mousedown", (event) => {
+renderer.domElement.addEventListener('mousedown', (event) => {
   isDragging = true;
   previousMouseX = event.clientX;
   isRotating = false;
 });
 
-renderer.domElement.addEventListener("mousemove", (event) => {
+renderer.domElement.addEventListener('mousemove', (event) => {
   if (isDragging) {
     const delta = event.clientX - previousMouseX;
 
@@ -178,12 +178,12 @@ renderer.domElement.addEventListener("mousemove", (event) => {
   }
 });
 
-renderer.domElement.addEventListener("mouseup", () => {
+renderer.domElement.addEventListener('mouseup', () => {
   isDragging = false;
   isRotating = false;
 });
 
-renderer.domElement.addEventListener("mouseleave", () => {
+renderer.domElement.addEventListener('mouseleave', () => {
   isDragging = false;
   isRotating = false;
 });

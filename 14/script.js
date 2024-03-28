@@ -1,13 +1,13 @@
 let uploadIntervals = [];
-const inputWrapper = document.getElementById("input-wrapper");
-const input = document.getElementById("file-input");
+const inputWrapper = document.getElementById('input-wrapper');
+const input = document.getElementById('file-input');
 
-input.addEventListener("change", handleFileSelect);
+input.addEventListener('change', handleFileSelect);
 
-inputWrapper.addEventListener("dragenter", handleDrag);
-inputWrapper.addEventListener("dragleave", handleDrag);
-inputWrapper.addEventListener("dragover", handleDragOver);
-inputWrapper.addEventListener("drop", handleFileDrop);
+inputWrapper.addEventListener('dragenter', handleDrag);
+inputWrapper.addEventListener('dragleave', handleDrag);
+inputWrapper.addEventListener('dragover', handleDragOver);
+inputWrapper.addEventListener('drop', handleFileDrop);
 
 function handleFileSelect(event) {
   const files = event.target.files;
@@ -18,7 +18,7 @@ function handleFileSelect(event) {
 
 function handleDrag(event) {
   event.preventDefault();
-  inputWrapper.classList.toggle("drag");
+  inputWrapper.classList.toggle('drag');
 }
 
 function handleDragOver(event) {
@@ -27,7 +27,7 @@ function handleDragOver(event) {
 
 function handleFileDrop(event) {
   event.preventDefault();
-  inputWrapper.classList.remove("drag");
+  inputWrapper.classList.remove('drag');
 
   const files = event.dataTransfer.files;
 
@@ -36,7 +36,7 @@ function handleFileDrop(event) {
 }
 
 function addFileToQueue(fileInfo) {
-  const files = document.getElementById("files");
+  const files = document.getElementById('files');
   const file = createFile(fileInfo);
   files.appendChild(file);
 
@@ -44,9 +44,9 @@ function addFileToQueue(fileInfo) {
 }
 
 function createFile(fileInfo) {
-  const file = document.createElement("article");
-  file.setAttribute("data-size", fileInfo.size);
-  file.setAttribute("data-status", "pending");
+  const file = document.createElement('article');
+  file.setAttribute('data-size', fileInfo.size);
+  file.setAttribute('data-status', 'pending');
   file.appendChild(createFileIcon());
   file.appendChild(createFileContent(fileInfo));
 
@@ -54,14 +54,14 @@ function createFile(fileInfo) {
 }
 
 function createFileIcon() {
-  const fileIcon = document.createElement("i");
-  fileIcon.classList = "ph-fill ph-file";
+  const fileIcon = document.createElement('i');
+  fileIcon.classList = 'ph-fill ph-file';
 
   return fileIcon;
 }
 
 function createFileContent(fileInfo) {
-  const fileContent = document.createElement("div");
+  const fileContent = document.createElement('div');
   fileContent.appendChild(createFileHeader(fileInfo));
   fileContent.appendChild(createFileSize(fileInfo));
   fileContent.appendChild(createProgress());
@@ -70,8 +70,8 @@ function createFileContent(fileInfo) {
 }
 
 function createFileHeader(file) {
-  const fileHeader = document.createElement("div");
-  fileHeader.classList = "file-header";
+  const fileHeader = document.createElement('div');
+  fileHeader.classList = 'file-header';
   fileHeader.appendChild(createFileName(file));
   fileHeader.appendChild(createCancelButton());
 
@@ -79,37 +79,37 @@ function createFileHeader(file) {
 }
 
 function createFileName(file) {
-  const fileName = document.createElement("h3");
+  const fileName = document.createElement('h3');
   fileName.innerText = file.name;
 
   return fileName;
 }
 
 function createCancelButton() {
-  const cancelButton = document.createElement("button");
-  cancelButton.addEventListener("click", handleCancelUpload);
+  const cancelButton = document.createElement('button');
+  cancelButton.addEventListener('click', handleCancelUpload);
   cancelButton.appendChild(createHeaderIcon());
 
   return cancelButton;
 }
 
 function createHeaderIcon() {
-  const headerIcon = document.createElement("i");
-  headerIcon.classList = "ph ph-x";
+  const headerIcon = document.createElement('i');
+  headerIcon.classList = 'ph ph-x';
 
   return headerIcon;
 }
 
 function createFileSize(file) {
-  const fileSize = document.createElement("p");
+  const fileSize = document.createElement('p');
   fileSize.innerText = `${formatSize(0)} / ${formatSize(file.size)}`;
 
   return fileSize;
 }
 
 function createProgress() {
-  const progress = document.createElement("div");
-  progress.classList = "progress";
+  const progress = document.createElement('div');
+  progress.classList = 'progress';
   progress.appendChild(createProgressBar());
   progress.appendChild(createPercentage());
 
@@ -117,11 +117,11 @@ function createProgress() {
 }
 
 function createProgressBar() {
-  const progressBarWrapper = document.createElement("div");
-  progressBarWrapper.classList = "progress-bar-wrapper";
+  const progressBarWrapper = document.createElement('div');
+  progressBarWrapper.classList = 'progress-bar-wrapper';
 
-  const progressBar = document.createElement("div");
-  progressBar.classList = "progress-bar";
+  const progressBar = document.createElement('div');
+  progressBar.classList = 'progress-bar';
 
   progressBarWrapper.appendChild(progressBar);
 
@@ -129,39 +129,39 @@ function createProgressBar() {
 }
 
 function createPercentage() {
-  const percentage = document.createElement("span");
-  percentage.innerText = "0%";
+  const percentage = document.createElement('span');
+  percentage.innerText = '0%';
 
   return percentage;
 }
 
 function formatSize(size) {
-  if (size >= 1000000) return (size / 1000000).toFixed(0) + " MB";
-  else if (size >= 1000) return (size / 1000).toFixed(0) + " KB";
-  else return size + " KB";
+  if (size >= 1000000) return (size / 1000000).toFixed(0) + ' MB';
+  else if (size >= 1000) return (size / 1000).toFixed(0) + ' KB';
+  else return size + ' KB';
 }
 
 function handleCancelUpload(event) {
-  const clickedOnTheButton = event.target.tagName === "BUTTON";
+  const clickedOnTheButton = event.target.tagName === 'BUTTON';
   let button = clickedOnTheButton ? event.target : event.target.parentElement;
   let buttonIcon = event.target;
 
   if (clickedOnTheButton) {
     buttonIcon =
-      file.getAttribute("data-status") === "pending"
-        ? button.querySelector(".ph.ph-x")
-        : button.querySelector(".ph.ph-arrow-counter-clockwise");
+      file.getAttribute('data-status') === 'pending'
+        ? button.querySelector('.ph.ph-x')
+        : button.querySelector('.ph.ph-arrow-counter-clockwise');
   }
 
   let file = clickedOnTheButton
     ? button.parentElement.parentElement
     : button.parentElement.parentElement.parentElement;
 
-  buttonIcon.classList = "ph ph-arrow-counter-clockwise";
+  buttonIcon.classList = 'ph ph-arrow-counter-clockwise';
 
   setUploadAsError(file);
 
-  const fileIntervalId = parseInt(file.getAttribute("data-interval"));
+  const fileIntervalId = parseInt(file.getAttribute('data-interval'));
   const fileInterval = uploadIntervals.find((i) => i === fileIntervalId);
 
   clearInterval(fileInterval);
@@ -169,20 +169,20 @@ function handleCancelUpload(event) {
 
   setFileSize(file);
 
-  button.addEventListener("click", () => {
-    file.setAttribute("data-status", "pending");
+  button.addEventListener('click', () => {
+    file.setAttribute('data-status', 'pending');
     upload(file);
   });
 }
 
 function setUploadAsError(file) {
-  file.setAttribute("data-status", "error");
+  file.setAttribute('data-status', 'error');
 
-  const progressBar = file.querySelector(".progress-bar");
-  progressBar.style.width = "0%";
+  const progressBar = file.querySelector('.progress-bar');
+  progressBar.style.width = '0%';
 
-  const percentage = [...file.getElementsByTagName("span")][0];
-  percentage.innerText = "Erro";
+  const percentage = [...file.getElementsByTagName('span')][0];
+  percentage.innerText = 'Erro';
 }
 
 function setFileSize(file) {
@@ -192,7 +192,7 @@ function setFileSize(file) {
 }
 
 function getSizeUploaded(file) {
-  return [...file.getElementsByTagName("p")][0];
+  return [...file.getElementsByTagName('p')][0];
 }
 
 function upload(file) {
@@ -216,11 +216,11 @@ function upload(file) {
 
   uploadIntervals = [...uploadIntervals, uploadInterval];
 
-  file.setAttribute("data-interval", uploadInterval);
+  file.setAttribute('data-interval', uploadInterval);
 }
 
 function getFileSize(file) {
-  return parseInt(file.getAttribute("data-size"));
+  return parseInt(file.getAttribute('data-size'));
 }
 
 function updateSizeUploaded(file, fileSize, uploadedSize) {
@@ -232,15 +232,15 @@ function updateSizeUploaded(file, fileSize, uploadedSize) {
 }
 
 function updateProgressBar(file, percentageUploaded) {
-  const progress = file.querySelector(".progress-bar");
-  const percentage = [...file.getElementsByTagName("span")][0];
+  const progress = file.querySelector('.progress-bar');
+  const percentage = [...file.getElementsByTagName('span')][0];
 
   progress.style.width = `${percentageUploaded}%`;
   percentage.innerText = `${percentageUploaded}%`;
 }
 
 function setUploadAsDone(file) {
-  file.setAttribute("data-status", "done");
-  [...file.getElementsByTagName("button")][0].remove();
+  file.setAttribute('data-status', 'done');
+  [...file.getElementsByTagName('button')][0].remove();
   setFileSize(file);
 }

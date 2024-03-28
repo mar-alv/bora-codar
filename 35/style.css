@@ -54,7 +54,7 @@ html {
 
 body,
 button {
-  font-family: "Poppins", system-ui, sans-serif;
+  font-family: 'Poppins', system-ui, sans-serif;
 }
 
 h1,
@@ -120,7 +120,7 @@ body {
   position: relative;
 }
 
-#app:has(dialog[data-open="true"]) .modal-overlay {
+#app:has(dialog[data-open='true']) .modal-overlay {
   opacity: 0.7;
 }
 
@@ -222,7 +222,7 @@ h3 {
   opacity: 0.3;
 }
 
-input[type="range"] {
+input[type='range'] {
   -webkit-appearance: none;
 
   width: 100%;
@@ -242,7 +242,7 @@ input[type="range"] {
   }
 }
 
-input[type="range"]::-webkit-slider-thumb {
+input[type='range']::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
 
@@ -254,7 +254,7 @@ input[type="range"]::-webkit-slider-thumb {
   background-color: var(--blue);
 }
 
-input[type="range"]::-moz-range-thumb {
+input[type='range']::-moz-range-thumb {
   width: 1.8rem;
   height: 1.8rem;
 
@@ -263,22 +263,22 @@ input[type="range"]::-moz-range-thumb {
   background-color: var(--blue);
 }
 
-input[type="range"]::-webkit-slider-runnable-track {
+input[type='range']::-webkit-slider-runnable-track {
   height: 0.6rem;
 
   border-radius: 0.5rem;
   background-color: var(--blue);
 }
 
-input[type="range"]::-moz-range-track {
+input[type='range']::-moz-range-track {
   height: 0.6rem;
 
   border-radius: 0.5rem;
   background-color: var(--gray-200);
 }
 
-input[type="range"]::-moz-range-progress,
-input[type="range"]::-webkit-progress-value {
+input[type='range']::-moz-range-progress,
+input[type='range']::-webkit-progress-value {
   height: 0.6rem;
 
   border-radius: 0.5rem;
@@ -326,7 +326,7 @@ sup {
   color: var(--gray-200);
 }
 
-input[type="number"] {
+input[type='number'] {
   width: 4rem;
   height: 4rem;
   padding: 1.2rem;
@@ -398,13 +398,13 @@ input[type="number"] {
   }
 }
 
-dialog[data-open="false"] {
+dialog[data-open='false'] {
   display: none;
 
   opacity: 0;
 }
 
-dialog[data-open="true"] {
+dialog[data-open='true'] {
   display: block;
   top: 50%;
   left: 50%;

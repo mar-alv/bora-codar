@@ -33,12 +33,12 @@
 body {
   height: 100vh;
   display: flex;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body,
 button {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 main {
@@ -50,7 +50,7 @@ main {
 h1,
 h2 {
   color: var(--title-color);
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 p {
@@ -105,30 +105,30 @@ button {
 }
 
 button:focus,
-button[data-focus="true"] {
+button[data-focus='true'] {
   outline: 2px solid var(--button-outline-color);
 }
 
 button:hover {
-  cursor: url("https://i.imgur.com/XUDebjh.png"), auto;
+  cursor: url('https://i.imgur.com/XUDebjh.png'), auto;
 }
 
 button:disabled {
-  cursor: url("https://i.imgur.com/M7IxEyc.png"), auto;
+  cursor: url('https://i.imgur.com/M7IxEyc.png'), auto;
   color: var(--button-disabled-color);
 }
 
-button[data-loading="true"] {
+button[data-loading='true'] {
   gap: 0.5rem;
   display: flex;
   align-items: center;
 }
 
-button[data-loading="true"]:hover {
-  cursor: url("https://i.imgur.com/6vCgQM4.png"), auto;
+button[data-loading='true']:hover {
+  cursor: url('https://i.imgur.com/6vCgQM4.png'), auto;
 }
 
-button[data-loading="true"] i {
+button[data-loading='true'] i {
   animation: spin 2s linear infinite;
 }
 
@@ -141,41 +141,41 @@ button[data-loading="true"] i {
   }
 }
 
-button[data-movable="true"]:hover {
-  cursor: url("https://i.imgur.com/RteyH0Y.png"), auto;
+button[data-movable='true']:hover {
+  cursor: url('https://i.imgur.com/RteyH0Y.png'), auto;
 }
 
-button[data-variation="primary"] {
+button[data-variation='primary'] {
   background-color: var(--primary-button-background-color);
 }
 
-button[data-variation="primary"][data-hover="true"]:not([data-loading="true"]),
-button:not([data-loading="true"])[data-variation="primary"]:hover {
+button[data-variation='primary'][data-hover='true']:not([data-loading='true']),
+button:not([data-loading='true'])[data-variation='primary']:hover {
   background-color: var(--primary-button-hover-background-color);
 }
 
-button[data-variation="primary"]:disabled {
+button[data-variation='primary']:disabled {
   background-color: var(--primary-button-disabled-background-color);
 }
 
-button[data-variation="secondary"] {
+button[data-variation='secondary'] {
   background-color: var(--secondary-button-background-color);
 }
 
-button[data-variation="secondary"][data-hover="true"]:not([data-loading="true"]),
-button[data-variation="secondary"]:not([data-loading="true"]):hover {
+button[data-variation='secondary'][data-hover='true']:not([data-loading='true']),
+button[data-variation='secondary']:not([data-loading='true']):hover {
   background-color: var(--secondary-button-hover-background-color);
 }
 
-button[data-variation="secondary"]:disabled {
+button[data-variation='secondary']:disabled {
   background-color: var(--secondary-button-disabled-background-color);
 }
 
-button[data-variation="tertiary"] {
+button[data-variation='tertiary'] {
   background-color: var(--tertiary-button-background-color);
 }
 
-button[data-variation="tertiary"]:disabled {
+button[data-variation='tertiary']:disabled {
   background-color: var(--tertiary-button-disabled-background-color);
 }
 

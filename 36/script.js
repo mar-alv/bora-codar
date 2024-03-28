@@ -1,4 +1,4 @@
-const details = document.querySelector(".details");
+const details = document.querySelector('.details');
 
 let isDragging = false;
 let startY = 0;
@@ -10,9 +10,9 @@ const startDrag = function (event) {
   startY = event.clientY || event.touches[0].clientY;
   lastY =
     parseFloat(
-      details.style.transform.replace("translateY(", "").replace("px)", "")
+      details.style.transform.replace('translateY(', '').replace('px)', '')
     ) || 0;
-  details.style.userSelect = "none";
+  details.style.userSelect = 'none';
 
   cancelAnimationFrame(animationID);
 };
@@ -24,10 +24,10 @@ const moveDrag = function (event) {
     const newTransform = Math.min(500, Math.max(40, lastY + deltaY));
 
     if (newTransform >= 470) {
-      details.dataset.open = "false";
-      details.style.transform = "translateY(40px)";
+      details.dataset.open = 'false';
+      details.style.transform = 'translateY(40px)';
     } else {
-      details.dataset.open = "true";
+      details.dataset.open = 'true';
       details.style.transform = `translateY(${newTransform}px)`;
     }
   }
@@ -35,10 +35,10 @@ const moveDrag = function (event) {
 
 const endDrag = function (event) {
   isDragging = false;
-  details.style.userSelect = "auto";
+  details.style.userSelect = 'auto';
 
   const finalTransform = parseFloat(
-    details.style.transform.replace("translateY(", "").replace("px)", "")
+    details.style.transform.replace('translateY(', '').replace('px)', '')
   );
 
   animateToFinalPosition(finalTransform);
@@ -56,7 +56,7 @@ function animateToFinalPosition(finalTransform) {
     const currentTransform =
       finalTransform +
       (parseFloat(
-        details.style.transform.replace("translateY(", "").replace("px)", "")
+        details.style.transform.replace('translateY(', '').replace('px)', '')
       ) -
         finalTransform) *
         progressRatio;
@@ -68,23 +68,23 @@ function animateToFinalPosition(finalTransform) {
   animationID = requestAnimationFrame(step);
 }
 
-details.addEventListener("mousedown", startDrag);
-details.addEventListener("touchstart", startDrag);
+details.addEventListener('mousedown', startDrag);
+details.addEventListener('touchstart', startDrag);
 
-document.addEventListener("mousemove", moveDrag);
-document.addEventListener("touchmove", moveDrag);
+document.addEventListener('mousemove', moveDrag);
+document.addEventListener('touchmove', moveDrag);
 
-document.addEventListener("mouseup", endDrag);
-document.addEventListener("touchend", endDrag);
+document.addEventListener('mouseup', endDrag);
+document.addEventListener('touchend', endDrag);
 
 function handleSeeDetails() {
-  details.dataset.open = "true";
+  details.dataset.open = 'true';
 
   toggleButtonsDisabled();
 }
 
 function toggleButtonsDisabled() {
-  const buttons = [...document.querySelectorAll("header button")];
+  const buttons = [...document.querySelectorAll('header button')];
 
   buttons.forEach((i) => {
     i.disabled = !i.disabled;
@@ -92,10 +92,10 @@ function toggleButtonsDisabled() {
 }
 
 function handleToggleFavorite(element) {
-  const isFavorited = element.dataset.favorited === "true";
+  const isFavorited = element.dataset.favorited === 'true';
 
   element.innerHTML = isFavorited
-    ? '<i class="ph ph-heart"></i>'
-    : '<i class="ph-fill ph-heart"></i>';
-  element.dataset.favorited = isFavorited ? "false" : "true";
+    ? '<i class='ph ph-heart'></i>'
+    : '<i class='ph-fill ph-heart'></i>';
+  element.dataset.favorited = isFavorited ? 'false' : 'true';
 }

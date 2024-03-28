@@ -52,7 +52,7 @@ html {
 
 body,
 button {
-  font-family: "Poppins", system-ui, sans-serif;
+  font-family: 'Poppins', system-ui, sans-serif;
 }
 
 h1,
@@ -152,7 +152,7 @@ header {
   }
 }
 
-button[data-favorited="true"] i {
+button[data-favorited='true'] i {
   font-size: 2rem;
   color: var(--secondary);
   box-shadow: none;
@@ -276,7 +276,7 @@ h1 {
   touch-action: none;
 }
 
-.details[data-open="true"] {
+.details[data-open='true'] {
   animation: openDetails 0.5s ease;
 
   & ~ header,
@@ -294,7 +294,7 @@ h1 {
   }
 }
 
-.details[data-open="false"] {
+.details[data-open='false'] {
   display: none;
   opacity: 0;
 

@@ -6,23 +6,23 @@ let initialDay = null;
 let finalDay = null;
 
 const months = [
-  "Jan",
-  "Fev",
-  "Mar",
-  "Abr",
-  "Mai",
-  "Jun",
-  "Jul",
-  "Ago",
-  "Set",
-  "Out",
-  "Nov",
-  "Dez"
+  'Jan',
+  'Fev',
+  'Mar',
+  'Abr',
+  'Mai',
+  'Jun',
+  'Jul',
+  'Ago',
+  'Set',
+  'Out',
+  'Nov',
+  'Dez'
 ];
 
-const weekDays = ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sáb"];
+const weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'];
 
-const app = document.getElementById("app");
+const app = document.getElementById('app');
 
 function handlePreviousPeriod() {
   currentMonth = (currentMonth - 1 + 12) % 12;
@@ -33,10 +33,10 @@ function handlePreviousPeriod() {
 }
 
 function handleChoosePeriod() {
-  const choosePeriodButton = document.querySelector("#choose-period-button");
+  const choosePeriodButton = document.querySelector('#choose-period-button');
   choosePeriodButton.innerText = currentYear;
 
-  if (app.classList.contains("app-days")) setMonths();
+  if (app.classList.contains('app-days')) setMonths();
   else {
     setCurrentMonthAndYear();
     setCalendar();
@@ -44,30 +44,30 @@ function handleChoosePeriod() {
 }
 
 function setMonths() {
-  app.classList = "app-months";
-  calendar.innerHTML = "";
+  app.classList = 'app-months';
+  calendar.innerHTML = '';
 
   let i = 0;
 
   while (i < months.length) {
-    const row = document.createElement("tr");
-    row.classList.add("month-row");
+    const row = document.createElement('tr');
+    row.classList.add('month-row');
 
     [...Array(3)].map((_, j) => {
-      const month = document.createElement("td");
-      month.classList.add("month");
+      const month = document.createElement('td');
+      month.classList.add('month');
 
-      const button = document.createElement("button");
+      const button = document.createElement('button');
       button.innerText = months[i];
-      button.setAttribute("data-month", i);
-      button.addEventListener("click", handleChooseMonth);
+      button.setAttribute('data-month', i);
+      button.addEventListener('click', handleChooseMonth);
 
       month.appendChild(button);
       row.appendChild(month);
 
       month.setAttribute(
-        "data-selected",
-        isMonthWithinPeriod(i) ? "true" : "false"
+        'data-selected',
+        isMonthWithinPeriod(i) ? 'true' : 'false'
       );
 
       i++;
@@ -78,7 +78,7 @@ function setMonths() {
 }
 
 function handleChooseMonth(event) {
-  const month = parseInt(event.target.getAttribute("data-month"));
+  const month = parseInt(event.target.getAttribute('data-month'));
   currentMonth = month;
 
   setCalendar();
@@ -100,9 +100,9 @@ function handleNextPeriod() {
 }
 
 function setCurrentMonthAndYear() {
-  const choosePeriodButton = document.querySelector("#choose-period-button");
+  const choosePeriodButton = document.querySelector('#choose-period-button');
   const currentMonthName = getCurrentMonthName();
-  choosePeriodButton.innerHTML = '<i class="ph-fill ph-caret-down"></i>';
+  choosePeriodButton.innerHTML = '<i class='ph-fill ph-caret-down'></i>';
   choosePeriodButton.prepend(`${currentMonthName} ${currentYear}`);
 }
 
@@ -111,7 +111,7 @@ function getCurrentMonthName() {
     currentYear,
     currentMonth,
     1
-  ).toLocaleDateString("pt-br", { month: "long" });
+  ).toLocaleDateString('pt-br', { month: 'long' });
   const capitalizedMonthName =
     currentMonthName.charAt(0).toUpperCase() + currentMonthName.slice(1);
 
@@ -119,10 +119,10 @@ function getCurrentMonthName() {
 }
 
 function setCalendar() {
-  app.classList = "app-days";
+  app.classList = 'app-days';
 
-  const calendar = document.getElementById("calendar");
-  calendar.innerHTML = "";
+  const calendar = document.getElementById('calendar');
+  calendar.innerHTML = '';
   calendar.appendChild(setWeek());
 
   const firstDay = new Date(currentYear, currentMonth, 1);
@@ -136,14 +136,14 @@ function setCalendar() {
   let currentDate = new Date(startDate);
 
   while (currentDate <= endDate) {
-    const weekRow = document.createElement("tr");
+    const weekRow = document.createElement('tr');
 
     [...Array(7)].map((_, i) => {
-      const button = document.createElement("button");
+      const button = document.createElement('button');
       button.innerText = currentDate.getDate();
-      button.addEventListener("click", handleSelectDay);
+      button.addEventListener('click', handleSelectDay);
 
-      let td = document.createElement("td");
+      let td = document.createElement('td');
 
       if (currentDate.toISOString() === getDate(initialDay)?.toISOString())
         td = initialDay;
@@ -151,12 +151,12 @@ function setCalendar() {
         td = finalDay;
       else {
         td.appendChild(button);
-        td.classList.add("day");
-        td.setAttribute("data-date", currentDate);
+        td.classList.add('day');
+        td.setAttribute('data-date', currentDate);
       }
 
       if (currentDate.getMonth() !== currentMonth)
-        td.classList.add("extra-day");
+        td.classList.add('extra-day');
 
       weekRow.appendChild(td);
 
@@ -174,10 +174,10 @@ function setCalendar() {
 }
 
 function setWeek() {
-  const weekHeader = document.createElement("tr");
+  const weekHeader = document.createElement('tr');
 
   weekDays.map((i) => {
-    const day = document.createElement("th");
+    const day = document.createElement('th');
     day.innerText = i;
     weekHeader.appendChild(day);
   });
@@ -208,11 +208,11 @@ function handleSelectDay(event) {
 }
 
 function getDate(day) {
-  return day ? new Date(day.getAttribute("data-date")) : null;
+  return day ? new Date(day.getAttribute('data-date')) : null;
 }
 
 function setPeriod() {
-  const days = [...document.querySelectorAll(".day")];
+  const days = [...document.querySelectorAll('.day')];
 
   let initialDayIndex = days.findIndex((i) => i === initialDay);
 
@@ -221,24 +221,24 @@ function setPeriod() {
   const finalDayIndex = days.indexOf(finalDay);
 
   days.map((i) => {
-    i.setAttribute("data-selected", "false");
+    i.setAttribute('data-selected', 'false');
   });
 
   for (let i = initialDayIndex; i <= finalDayIndex; i++) {
-    days[i].setAttribute("data-selected", "true");
+    days[i].setAttribute('data-selected', 'true');
 
-    if (days[i] === initialDay) days[i].setAttribute("data-period", "initial");
-    else if (days[i] === finalDay) days[i].setAttribute("data-period", "final");
-    else days[i].setAttribute("data-period", "inBetween");
+    if (days[i] === initialDay) days[i].setAttribute('data-period', 'initial');
+    else if (days[i] === finalDay) days[i].setAttribute('data-period', 'final');
+    else days[i].setAttribute('data-period', 'inBetween');
   }
 }
 
 function toggleSelectedDay(day) {
-  day.setAttribute("data-selected", isDaySelected(day) ? "false" : "true");
+  day.setAttribute('data-selected', isDaySelected(day) ? 'false' : 'true');
 }
 
 function isDaySelected(day) {
-  return day.getAttribute("data-selected") === "true";
+  return day.getAttribute('data-selected') === 'true';
 }
 
 setCalendar();

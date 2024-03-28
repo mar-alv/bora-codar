@@ -26,7 +26,7 @@ html {
 
 body,
 button {
-  font-family: "Source Serif 4", system-ui, sans-serif;
+  font-family: 'Source Serif 4', system-ui, sans-serif;
 }
 
 body {
@@ -186,7 +186,7 @@ li {
   color: var(--brown-100);
 }
 
-/* Scale when hovering over the button can be done by "scale: x y;", but don't forget to include it on the transition up there */
+/* Scale when hovering over the button can be done by 'scale: x y;', but don't forget to include it on the transition up there */
 
 @media (prefers-reduced-motion: no-preference) {
   :has(:target) {

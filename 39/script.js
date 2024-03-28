@@ -8,14 +8,14 @@ const title = document.getElementsByTagName('h1')[0];
 const returnArrow = document.querySelector('.ph.ph-arrow-left');
 
 submitButton.disabled = true;
-returnArrow.style.display = "none";
-textarea.style.display = "none";
+returnArrow.style.display = 'none';
+textarea.style.display = 'none';
       
 function rate(rating) {
   unselectStars();
   
   [...Array(rating)].map((_, i) => {
-    ratingStars[i].classList.add("selected");
+    ratingStars[i].classList.add('selected');
   });
   
   submitButton.disabled = false;
@@ -23,7 +23,7 @@ function rate(rating) {
 
 function unselectStars() {
   [...ratingStars].map((i) => { 
-    i.classList.remove("selected");
+    i.classList.remove('selected');
     
     return i;
   });
@@ -35,9 +35,9 @@ function handleComment() {
 
 function changePage() {
   submitButton.innerText = isRating ? 'Enviar' : 'Confirmar';
-  textarea.style.display = isRating ? "block" : "none";
-  rating.style.display = isRating ? "none" : "block";
-  returnArrow.style.display = isRating ? "" : "none";
+  textarea.style.display = isRating ? 'block' : 'none';
+  rating.style.display = isRating ? 'none' : 'block';
+  returnArrow.style.display = isRating ? '' : 'none';
   title.innerText = isRating ? 'Deixe um comentário' : 'Avalie o produto';
   
   unselectStars();
@@ -49,14 +49,14 @@ function changePage() {
 
 function changeRateDescription() {
   if (!isRating) {
-    const p1 = document.createElement("p");
-    p1.textContent = "O que você achou do produto";
+    const p1 = document.createElement('p');
+    p1.textContent = 'O que você achou do produto';
 
-    const a = document.createElement("a");
-    a.textContent = "Smartwatch Amazfit Bip U Pro";
-    a.setAttribute("href", "/");
+    const a = document.createElement('a');
+    a.textContent = 'Smartwatch Amazfit Bip U Pro';
+    a.setAttribute('href', '/');
 
-    const p2 = document.createElement("p");
+    const p2 = document.createElement('p');
     p2.appendChild(a);
     
     rateDescription.innerHTML = null;
@@ -64,15 +64,15 @@ function changeRateDescription() {
     rateDescription.appendChild(p2);
   }
   else {
-    const p = document.createElement("p");
-    p.textContent = "Conte sobre o motivo da sua avaliação";
+    const p = document.createElement('p');
+    p.textContent = 'Conte sobre o motivo da sua avaliação';
     
     rateDescription.innerHTML = p.innerHTML;
   }
-  const i = document.createElement("i");
+  const i = document.createElement('i');
   
-  i.classList.add("ph");
-  i.classList.add("ph-arrow-right");
+  i.classList.add('ph');
+  i.classList.add('ph-arrow-right');
   
   submitButton.appendChild(i);
 }

@@ -44,7 +44,7 @@ body {
   display: grid;
   place-items: center;
 
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 
   background-color: var(--bg-color);
 }
@@ -161,19 +161,19 @@ article {
   box-shadow: 0px 4px 16px 0px #eae2fd;
 }
 
-article[data-status="pending"] {
+article[data-status='pending'] {
   --status-color: var(--pending-color);
   --file-bg-color: var(--pending-file-bg-color);
   --percentage-color: var(--pending-percentage-color);
 }
 
-article[data-status="done"] {
+article[data-status='done'] {
   --status-color: var(--done-color);
   --file-bg-color: var(--done-file-bg-color);
   --percentage-color: var(--done-percentage-color);
 }
 
-article[data-status="error"] {
+article[data-status='error'] {
   --status-color: var(--error-color);
   --file-bg-color: var(--error-file-bg-color);
   --percentage-color: var(--error-percentage-color);

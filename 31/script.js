@@ -1,9 +1,9 @@
-const YOUTUBE_URL_PREFIX = "https://www.youtube.com/watch?v=";
+const YOUTUBE_URL_PREFIX = 'https://www.youtube.com/watch?v=';
 let player;
 
-var tag = document.createElement("script");
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
+var tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+var firstScriptTag = document.getElementsByTagName('script')[0];
 
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
@@ -20,7 +20,7 @@ function isUrlValid(url) {
 function loadVideo(url) {
   const videoId = getVideoId(url);
 
-  player = new YT.Player("video", {
+  player = new YT.Player('video', {
     videoId: videoId,
     playerVars: {
       autoplay: 0,

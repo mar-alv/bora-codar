@@ -1,5 +1,5 @@
 let arrivalTimer = null;
-const arrivalIn = document.querySelector("#arrival-in");
+const arrivalIn = document.querySelector('#arrival-in');
 let distanceToArriveInMeters = 1600;
 let carSpeedInMetersPerSecond = 80;
 
@@ -27,12 +27,12 @@ function drive() {
 function arrive() {
   arrivalIn.remove();
 
-  document.querySelector("h1").innerHTML =
-    "<b>Marcelo</b> Chegou ao seu destino";
+  document.querySelector('h1').innerHTML =
+    '<b>Marcelo</b> Chegou ao seu destino';
 }
 
 function stopWheelsAnimation() {
-  const wheels = document.querySelectorAll(".car-wheel");
+  const wheels = document.querySelectorAll('.car-wheel');
   const leftWheel = wheels[0];
   const rightWheel = wheels[1];
 
@@ -49,9 +49,9 @@ function getTimeToArrive() {
   const seconds = Math.round(timeToArriveInSeconds % 60);
 
   const minutesText =
-    minutes > 0 ? `${minutes} minuto${minutes > 1 ? "s" : ""}` : "";
+    minutes > 0 ? `${minutes} minuto${minutes > 1 ? 's' : ''}` : '';
   const secondsText =
-    seconds > 0 ? `${seconds} segundo${seconds > 1 ? "s" : ""}` : "";
+    seconds > 0 ? `${seconds} segundo${seconds > 1 ? 's' : ''}` : '';
 
   return `${minutesText} ${secondsText}`.trim();
 }
@@ -60,22 +60,22 @@ function getDistanceToArrive() {
   const kilometers = Math.floor(distanceToArriveInMeters / 1000);
 
   if (kilometers > 0)
-    return `${kilometers} quilômetro${kilometers > 1 ? "s" : ""}`;
+    return `${kilometers} quilômetro${kilometers > 1 ? 's' : ''}`;
 
   const meters = distanceToArriveInMeters % 1000;
 
-  return `${meters} metro${meters > 1 ? "s" : ""}`;
+  return `${meters} metro${meters > 1 ? 's' : ''}`;
 }
 
 function handleMessageDriver(event) {
   const messageText = event.target.value;
 
-  if (event.key === "Enter" && messageText) {
+  if (event.key === 'Enter' && messageText) {
     clearInput();
 
     const message = createMessage();
 
-    const inputWrapper = document.querySelector("#input-wrapper");
+    const inputWrapper = document.querySelector('#input-wrapper');
     inputWrapper.appendChild(message);
 
     changeMessageIcon(message);
@@ -84,21 +84,21 @@ function handleMessageDriver(event) {
 }
 
 function clearInput() {
-  event.target.value = "";
+  event.target.value = '';
   event.target.disabled = true;
 }
 
 function createMessage() {
-  const message = document.createElement("div");
-  message.classList.add("message");
-  message.innerHTML = '<i class="ph-bold ph-envelope-open"></i>';
+  const message = document.createElement('div');
+  message.classList.add('message');
+  message.innerHTML = '<i class='ph-bold ph-envelope-open'></i>';
 
   return message;
 }
 
 function changeMessageIcon(message) {
   setTimeout(() => {
-    message.innerHTML = '<i class="ph-bold ph-envelope"></i>';
+    message.innerHTML = '<i class='ph-bold ph-envelope'></i>';
   }, 500);
 }
 
@@ -109,18 +109,18 @@ function enableInput(event) {
 }
 
 function handleCall(element) {
-  element.classList.add("call");
+  element.classList.add('call');
 
   setTimeout(() => {
-    element.classList.remove("call");
+    element.classList.remove('call');
   }, 2000);
 }
 
 function handleFavorite(element) {
-  element.classList.add("favorite");
+  element.classList.add('favorite');
 
   setTimeout(() => {
-    element.classList.remove("favorite");
+    element.classList.remove('favorite');
   }, 2000);
 }
 

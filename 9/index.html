@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang='pt-br'>
 <head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel='preconnect' href='https://fonts.googleapis.com'>
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
 	<title>#boraCodar 9</title>
 
-	<link rel="stylesheet" href="style.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='style.css' />
+	<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap' rel='stylesheet'>
 
-	<script defer src="script.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+	<script defer src='script.js'></script>
+	<script src='https://cdn.jsdelivr.net/npm/apexcharts'></script>
+	<script src='https://unpkg.com/@phosphor-icons/web'></script>
 </head>
 
 <body>
-	<div id="converter">
+	<div id='converter'>
 		<header>
 			<h1>Conversor de moedas</h1>
 	
 			<div id='currency-fields'>
 				<div class='currency-field'>
-					<div class="currency-field-input">
+					<div class='currency-field-input'>
 						<span>$</span>
-						<input id='from-input' min='0' tabindex='1' type="number" value='1' />
+						<input id='from-input' min='0' tabindex='1' type='number' value='1' />
 					</div>
 					<div class='currency-field-select-container' data-selected='false' onclick='handleToggleModal(0)' tabindex='2'>
 						<div id='selected-from-currency' class='currency'>
-							<img class='currency-icon' src="https://www.worldometers.info/img/flags/us-flag.gif" alt="US flag icon">
+							<img class='currency-icon' src='https://www.worldometers.info/img/flags/us-flag.gif' alt='US flag icon'>
 							<span>
 								USD
 							</span>
@@ -41,22 +41,22 @@
 							</ul>
 						</dialog>
 	
-						<i class="ph ph-caret-down"></i>
+						<i class='ph ph-caret-down'></i>
 					</div>
 				</div>
 	
 				<button id='convert-button' onclick='handleConvert()' tabindex='8'>
-					<i class="ph-fill ph-swap"></i>
+					<i class='ph-fill ph-swap'></i>
 				</button>
 	
 				<div class='currency-field'>
-					<div class="currency-field-input">
+					<div class='currency-field-input'>
 						<span>$</span>
-						<input id='to-input' disabled type="number" value='1' />
+						<input id='to-input' disabled type='number' value='1' />
 					</div>
 					<div class='currency-field-select-container' data-selected='false' onclick='handleToggleModal(1)' tabindex='9'>
 						<div id='selected-to-currency' class='currency'>
-							<img class='currency-icon' src="https://www.worldometers.info/img/flags/us-flag.gif" alt="US flag icon">
+							<img class='currency-icon' src='https://www.worldometers.info/img/flags/us-flag.gif' alt='US flag icon'>
 							<span>
 								USD
 							</span>
@@ -67,7 +67,7 @@
 							</ul>
 						</dialog>
 	
-						<i class="ph ph-caret-down"></i>
+						<i class='ph ph-caret-down'></i>
 					</div>
 				</div>
 			</div>
@@ -78,7 +78,7 @@
 			<h2>
 				Taxa de câmbio
 			</h2>
-			<div id="chart">
+			<div id='chart'>
 			</div>
 		</main>
 	</div>

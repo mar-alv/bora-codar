@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang='pt-br'>
 <head>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel='preconnect' href='https://fonts.googleapis.com'>
+	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
 	<title>#boraCodar 16</title>
 
-	<link rel="stylesheet" href="style.css" />
-	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel='stylesheet' href='style.css' />
+	<link href='https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap' rel='stylesheet'>
 
-	<script defer src="script.js"></script>
-	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+	<script defer src='script.js'></script>
+	<script src='https://unpkg.com/@phosphor-icons/web'></script>
 </head>
 
 <body>
-	<div id="app">
+	<div id='app'>
 		<div id='modal-overlay' onclick='hideModal()'></div>
 	
 		<header>
@@ -26,21 +26,21 @@
 	
 				<div id='shortcut-buttons'>
 					<button onclick='showModal()'>
-						<i class="ph ph-plus"></i>
+						<i class='ph ph-plus'></i>
 					</button>
 					<button>
-						<i class="ph-fill ph-pencil-simple"></i>
+						<i class='ph-fill ph-pencil-simple'></i>
 					</button>
 					<button onclick='handleDelete()'>
-						<i class="ph-fill ph-trash"></i>
+						<i class='ph-fill ph-trash'></i>
 					</button>
 				</div>
 			</div>
 	
 			<div class='input-wrapper'>
-				<i class="ph ph-magnifying-glass"></i>
+				<i class='ph ph-magnifying-glass'></i>
 	
-				<input placeholder='Busque por nome ou por dados de contato...' type="text" />
+				<input placeholder='Busque por nome ou por dados de contato...' type='text' />
 			</div>
 		</header>
 	
@@ -52,10 +52,10 @@
 					<ul>
 						<li>
 							<button class='delete-button' onclick='handleDeleteContact(event)'>
-								<i class="ph-fill ph-trash"></i>
+								<i class='ph-fill ph-trash'></i>
 							</button>
 	
-							<img src="https://picsum.photos/48/48" alt="Image of the contact">
+							<img src='https://picsum.photos/48/48' alt='Image of the contact'>
 							<div class='contact-info'>
 								<h2>Abraão Sena teste</h2>
 	
@@ -71,10 +71,10 @@
 					<ul>
 						<li>
 							<button class='delete-button' onclick='handleDeleteContact(event)'>
-								<i class="ph-fill ph-trash"></i>
+								<i class='ph-fill ph-trash'></i>
 							</button>
 	
-							<img src="https://picsum.photos/48/48" alt="Image of the contact">
+							<img src='https://picsum.photos/48/48' alt='Image of the contact'>
 							<div class='contact-info'>
 								<h2>Beatriz Clasen</h2>
 	
@@ -84,10 +84,10 @@
 	
 						<li>
 							<button class='delete-button' onclick='handleDeleteContact(event)'>
-								<i class="ph-fill ph-trash"></i>
+								<i class='ph-fill ph-trash'></i>
 							</button>
 	
-							<img src="https://picsum.photos/48/48" alt="Image of the contact">
+							<img src='https://picsum.photos/48/48' alt='Image of the contact'>
 							<div class='contact-info'>
 								<h2>Brenda Mendes</h2>
 	
@@ -103,10 +103,10 @@
 					<ul>
 						<li>
 							<button class='delete-button' onclick='handleDeleteContact(event)'>
-								<i class="ph-fill ph-trash"></i>
+								<i class='ph-fill ph-trash'></i>
 							</button>
 	
-							<img src="https://picsum.photos/48/48" alt="Image of the contact">
+							<img src='https://picsum.photos/48/48' alt='Image of the contact'>
 							<div class='contact-info'>
 								<h2>Caio Vinícius</h2>
 	
@@ -116,10 +116,10 @@
 	
 						<li>
 							<button class='delete-button' onclick='handleDeleteContact(event)'>
-								<i class="ph-fill ph-trash"></i>
+								<i class='ph-fill ph-trash'></i>
 							</button>
 	
-							<img src="https://picsum.photos/48/48" alt="Image of the contact">
+							<img src='https://picsum.photos/48/48' alt='Image of the contact'>
 							<div class='contact-info'>
 								<h2>Cleiton Souza Mendes</h2>
 	
@@ -135,10 +135,10 @@
 					<ul>
 						<li>
 							<button class='delete-button' onclick='handleDeleteContact(event)'>
-								<i class="ph-fill ph-trash"></i>
+								<i class='ph-fill ph-trash'></i>
 							</button>
 	
-							<img src="https://picsum.photos/48/48" alt="Image of the contact">
+							<img src='https://picsum.photos/48/48' alt='Image of the contact'>
 							<div class='contact-info'>
 								<h2>Daniel Duarte</h2>
 	
@@ -154,10 +154,10 @@
 					<ul>
 						<li>
 							<button class='delete-button' onclick='handleDeleteContact(event)'>
-								<i class="ph-fill ph-trash"></i>
+								<i class='ph-fill ph-trash'></i>
 							</button>
 	
-							<img src="https://picsum.photos/48/48" alt="Image of the contact">
+							<img src='https://picsum.photos/48/48' alt='Image of the contact'>
 							<div class='contact-info'>
 								<h2>Elias Gabriel</h2>
 	
@@ -172,21 +172,21 @@
 		<dialog data-open='false'>
 			<form onsubmit='handleAddContact(event)'>
 				<div class='input-wrapper'>
-					<i class="ph ph-user"></i>
+					<i class='ph ph-user'></i>
 	
-					<input id='input-name' placeholder='Nome' required type="text" />
+					<input id='input-name' placeholder='Nome' required type='text' />
 				</div>
 	
 				<div class='input-wrapper'>
-					<i class="ph ph-phone"></i>
+					<i class='ph ph-phone'></i>
 	
-					<input id='input-number' pattern="[0-9()+-]*" placeholder='Número' required type="text" />
+					<input id='input-number' pattern='[0-9()+-]*' placeholder='Número' required type='text' />
 				</div>
 	
 				<div class='input-wrapper'>
-					<i class="ph ph-image"></i>
+					<i class='ph ph-image'></i>
 	
-					<input id='input-image' placeholder='Foto' required type="text" />
+					<input id='input-image' placeholder='Foto' required type='text' />
 				</div>
 	
 				<button type='submit'>

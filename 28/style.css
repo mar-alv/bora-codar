@@ -42,7 +42,7 @@ html {
 
 body,
 button {
-  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
 }
 
 body {
@@ -50,7 +50,7 @@ body {
   display: grid;
   place-items: center;
 
-  background-image: url("assets/background.png");
+  background-image: url('assets/background.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -112,7 +112,7 @@ li {
 }
 
 li button,
-button[type="submit"] {
+button[type='submit'] {
   border: 0.1rem solid var(--gray-05);
   background-color: var(--gray-06);
 
@@ -213,7 +213,7 @@ input {
   }
 }
 
-button[type="submit"] {
+button[type='submit'] {
   color: var(--gray-01);
 }
 

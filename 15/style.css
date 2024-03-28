@@ -39,7 +39,7 @@
 
 body,
 button {
-  font-family: "Titillium Web", sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 body {
@@ -87,8 +87,8 @@ section:hover {
   border: 1px solid var(--primary-color);
 }
 
-section[data-plan="essentials"],
-section[data-plan="enterprise"] {
+section[data-plan='essentials'],
+section[data-plan='enterprise'] {
   --card-bg-color: white;
   --title-price-color: var(--secondary-color);
 
@@ -103,7 +103,7 @@ section[data-plan="enterprise"] {
   --feature-color: var(--tertiary-color);
 }
 
-section[data-plan="ultimate"] {
+section[data-plan='ultimate'] {
   padding-top: 4rem;
 
   --card-bg-color: var(--main-card-bg-color);
@@ -173,8 +173,8 @@ h2 {
   font-weight: bold;
 }
 
-section[data-plan="essentials"] button,
-section[data-plan="enterprise"] button {
+section[data-plan='essentials'] button,
+section[data-plan='enterprise'] button {
   border: 1px solid var(--secondary-button-border-color);
 }
 

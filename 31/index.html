@@ -1,25 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang='pt-br'>
 <head>
 	<link rel='preconnect' href='https://fonts.googleapis.com'>
 	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
 	<title>#boraCodar 31</title>
 
-	<link rel="stylesheet" href="style.css" />
+	<link rel='stylesheet' href='style.css' />
 	<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap' rel='stylesheet'>
 
-	<script defer src="script.js"></script>
-	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+	<script defer src='script.js'></script>
+	<script src='https://unpkg.com/@phosphor-icons/web'></script>
 </head>
 
 <body>
-	<div id="app">
+	<div id='app'>
 		<header>
-			<i class="ph ph-magic-wand"></i>
+			<i class='ph ph-magic-wand'></i>
 	
 			<h1>
 				YouTube<span>Transcription</span>
@@ -28,25 +28,25 @@
 	
 		<main>
 			<form>
-				<div class="input-wrapper">
-					<input type="text" onchange='handleLoadVideo(this)' placeholder='Cole a url de um vídeo para transcrever'>
+				<div class='input-wrapper'>
+					<input type='text' onchange='handleLoadVideo(this)' placeholder='Cole a url de um vídeo para transcrever'>
 	
 					<button type='button'>
-						<i class="ph ph-x-circle"></i>
+						<i class='ph ph-x-circle'></i>
 					</button>
 				</div>
 	
-				<button id='transcript-button' type="submit">
+				<button id='transcript-button' type='submit'>
 					Transcrever
 				</button>
 			</form>
 	
 			<section>
 				<button id='copy-transcription-button'>
-					<i class="ph ph-copy"></i>
+					<i class='ph ph-copy'></i>
 				</button>
 	
-				<div id="video"></div>
+				<div id='video'></div>
 	
 				<ol>
 					<li>
