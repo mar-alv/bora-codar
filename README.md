@@ -75,10 +75,22 @@ Install the Visual Studio Code extension 'Live Server', on the bottom right of t
 ```
 
 ## 🧰 Technologies
+### Components
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+### Styling
+![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+[![Phosphor Icons](https://img.shields.io/badge/Phosphor%20Icons-c4e456?style=for-the-badge&logo=phosphoricons&logoColor=black)](https://phosphoricons.com/)
+
+### Utilities
+[![ApexCharts](https://img.shields.io/badge/ApexCharts-1802FC?style=for-the-badge&logo=apexcharts&logoColor=white)](https://apexcharts.com/)
+[![CodeMirror](https://img.shields.io/badge/CodeMirror-232F3E?style=for-the-badge&logo=codemirror&logoColor=white)](https://codemirror.net/)
+[![CoinOne](https://img.shields.io/badge/CoinOne-326CE5?style=for-the-badge&logo=coinone&logoColor=white)](https://coinone.co.kr/)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![jQuery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
+[![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)](https://threejs.org/)
+[![Toastr](https://img.shields.io/badge/Toastr-CD6E2E?style=for-the-badge&logo=toastr&logoColor=white)](https://github.com/CodeSeven/toastr)
+[![YouTube API](https://img.shields.io/badge/YouTube_API-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://developers.google.com/youtube/)
 
 ## 📸 Screenshots and 🎥 Recordings
 | # | Challenge | Code | Made in | Preview |
@@ -131,7 +143,7 @@ Install the Visual Studio Code extension 'Live Server', on the bottom right of t
         <strong>Marcelo Alvarez</strong>
         <br>
         <em>Front-end Developer</em><br>
-        <span>'Programming: where the coffee is strong and the bugs are weak.'</span><br>
+        <span>"Some AI generated funny quote here 😗"</span><br>
         <a href='https://www.linkedin.com/in/marcelo-dos-santos-alvarez-474406180/'>LinkedIn</a> |
         <a href='/'>Portfolio</a>
     </div>
