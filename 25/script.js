@@ -1,22 +1,22 @@
-const YOUTUBE_URL_PREFIX = "https://www.youtube.com/watch?v=";
+const YOUTUBE_URL_PREFIX = 'https://www.youtube.com/watch?v=';
 const historic = [];
 let player;
 let playerOverlay;
 let currentVideoIndex = -1;
-const playbutton = document.querySelector("#play-button");
-const secureConnection = document.querySelector("#secure-connection");
+const playbutton = document.querySelector('#play-button');
+const secureConnection = document.querySelector('#secure-connection');
 
-var tag = document.createElement("script");
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
+var tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+var firstScriptTag = document.getElementsByTagName('script')[0];
 
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 function handleToggleSidebar() {
-  const sidebar = document.querySelector("aside");
-  const isOpen = sidebar.dataset.open === "true";
+  const sidebar = document.querySelector('aside');
+  const isOpen = sidebar.dataset.open === 'true';
 
-  sidebar.dataset.open = isOpen ? "false" : "true";
+  sidebar.dataset.open = isOpen ? 'false' : 'true';
 }
 
 function handleWatchPreviousVideo() {
@@ -39,7 +39,7 @@ function loadVideo(url) {
   cleanVideos();
   setPlayButtonIconToPlay();
 
-  playerOverlay = new YT.Player("video-overlay", {
+  playerOverlay = new YT.Player('video-overlay', {
     videoId: videoId,
     playerVars: {
       autohide: 1,
@@ -54,7 +54,7 @@ function loadVideo(url) {
     }
   });
 
-  player = new YT.Player("video", {
+  player = new YT.Player('video', {
     videoId: videoId,
     playerVars: {
       autoplay: 0,
@@ -70,26 +70,26 @@ function loadVideo(url) {
 }
 
 function cleanVideos() {
-  let video = document.querySelector("#video");
+  let video = document.querySelector('#video');
 
-  if (video.tagName.toLowerCase() === "div") return;
+  if (video.tagName.toLowerCase() === 'div') return;
 
   cleanVideoOverlay();
   cleanVideoContainer();
 }
 
 function cleanVideoOverlay() {
-  let videoOverlay = document.querySelector("#video-overlay");
+  let videoOverlay = document.querySelector('#video-overlay');
   videoOverlay.remove();
-  videoOverlay = document.createElement("div");
-  videoOverlay.id = "video-overlay";
+  videoOverlay = document.createElement('div');
+  videoOverlay.id = 'video-overlay';
 
-  const app = document.querySelector("#app");
+  const app = document.querySelector('#app');
   app.prepend(videoOverlay);
 }
 
 function cleanVideoContainer() {
-  const videoContainer = document.querySelector("main");
+  const videoContainer = document.querySelector('main');
   videoContainer.innerHTML = '<div id="video"></div>';
 }
 
@@ -134,16 +134,16 @@ function getVideoId(value) {
 
 function handleMaskUrl(element) {
   if (isUrlValid(element.value)) {
-    element.value = "youtube.com";
-    secureConnection.style.display = "inline-block";
+    element.value = 'youtube.com';
+    secureConnection.style.display = 'inline-block';
   } else {
-    element.value = "";
-    secureConnection.style.display = "none";
+    element.value = '';
+    secureConnection.style.display = 'none';
   }
 }
 
 function handleToggleFullscreen() {
-  const iframe = document.getElementById("video");
+  const iframe = document.getElementById('video');
 
   if (document.fullscreenElement) {
     document.exitFullscreen();

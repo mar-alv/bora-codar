@@ -1,92 +1,92 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang='pt-br'>
 <head>
 	<link rel='preconnect' href='https://fonts.googleapis.com'>
 	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
 	<title>#boraCodar 25</title>
 
-	<link rel="stylesheet" href="style.css" />
+	<link rel='stylesheet' href='style.css' />
 	<link href='https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap' rel='stylesheet'>
 
-	<script defer src="script.js"></script>
-	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+	<script defer src='script.js'></script>
+	<script src='https://unpkg.com/@phosphor-icons/web'></script>
 </head>
 
 <body>
-	<div id="app">
-		<div id="video-overlay"></div>
+	<div id='app'>
+		<div id='video-overlay'></div>
 	
 		<div id='app-content'>
 			<aside data-open='false'>
 				<ul>
 					<li>
 						<button id='play-button' onclick='handleTogglePlay()'>
-							<i class="ph-bold ph-play-circle"></i>
+							<i class='ph-bold ph-play-circle'></i>
 						</button>
 					</li>
 					<li>
 						<button>
-							<i class="ph ph-person-arms-spread"></i>
+							<i class='ph ph-person-arms-spread'></i>
 						</button>
 					</li>
 					<li>
 						<button>
-							<i class="ph ph-tabs"></i>
+							<i class='ph ph-tabs'></i>
 						</button>
 					</li>
 					<li>
 						<button>
-							<i class="ph ph-magnifying-glass"></i>
+							<i class='ph ph-magnifying-glass'></i>
 						</button>
 					</li>
 				</ul>
 			</aside>
 	
 			<header>
-				<div class="buttons">
+				<div class='buttons'>
 					<button onclick='handleToggleSidebar()'>
-						<i class="ph ph-sidebar-simple"></i>
+						<i class='ph ph-sidebar-simple'></i>
 					</button>
 					<button onclick='handleWatchPreviousVideo()'>
-						<i class="ph ph-caret-left"></i>
+						<i class='ph ph-caret-left'></i>
 					</button>
 					<button onclick='handleWatchNextVideo()'>
-						<i class="ph ph-caret-right"></i>
+						<i class='ph ph-caret-right'></i>
 					</button>
 				</div>
 	
-				<div class="input-wrapper">
+				<div class='input-wrapper'>
 					<button>
-						<i class="ph ph-text-aa"></i>
+						<i class='ph ph-text-aa'></i>
 					</button>
 	
-					<i id='secure-connection' class="ph-fill ph-lock-simple"></i>
-					<input class='text' type="text" onblur='handleMaskUrl(this)' onchange='handleLoadVideo(this)'>
+					<i id='secure-connection' class='ph-fill ph-lock-simple'></i>
+					<input class='text' type='text' onblur='handleMaskUrl(this)' onchange='handleLoadVideo(this)'>
 	
 					<button>
-						<i class="ph ph-arrow-clockwise"></i>
+						<i class='ph ph-arrow-clockwise'></i>
 					</button>
 				</div>
 	
-				<div class="buttons">
+				<div class='buttons'>
 					<button>
-						<i class="ph ph-upload-simple"></i>
+						<i class='ph ph-upload-simple'></i>
 					</button>
 					<button>
-						<i class="ph ph-plus"></i>
+						<i class='ph ph-plus'></i>
 					</button>
 					<button onclick='handleToggleFullscreen()'>
-						<i class="ph ph-cards"></i>
+						<i class='ph ph-cards'></i>
 					</button>
 				</div>
 			</header>
 	
 			<main>
-				<div id="video"></div>
+				<div id='video'></div>
 			</main>
 	
 			<footer>

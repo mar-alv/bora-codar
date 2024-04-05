@@ -1,37 +1,37 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang='pt-br'>
 <head>
 	<link rel='preconnect' href='https://fonts.googleapis.com'>
 	<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
 
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0'>
 
 	<title>#boraCodar 23</title>
 
-	<link rel="stylesheet" href="style.css" />
+	<link rel='stylesheet' href='style.css' />
 	<link href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap' rel='stylesheet'>
 
-	<script defer src="script.js"></script>
-	<script src="https://unpkg.com/@phosphor-icons/web"></script>
+	<script defer src='script.js'></script>
+	<script src='https://unpkg.com/@phosphor-icons/web'></script>
 </head>
 
 <body>
-	<div id="app" data-step='0' onload="onload()">
+	<div id='app' data-step='0' onload='onload()'>
 		<header class='text-bold'>
 			<div class='step' data-status='pending'>
 				<span class='step-number'>1</span>
 				<span class='step-name'>Contato</span>
 			</div>
 
-			<i class="next-step-icon ph ph-caret-right"></i>
+			<i class='next-step-icon ph ph-caret-right'></i>
 
 			<div class='step' data-status='disabled'>
 				<span class='step-number'>2</span>
 				<span class='step-name'>Empresa</span>
 			</div>
 
-			<i class="next-step-icon ph ph-caret-right"></i>
+			<i class='next-step-icon ph ph-caret-right'></i>
 
 			<div class='step' data-status='disabled'>
 				<span class='step-number'>3</span>
@@ -44,55 +44,55 @@
 		<main>
 			<form>
 				<section>
-					<div class="input-wrapper">
-						<label class='text-bold' for="input-name">Nome</label>
-						<input id='input-name' class='text-regular' pattern="^[a-zA-Z]+(?: [a-zA-Z]+)+$" placeholder='Como prefere ser chamado' type="text">
+					<div class='input-wrapper'>
+						<label class='text-bold' for='input-name'>Nome</label>
+						<input id='input-name' class='text-regular' pattern='^[a-zA-Z]+(?: [a-zA-Z]+)+$' placeholder='Como prefere ser chamado' type='text'>
 						<span class='field-error-message'>Nome inválido</span>
 					</div>
 
-					<div class="input-wrapper">
-						<label class='text-bold' for="input-number">Telefone</label>
-						<input id='input-number' maxlength="13" class='text-regular' pattern='^(11|12|13|14|15|16|17|18|19|21|22|24|27|28|31|32|33|34|35|37|38|41|42|43|44|45|46|47|48|49|51|53|54|55|61|62|63|64|65|66|67|68|69|71|73|74|75|77|79|81|82|83|84|85|86|87|88|89|91|92|93|94|95|96|97|98|99)\d{2}9\d{0,9}$' placeholder='Digite seu número de WhatsApp' type="text">
+					<div class='input-wrapper'>
+						<label class='text-bold' for='input-number'>Telefone</label>
+						<input id='input-number' maxlength='13' class='text-regular' pattern='^(11|12|13|14|15|16|17|18|19|21|22|24|27|28|31|32|33|34|35|37|38|41|42|43|44|45|46|47|48|49|51|53|54|55|61|62|63|64|65|66|67|68|69|71|73|74|75|77|79|81|82|83|84|85|86|87|88|89|91|92|93|94|95|96|97|98|99)\d{2}9\d{0,9}$' placeholder='Digite seu número de WhatsApp' type='text'>
 						<span class='field-error-message'>Telefone inválido</span>
 					</div>
 
-					<div class="input-wrapper">
-						<label class='text-bold' for="input-mail">E-mail</label>
-						<input id='input-mail' class='text-regular' pattern='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$' placeholder='Digite seu e-mail' type="mail">
+					<div class='input-wrapper'>
+						<label class='text-bold' for='input-mail'>E-mail</label>
+						<input id='input-mail' class='text-regular' pattern='^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$' placeholder='Digite seu e-mail' type='mail'>
 						<span class='field-error-message'>E-mail inválido</span>
 					</div>
 				</section>
 
 				<section>
-					<div class="input-wrapper">
-						<label class='text-bold' for="input-company">Nome da empresa</label>
-						<input id='input-company' class='text-regular' pattern="^[a-zA-Z]+(?: [a-zA-Z]+)+$" placeholder='Qual é o nome da empresa' type="text">
+					<div class='input-wrapper'>
+						<label class='text-bold' for='input-company'>Nome da empresa</label>
+						<input id='input-company' class='text-regular' pattern='^[a-zA-Z]+(?: [a-zA-Z]+)+$' placeholder='Qual é o nome da empresa' type='text'>
 						<span class='field-error-message'>Nome de empresa inválido</span>
 					</div>
 
-					<div class="input-wrapper">
-						<label class='text-bold' for="input-employees-count">Número de funcionários</label>
-						<input id='input-employees-count' class='text-regular' pattern='^[0-9]+$' placeholder='Digite o número de colaboradores' type="text">
+					<div class='input-wrapper'>
+						<label class='text-bold' for='input-employees-count'>Número de funcionários</label>
+						<input id='input-employees-count' class='text-regular' pattern='^[0-9]+$' placeholder='Digite o número de colaboradores' type='text'>
 						<span class='field-error-message'>Número de funcionários inválido</span>
 					</div>
 
-					<div class="input-wrapper">
-						<label class='text-bold' for="input-employees-count">Sobre seu negócio</label>
+					<div class='input-wrapper'>
+						<label class='text-bold' for='input-employees-count'>Sobre seu negócio</label>
 						<textarea id='input-employees-count' class='text-regular' pattern='^.{1,200}$' placeholder='Fale um pouco sobre seus produtos ou serviços'></textarea>
 						<span class='field-error-message'>Quantidade de caracteres inválida</span>
 					</div>
 				</section>
 
 				<section>
-					<div class="input-wrapper">
-						<label class='text-bold' for="input-employees-count">Objetivos do projeto</label>
+					<div class='input-wrapper'>
+						<label class='text-bold' for='input-employees-count'>Objetivos do projeto</label>
 						<textarea id='input-employees-count' class='text-regular' pattern='^.{1,200}$' placeholder='Descreva quais os objetivos desse projeto'></textarea>
 						<span class='field-error-message'>Quantidade de caracteres inválida</span>
 					</div>
 				</section>
 			</form>
 
-			<section id="conclusion">
+			<section id='conclusion'>
 				<h2>
 					<span>Sucesso!</span> Suas informações foram registradas com êxito. Estamos empolgados para explorar oportunidades juntos.
 				</h2>

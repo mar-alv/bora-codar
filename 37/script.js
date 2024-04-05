@@ -1,4 +1,4 @@
-const hour = document.getElementById("hour");
+const hour = document.getElementById('hour');
 
 window.onload = function () {
   updateHour();
@@ -14,11 +14,11 @@ function updateHour() {
   hour.innerText = `${now.getHours()}:${now.getMinutes()}`;
 }
 
-const watchSleepsWrapper = document.querySelector(".watch-sleeps");
+const watchSleepsWrapper = document.querySelector('.watch-sleeps');
 
-watchSleepsWrapper.addEventListener("scroll", (e) => {
+watchSleepsWrapper.addEventListener('scroll', (e) => {
   const wrapperRect = watchSleepsWrapper.getBoundingClientRect();
-  const watchSleeps = watchSleepsWrapper.querySelectorAll(".watch-sleep");
+  const watchSleeps = watchSleepsWrapper.querySelectorAll('.watch-sleep');
 
   let lastActiveIndex = -1;
 
@@ -33,6 +33,6 @@ watchSleepsWrapper.addEventListener("scroll", (e) => {
   });
 
   watchSleeps.forEach((element, index) => {
-    element.dataset.active = index === lastActiveIndex ? "true" : "false";
+    element.dataset.active = index === lastActiveIndex ? 'true' : 'false';
   });
 });

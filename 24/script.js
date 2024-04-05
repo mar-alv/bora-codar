@@ -1,5 +1,5 @@
-const colorPreview = document.querySelector("#color-preview");
-const colorSlider = document.getElementById("input-color");
+const colorPreview = document.querySelector('#color-preview');
+const colorSlider = document.getElementById('input-color');
 
 function handleColorChange(event) {
   const color = `hsl(${event.target.value}, 100%, 50%)`;

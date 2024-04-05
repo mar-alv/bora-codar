@@ -1,18 +1,18 @@
-const app = document.querySelector("#app");
-const returnButton = document.querySelector("#return-button");
-const continueButton = document.querySelector("#next-button");
+const app = document.querySelector('#app');
+const returnButton = document.querySelector('#return-button');
+const continueButton = document.querySelector('#next-button');
 const MSITE_THRESHOLD_WIDTH = 450;
-const form = document.querySelector("form");
-const stepSection = [...form.querySelectorAll("section")];
-const fields = [...document.querySelectorAll("input, textarea")];
+const form = document.querySelector('form');
+const stepSection = [...form.querySelectorAll('section')];
+const fields = [...document.querySelectorAll('input, textarea')];
 
 fields.forEach((i) => {
-  i.addEventListener("input", () => {
+  i.addEventListener('input', () => {
     continueButton.disabled = !areStepFieldsFulfilled(getCurrentStepValue());
   });
 
-  i.addEventListener("keydown", function (event) {
-    if (event.key === "Enter" && areStepFieldsFulfilled(getCurrentStepValue()))
+  i.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter' && areStepFieldsFulfilled(getCurrentStepValue()))
       handleContinue();
   });
 });
@@ -20,12 +20,12 @@ fields.forEach((i) => {
 function areStepFieldsFulfilled(currentStep) {
   const currentStepSection = stepSection[currentStep];
   const currentStepFields = [
-    ...currentStepSection.querySelectorAll("input, textarea")
+    ...currentStepSection.querySelectorAll('input, textarea')
   ];
 
   return currentStepFields.every((i) => {
     const value = i.value;
-    const pattern = new RegExp(i.getAttribute("pattern"));
+    const pattern = new RegExp(i.getAttribute('pattern'));
 
     return pattern.test(value);
   });
@@ -48,10 +48,10 @@ function handleReturn() {
 }
 
 function hideReturnButton() {
-  returnButton.style.visibility = "hidden";
+  returnButton.style.visibility = 'hidden';
 
   if (window.innerWidth <= MSITE_THRESHOLD_WIDTH)
-    returnButton.style.display = "none";
+    returnButton.style.display = 'none';
 }
 
 function handleContinue() {
@@ -75,29 +75,29 @@ function sendData() {
 }
 
 function setStepNumberAsDone() {
-  const steps = [...document.querySelectorAll(".step")];
+  const steps = [...document.querySelectorAll('.step')];
   const currentStepValue = getCurrentStepValue();
   const currentStep = steps[currentStepValue];
-  const currentStepNumber = currentStep.querySelector(".step-number");
+  const currentStepNumber = currentStep.querySelector('.step-number');
   const nextStepValue = currentStepValue + 1;
   const nextStep = steps[nextStepValue];
 
   if (nextStep) {
     app.dataset.step = nextStepValue;
-    nextStep.dataset.status = "pending";
+    nextStep.dataset.status = 'pending';
   }
 
-  currentStep.dataset.status = "done";
+  currentStep.dataset.status = 'done';
   currentStepNumber.innerHTML = '<i class="ph-bold ph-check"></i>';
 }
 
 function showConclusionSection() {
   const currentStepValue = getCurrentStepValue();
   const nextStepValue = currentStepValue + 1;
-  const footer = document.querySelector("footer");
+  const footer = document.querySelector('footer');
 
   app.dataset.step = nextStepValue;
-  footer.style.display = "none";
+  footer.style.display = 'none';
 }
 
 function goToNextStep() {
@@ -114,10 +114,10 @@ function goToNextStep() {
 }
 
 function showReturnButton() {
-  returnButton.style.visibility = "initial";
-  returnButton.style.display = "block";
+  returnButton.style.visibility = 'initial';
+  returnButton.style.display = 'block';
 }
 
 function changeNextButtonText() {
-  continueButton.innerText = isAtLastStep() ? "ENVIAR PROPOSTA" : "CONTINUAR";
+  continueButton.innerText = isAtLastStep() ? 'ENVIAR PROPOSTA' : 'CONTINUAR';
 }

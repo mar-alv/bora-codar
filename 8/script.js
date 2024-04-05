@@ -1,48 +1,48 @@
 let totalExpected = 100;
 let totalReached = 70;
 const totalSalesPercentage = [
-  ...document.getElementsByClassName("sales-percentage")
+  ...document.getElementsByClassName('sales-percentage')
 ][0];
 
 let monthlyExpected = 70000;
 let monthlyReached = 63000;
 const monthlySalesPercentage = [
-  ...document.getElementsByClassName("sales-percentage")
+  ...document.getElementsByClassName('sales-percentage')
 ][1];
 
-const body = [...document.getElementsByTagName("body")][0];
+const body = [...document.getElementsByTagName('body')][0];
 
 const weekDaysName = [
-  "domingo",
-  "segunda-feira",
-  "terça-feira",
-  "quarta-feira",
-  "quinta-feira",
-  "sexta-feira",
-  "sábado"
+  'domingo',
+  'segunda-feira',
+  'terça-feira',
+  'quarta-feira',
+  'quinta-feira',
+  'sexta-feira',
+  'sábado'
 ];
 
-totalSalesPercentage.addEventListener("mouseover", hideScrollbar);
-totalSalesPercentage.addEventListener("mouseout", showScrollbar);
-monthlySalesPercentage.addEventListener("mouseover", hideScrollbar);
-monthlySalesPercentage.addEventListener("mouseout", showScrollbar);
+totalSalesPercentage.addEventListener('mouseover', hideScrollbar);
+totalSalesPercentage.addEventListener('mouseout', showScrollbar);
+monthlySalesPercentage.addEventListener('mouseover', hideScrollbar);
+monthlySalesPercentage.addEventListener('mouseout', showScrollbar);
 
 function hideScrollbar() {
-  body.style.overflow = "hidden";
+  body.style.overflow = 'hidden';
 }
 
 function showScrollbar() {
-  body.style.overflow = "auto";
+  body.style.overflow = 'auto';
 }
 
-totalSalesPercentage.addEventListener("wheel", (e) => {
+totalSalesPercentage.addEventListener('wheel', (e) => {
   setTotalReached(e);
-  setSalesPercentage("total");
+  setSalesPercentage('total');
 });
 
-monthlySalesPercentage.addEventListener("wheel", (e) => {
+monthlySalesPercentage.addEventListener('wheel', (e) => {
   setMonthlyReached(e);
-  setSalesPercentage("monthly");
+  setSalesPercentage('monthly');
 });
 
 function setTotalReached(e) {
@@ -70,20 +70,20 @@ function setMonthlyReached(e) {
 }
 
 function setSalesPercentage(type) {
-  const scoreValueIndex = type === "total" ? 2 : 4;
-  const salesPercentageValueIndex = type === "total" ? 0 : 1;
+  const scoreValueIndex = type === 'total' ? 2 : 4;
+  const salesPercentageValueIndex = type === 'total' ? 0 : 1;
 
-  const reached = type === "total" ? totalReached : monthlyReached;
-  const expected = type === "total" ? totalExpected : monthlyExpected;
+  const reached = type === 'total' ? totalReached : monthlyReached;
+  const expected = type === 'total' ? totalExpected : monthlyExpected;
 
   const salesPercentage =
-    type === "total" ? totalSalesPercentage : monthlySalesPercentage;
+    type === 'total' ? totalSalesPercentage : monthlySalesPercentage;
 
-  const scoreValue = [...document.getElementsByClassName("score-value")][
+  const scoreValue = [...document.getElementsByClassName('score-value')][
     scoreValueIndex
   ];
   const totalPercentageValue = [
-    ...document.getElementsByClassName("sales-percentage-value")
+    ...document.getElementsByClassName('sales-percentage-value')
   ][salesPercentageValueIndex];
 
   scoreValue.innerText = formatTotal(reached);
@@ -138,50 +138,50 @@ function getNps() {
 }
 
 function setLowNpsIndicator() {
-  setNpsIndicator("low");
-  setNpsIcon("-sad");
-  setNpsDescription("Baixo");
+  setNpsIndicator('low');
+  setNpsIcon('-sad');
+  setNpsDescription('Baixo');
 }
 
 function setMediumNpsIndicator() {
-  setNpsIndicator("medium");
-  setNpsIcon("-meh");
-  setNpsDescription("Mediano");
+  setNpsIndicator('medium');
+  setNpsIcon('-meh');
+  setNpsDescription('Mediano');
 }
 
 function setHighNpsIndicator() {
-  setNpsIndicator("high");
-  setNpsIcon("");
-  setNpsDescription("Excelente!");
+  setNpsIndicator('high');
+  setNpsIcon('');
+  setNpsDescription('Excelente!');
 }
 
 function setNpsIndicator(indicator) {
-  const npsElement = document.getElementById("nps");
+  const npsElement = document.getElementById('nps');
 
-  npsElement.setAttribute("data-indicator", indicator);
+  npsElement.setAttribute('data-indicator', indicator);
 }
 
 function setNpsIcon(icon) {
-  const npsIcon = [...document.getElementsByClassName("ph-fill")][0];
+  const npsIcon = [...document.getElementsByClassName('ph-fill')][0];
 
   npsIcon.className = `ph-fill ph-smiley${icon}`;
 }
 
 function setNpsDescription(description) {
-  const npsDescription = [...document.getElementsByTagName("h1")][0];
+  const npsDescription = [...document.getElementsByTagName('h1')][0];
 
   npsDescription.innerText = description;
 }
 
 function setNpsScore(nps) {
-  const npsScore = [...document.getElementsByClassName("score-value")][0];
+  const npsScore = [...document.getElementsByClassName('score-value')][0];
 
   npsScore.innerText = Math.round(nps);
 }
 
-setSalesPercentage("total");
-setSalesPercentage("monthly");
+setSalesPercentage('total');
+setSalesPercentage('monthly');
 
 function getPropertyToChange() {
-  return window.innerWidth < 1200 ? "width" : "height";
+  return window.innerWidth < 1200 ? 'width' : 'height';
 }

@@ -13,4 +13,4 @@ function handleEmailChange() {
 }
 
 input.addEventListener('input', handleEmailChange);
-    button.addEventListener('click', handleSend);
+button.addEventListener('click', handleSend);

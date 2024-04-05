@@ -1,34 +1,34 @@
-const modal = [...document.getElementsByTagName("dialog")][0];
-const input = [...document.getElementsByTagName("input")][0];
-const numberInput = document.getElementById("input-number");
+const modal = [...document.getElementsByTagName('dialog')][0];
+const input = [...document.getElementsByTagName('input')][0];
+const numberInput = document.getElementById('input-number');
 let colors = [
-  "#7547ae",
-  "#8250b5",
-  "#8f59bb",
-  "#9c62c2",
-  "#aa6bca",
-  "#128a8a",
-  "#23acc4",
-  "#33ccd2",
-  "#46eef0",
-  "#57fbff",
-  "#a623bf",
-  "#ae34c4",
-  "#b746c9",
-  "#bf57ce",
-  "#d17ad9",
-  "#00afba",
-  "#00c0c0",
-  "#00d1d5",
-  "#00e2ea",
-  "#00f3f0",
-  "#bba20a"
+  '#7547ae',
+  '#8250b5',
+  '#8f59bb',
+  '#9c62c2',
+  '#aa6bca',
+  '#128a8a',
+  '#23acc4',
+  '#33ccd2',
+  '#46eef0',
+  '#57fbff',
+  '#a623bf',
+  '#ae34c4',
+  '#b746c9',
+  '#bf57ce',
+  '#d17ad9',
+  '#00afba',
+  '#00c0c0',
+  '#00d1d5',
+  '#00e2ea',
+  '#00f3f0',
+  '#bba20a'
 ];
-const defaultColor = "#633BBC";
+const defaultColor = '#633BBC';
 
-input.addEventListener("input", handleFilter);
-numberInput.addEventListener("input", (event) => {
-  numberInput.value = event.target.value.replace(/[^0-9()+-\s]/g, "");
+input.addEventListener('input', handleFilter);
+numberInput.addEventListener('input', (event) => {
+  numberInput.value = event.target.value.replace(/[^0-9()+-\s]/g, '');
 });
 
 function handleFilter(event) {
@@ -52,19 +52,19 @@ function getValue(event) {
 }
 
 function getAlphabetSections() {
-  return [...document.getElementsByTagName("article")];
+  return [...document.getElementsByTagName('article')];
 }
 
 function getContacts(i) {
-  return [...i.getElementsByTagName("li")];
+  return [...i.getElementsByTagName('li')];
 }
 
 function getName(contact) {
-  return [...contact.getElementsByTagName("h2")][0].innerText.toLowerCase();
+  return [...contact.getElementsByTagName('h2')][0].innerText.toLowerCase();
 }
 
 function getNumber(contact) {
-  return [...contact.getElementsByTagName("p")][0].innerText.toLowerCase();
+  return [...contact.getElementsByTagName('p')][0].innerText.toLowerCase();
 }
 
 function toggleContactVisibility(contact, value) {
@@ -72,27 +72,27 @@ function toggleContactVisibility(contact, value) {
   const number = getNumber(contact);
 
   contact.style.display =
-    name.includes(value) || number.includes(value) ? "flex" : "none";
+    name.includes(value) || number.includes(value) ? 'flex' : 'none';
 }
 
 function areContactsHidden(sectionContacts) {
-  return sectionContacts.every((i) => i.style.display === "none");
+  return sectionContacts.every((i) => i.style.display === 'none');
 }
 
 function hideAlphabetSection(alphabetSection) {
-  alphabetSection.style.display = "none";
+  alphabetSection.style.display = 'none';
 }
 
 function showAlphabetSection(alphabetSection) {
-  alphabetSection.style.display = "flex";
+  alphabetSection.style.display = 'flex';
 }
 
 function showModal() {
-  modal.setAttribute("data-open", "true");
+  modal.setAttribute('data-open', 'true');
 }
 
 function hideModal() {
-  modal.setAttribute("data-open", "false");
+  modal.setAttribute('data-open', 'false');
 }
 
 function handleAddContact(event) {
@@ -104,7 +104,7 @@ function handleAddContact(event) {
 }
 
 function createContact() {
-  const contact = document.createElement("li");
+  const contact = document.createElement('li');
 
   contact.appendChild(createDeleteButton());
   contact.appendChild(createImage());
@@ -114,12 +114,12 @@ function createContact() {
 }
 
 function createDeleteButton() {
-  const button = document.createElement("button");
-  button.classList = "delete-button";
-  button.addEventListener("click", handleDeleteContact);
+  const button = document.createElement('button');
+  button.classList = 'delete-button';
+  button.addEventListener('click', handleDeleteContact);
 
-  const icon = document.createElement("i");
-  icon.classList = "ph-fill ph-trash";
+  const icon = document.createElement('i');
+  icon.classList = 'ph-fill ph-trash';
 
   button.appendChild(icon);
 
@@ -127,20 +127,20 @@ function createDeleteButton() {
 }
 
 function createImage() {
-  const image = document.createElement("img");
-  image.alt = "Imagem do contato";
+  const image = document.createElement('img');
+  image.alt = 'Imagem do contato';
   image.src = getImageValue();
 
   return image;
 }
 
 function getImageValue() {
-  return document.getElementById("input-image").value;
+  return document.getElementById('input-image').value;
 }
 
 function createContactInfo() {
-  const contactInfo = document.createElement("div");
-  contactInfo.classList = "contact-info";
+  const contactInfo = document.createElement('div');
+  contactInfo.classList = 'contact-info';
 
   contactInfo.appendChild(createName());
   contactInfo.appendChild(createNumber());
@@ -149,25 +149,25 @@ function createContactInfo() {
 }
 
 function createName() {
-  const name = document.createElement("h2");
+  const name = document.createElement('h2');
   name.innerText = getNameValue();
 
   return name;
 }
 
 function getNameValue() {
-  return document.getElementById("input-name").value;
+  return document.getElementById('input-name').value;
 }
 
 function createNumber() {
-  const number = document.createElement("p");
+  const number = document.createElement('p');
   number.innerText = getNumberValue();
 
   return number;
 }
 
 function getNumberValue() {
-  return document.getElementById("input-number").value;
+  return document.getElementById('input-number').value;
 }
 
 function addContact(contact) {
@@ -185,7 +185,7 @@ function alphabetSectionExists(letter) {
 }
 
 function getAlphabetSectionLetters() {
-  return [...document.getElementsByTagName("h3")].map((i) =>
+  return [...document.getElementsByTagName('h3')].map((i) =>
     i.innerText.toLowerCase()
   );
 }
@@ -202,20 +202,20 @@ function addContactToExistingSection(contact, contactNameFirstLetter) {
 function getAlphabetSection(letter) {
   return getAlphabetSections().find(
     (i) =>
-      [...i.getElementsByTagName("h3")][0].innerText.toLowerCase() === letter
+      [...i.getElementsByTagName('h3')][0].innerText.toLowerCase() === letter
   );
 }
 
 function getAlphabetSectionList(alphabetSection) {
-  return [...alphabetSection.getElementsByTagName("ul")][0];
+  return [...alphabetSection.getElementsByTagName('ul')][0];
 }
 
 function sortAlphabetSectionListByName(list) {
   const contactList = getContacts(list);
 
   contactList.sort((a, b) => {
-    var nameA = a.querySelector("h2").innerText.toLowerCase();
-    var nameB = b.querySelector("h2").innerText.toLowerCase();
+    var nameA = a.querySelector('h2').innerText.toLowerCase();
+    var nameB = b.querySelector('h2').innerText.toLowerCase();
 
     return nameA < nameB ? -1 : nameA > nameB ? 1 : 0;
   });
@@ -235,18 +235,18 @@ function addContactToNewSection(contact, contactNameFirstLetter) {
     contactNameFirstLetter
   );
 
-  [...document.getElementsByTagName("section")][0].appendChild(alphabetSection);
+  [...document.getElementsByTagName('section')][0].appendChild(alphabetSection);
 
   sortSectionsAlphabetically(getAlphabetSections());
 }
 
 function sortSectionsAlphabetically(list) {
-  const sectionsContainer = document.getElementById("sections-container");
+  const sectionsContainer = document.getElementById('sections-container');
   const alphabetSections = getAlphabetSections();
 
   alphabetSections.sort((a, b) => {
-    var letterA = a.querySelector("h3").innerText.toLowerCase();
-    var letterB = b.querySelector("h3").innerText.toLowerCase();
+    var letterA = a.querySelector('h3').innerText.toLowerCase();
+    var letterB = b.querySelector('h3').innerText.toLowerCase();
 
     return letterA < letterB ? -1 : letterA > letterB ? 1 : 0;
   });
@@ -261,7 +261,7 @@ function sortSectionsAlphabetically(list) {
 }
 
 function createAlphabetSection(contact, letter) {
-  const alphabetSection = document.createElement("article");
+  const alphabetSection = document.createElement('article');
 
   alphabetSection.appendChild(createAlphabetSectionLetter(letter));
   alphabetSection.appendChild(createAlphabetSectionList(contact));
@@ -270,7 +270,7 @@ function createAlphabetSection(contact, letter) {
 }
 
 function createAlphabetSectionLetter(letter) {
-  const alphabetSectionLetter = document.createElement("h3");
+  const alphabetSectionLetter = document.createElement('h3');
   alphabetSectionLetter.innerText = letter.toUpperCase();
   alphabetSectionLetter.style.backgroundColor = getRandomBackgroundColor();
 
@@ -289,30 +289,30 @@ function getRandomBackgroundColor() {
 }
 
 function createAlphabetSectionList(contact) {
-  const alphabetSectionList = document.createElement("ul");
+  const alphabetSectionList = document.createElement('ul');
   alphabetSectionList.appendChild(contact);
 
   return alphabetSectionList;
 }
 
 function clearInputs() {
-  document.getElementById("input-name").value = "";
-  document.getElementById("input-number").value = "";
-  document.getElementById("input-image").value = "";
+  document.getElementById('input-name').value = '';
+  document.getElementById('input-number').value = '';
+  document.getElementById('input-image').value = '';
 }
 
 function handleDelete() {
-  const deleteButtons = [...document.querySelectorAll(".delete-button")];
+  const deleteButtons = [...document.querySelectorAll('.delete-button')];
 
   deleteButtons.map((i) => {
     i.style.display =
-      i.style.display === "" || i.style.display === "none" ? "block" : "none";
+      i.style.display === '' || i.style.display === 'none' ? 'block' : 'none';
   });
 }
 
 function handleDeleteContact(event) {
   const button =
-    event.target.tagName === "button"
+    event.target.tagName === 'button'
       ? event.target
       : event.target.parentElement;
 

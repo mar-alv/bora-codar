@@ -95,7 +95,7 @@ function handleToggleFavorite(element) {
   const isFavorited = element.dataset.favorited === 'true';
 
   element.innerHTML = isFavorited
-    ? '<i class='ph ph-heart'></i>'
-    : '<i class='ph-fill ph-heart'></i>';
+    ? '<i class="ph ph-heart"></i>'
+    : '<i class="ph-fill ph-heart"></i>';
   element.dataset.favorited = isFavorited ? 'false' : 'true';
 }
