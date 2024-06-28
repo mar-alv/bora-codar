@@ -6,41 +6,9 @@
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
-  [🇧🇷 Português](#pt-br) / [🇬🇧 English](#en)
+   [🇬🇧 English](#en) / [🇧🇷 Português](#pt-br)
 
 </div>
-
-## <a id='pt-br' style='text-decoration: none; color: inherit;'>🇧🇷 Português</a>
-
-### 📚 Sumário
-- [❕ Sobre](#pt-br-sobre)
-- [📖 Instruções](#pt-br-instrucoes)
-  - [📥 Instalar](#pt-br-instalar)
-  - [🚀 Rodar Localmente](#pt-br-localmente)
-- [📂 Estrutura](#pt-br-estrutura)
-
-#### <a id='pt-br-sobre' style='text-decoration: none; color: inherit;'>❕ Sobre</a>
-[40 desafios de código](https://www.rocketseat.com.br/boracodar) pela [Rocketseat](https://www.rocketseat.com.br/) para elevar o seu portifólio para o próximo nível
-
-#### <a id='pt-br-instrucoes' style='text-decoration: none; color: inherit;'>📖 Instruções</a>
-##### <a id='pt-br-instalar' style='text-decoration: none; color: inherit;'>📥 Instalar</a>
-Cole o comando em um terminal aberto dentro de uma pasta de sua preferência para clonar o projeto
-```sh
-git clone https://github.com/mar-alv/bora-codar.git
-```
-
-##### <a id='pt-br-localmente' style='text-decoration: none; color: inherit;'>🚀 Rodar Localmente</a>
-Instale a extensão 'Live Server' para o Visual Studio Code, embaixo à direita da IDE, clique em 'Go Live' e escolha o projeto que deseja visualizar, link de exemplo: http://127.0.0.1:5500/bora-codar/1
-
-#### <a id='pt-br-estrutura' style='text-decoration: none; color: inherit;'>📂 Estrutura</a>
-```
-│ 1-40/
-│   ├── assets/
-│   └── cover.png
-│   └── index.html
-│   └── script.js
-│   └── style.css
-```
 
 ## <a id='en' style='text-decoration: none; color: inherit;'>🇬🇧 English</a>
 
@@ -68,9 +36,43 @@ Install the Visual Studio Code extension 'Live Server', on the bottom right of t
 ```
 │ 1-40/
 │   ├── assets/
-│   └── cover.png
-│   └── index.html
-│   └── script.js
+│   │	  └── ...
+│   ├── cover.png
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+```
+
+## <a id='pt-br' style='text-decoration: none; color: inherit;'>🇧🇷 Português</a>
+
+### 📚 Sumário
+- [❕ Sobre](#pt-br-sobre)
+- [📖 Instruções](#pt-br-instrucoes)
+  - [📥 Instalar](#pt-br-instalar)
+  - [🚀 Rodar Localmente](#pt-br-localmente)
+- [📂 Estrutura](#pt-br-estrutura)
+
+#### <a id='pt-br-sobre' style='text-decoration: none; color: inherit;'>❕ Sobre</a>
+[40 desafios de código](https://www.rocketseat.com.br/boracodar) pela [Rocketseat](https://www.rocketseat.com.br/) para elevar o seu portifólio para o próximo nível
+
+#### <a id='pt-br-instrucoes' style='text-decoration: none; color: inherit;'>📖 Instruções</a>
+##### <a id='pt-br-instalar' style='text-decoration: none; color: inherit;'>📥 Instalar</a>
+Cole o comando em um terminal aberto dentro de uma pasta de sua preferência para clonar o projeto
+```sh
+git clone https://github.com/mar-alv/bora-codar.git
+```
+
+##### <a id='pt-br-localmente' style='text-decoration: none; color: inherit;'>🚀 Rodar Localmente</a>
+Instale a extensão 'Live Server' para o Visual Studio Code, embaixo à direita da IDE, clique em 'Go Live' e escolha o projeto que deseja visualizar, link de exemplo: http://127.0.0.1:5500/bora-codar/1
+
+#### <a id='pt-br-estrutura' style='text-decoration: none; color: inherit;'>📂 Estrutura</a>
+```
+│ 1-40/
+│   ├── assets/
+│   │	  └── ...
+│   ├── cover.png
+│   ├── index.html
+│   ├── script.js
 │   └── style.css
 ```
 
