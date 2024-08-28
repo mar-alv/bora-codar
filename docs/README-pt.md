@@ -43,6 +43,8 @@ Instale a extensão 'Live Server' para o Visual Studio Code, embaixo à direita 
 │   ├── index.html
 │   ├── script.js
 │   └── style.css
+│ docs/
+│   └── ...
 ```
 
 ## <a id='technologies' style='text-decoration: none; color: inherit;'>🧰 Tecnologias</a>
