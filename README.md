@@ -6,33 +6,35 @@
   
   [![License: MIT](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://opensource.org/licenses/MIT)
 
-   [🇬🇧 English](#en) / [🇧🇷 Português](#pt-br)
+  [🇵🇹 Português](./docs/README-pt.md)
 
 </div>
 
-## <a id='en' style='text-decoration: none; color: inherit;'>🇬🇧 English</a>
+## 📚 Summary
+- [❕ About](#about)
+- [📖 Instructions](#instructions)
+  - [📥 Install](#install)
+  - [🚀 Run Locally](#locally)
+- [📂 Structure](#structure)
+- [🧰 Technologies](#technologies)
+- [📸 Screenshots and 🎥 Recordings](#screenshots-prints)
+- [👤 Author](#author)
+- [📄 License](#license)
 
-### 📚 Summary
-- [❕ About](#en-about)
-- [📖 Instructions](#en-instructions)
-  - [📥 Install](#en-install)
-  - [🚀 Run Locally](#en-locally)
-- [📂 Structure](#en-structure)
-
-#### <a id='en-about' style='text-decoration: none; color: inherit;'>❕ About</a>
+### <a id='about' style='text-decoration: none; color: inherit;'>❕ About</a>
 [40 coding challenges](https://www.rocketseat.com.br/boracodar) by [Rocketseat](https://www.rocketseat.com.br/) to elevate your portfolio to the next level
 
-#### <a id='en-instructions' style='text-decoration: none; color: inherit;'>📖 Instructions</a>
-##### <a id='en-instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
+### <a id='instructions' style='text-decoration: none; color: inherit;'>📖 Instructions</a>
+#### <a id='instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
 Paste thet command into a terminal open within a folder of your preference to clone the project
 ```sh
 git clone https://github.com/mar-alv/bora-codar.git
 ```
 
-##### <a id='en-locally' style='text-decoration: none; color: inherit;'>🚀 Run Locally</a>
+#### <a id='locally' style='text-decoration: none; color: inherit;'>🚀 Run Locally</a>
 Install the Visual Studio Code extension 'Live Server', on the bottom right of the IDE, hit 'Go Live' and select which project you would like to test, link example: http://127.0.0.1:5500/bora-codar/1
 
-#### <a id='en-structure' style='text-decoration: none; color: inherit;'>📂 Structure</a>
+### <a id='structure' style='text-decoration: none; color: inherit;'>📂 Structure</a>
 ```
 │ 1-40/
 │   ├── assets/
@@ -43,40 +45,7 @@ Install the Visual Studio Code extension 'Live Server', on the bottom right of t
 │   └── style.css
 ```
 
-## <a id='pt-br' style='text-decoration: none; color: inherit;'>🇧🇷 Português</a>
-
-### 📚 Sumário
-- [❕ Sobre](#pt-br-sobre)
-- [📖 Instruções](#pt-br-instrucoes)
-  - [📥 Instalar](#pt-br-instalar)
-  - [🚀 Rodar Localmente](#pt-br-localmente)
-- [📂 Estrutura](#pt-br-estrutura)
-
-#### <a id='pt-br-sobre' style='text-decoration: none; color: inherit;'>❕ Sobre</a>
-[40 desafios de código](https://www.rocketseat.com.br/boracodar) pela [Rocketseat](https://www.rocketseat.com.br/) para elevar o seu portifólio para o próximo nível
-
-#### <a id='pt-br-instrucoes' style='text-decoration: none; color: inherit;'>📖 Instruções</a>
-##### <a id='pt-br-instalar' style='text-decoration: none; color: inherit;'>📥 Instalar</a>
-Cole o comando em um terminal aberto dentro de uma pasta de sua preferência para clonar o projeto
-```sh
-git clone https://github.com/mar-alv/bora-codar.git
-```
-
-##### <a id='pt-br-localmente' style='text-decoration: none; color: inherit;'>🚀 Rodar Localmente</a>
-Instale a extensão 'Live Server' para o Visual Studio Code, embaixo à direita da IDE, clique em 'Go Live' e escolha o projeto que deseja visualizar, link de exemplo: http://127.0.0.1:5500/bora-codar/1
-
-#### <a id='pt-br-estrutura' style='text-decoration: none; color: inherit;'>📂 Estrutura</a>
-```
-│ 1-40/
-│   ├── assets/
-│   │	  └── ...
-│   ├── cover.png
-│   ├── index.html
-│   ├── script.js
-│   └── style.css
-```
-
-## 🧰 Technologies
+## <a id='technologies' style='text-decoration: none; color: inherit;'>🧰 Technologies</a>
 ### Components
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
@@ -94,7 +63,7 @@ Instale a extensão 'Live Server' para o Visual Studio Code, embaixo à direita 
 [![Toastr](https://img.shields.io/badge/Toastr-CD6E2E?style=for-the-badge&logo=toastr&logoColor=white)](https://github.com/CodeSeven/toastr)
 [![YouTube API](https://img.shields.io/badge/YouTube_API-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://developers.google.com/youtube/)
 
-## 📸 Screenshots and 🎥 Recordings
+## <a id='screenshots-prints' style='text-decoration: none; color: inherit;'>📸 Screenshots and 🎥 Recordings</a>
 | # | Challenge | Code | Made in | Preview |
 | - | --------- | ---- | ------- | ------- |
 | 1 | [Music Player](https://www.rocketseat.com.br/boracodar/desafios-anteriores/um-player-de-musica-desafio-01) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/1) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/poqQMwO) | October 7th, 2023 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/1/cover.jpg) |
@@ -138,18 +107,28 @@ Instale a extensão 'Live Server' para o Visual Studio Code, embaixo à direita 
 | 39 | [Product Rating Widget](https://www.rocketseat.com.br/boracodar/desafios-anteriores/um-widget-de-avaliacao-de-produto-desafio-39) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/39) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/BavqyaY) | October 4th, 2023 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/39/cover.jpg) |
 | 40 | [Newsletter Page](https://www.rocketseat.com.br/boracodar/desafios-anteriores/uma-pagina-de-newsletter-desafio-40) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/40) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/dywgKGd) | October 6th, 2023 | ![Preview](https://github.com/mar-alv/bora-codar/blob/main/40/cover.jpg) |
 
-## Author
+## <a id='author' style='text-decoration: none; color: inherit;'>👤 Author</a>
 <div style='display: flex; align-items: center;'>
-    <img src='https://github.com/mar-alv.png' alt='Marcelo Alvarez GitHub profile picture' style='width: 150px; border-radius: 50%; margin-right: 20px;'>
-    <div>
-        <strong>Marcelo Alvarez</strong>
-        <br>
-        <em>Front-end Developer</em><br>
-        <span>"Some AI generated funny quote here 😗"</span><br>
-        <a href='https://www.linkedin.com/in/marcelo-dos-santos-alvarez-474406180/'>LinkedIn</a> |
-        <a href='/'>Portfolio</a>
-    </div>
+		<img src='https://github.com/mar-alv.png' alt='Marcelo Alvarez GitHub profile picture' style='width: 150px; border-radius: 50%; margin-right: 20px;'>
+		<div>
+				<strong>Marcelo Alvarez</strong>
+				<br>
+				<em>Front-end Developer</em><br>
+				<span>"Some AI generated funny quote here 😗"</span><br>
+				<a href='https://www.linkedin.com/in/mar-alv'>
+					<img
+						alt='LinkedIn'
+						src='https://img.shields.io/badge/LinkedIn-Marcelo%20Alvarez-0077B5?logo=linkedin&logoColor=white'
+					/>
+				</a>
+				<a href='https://mar-alv.github.io/'>
+					<img
+						alt='Portfolio'
+						src='https://img.shields.io/badge/Portfolio-Marcelo%20Alvarez-000?style=flat&logo=portfolio&logoColor=white'
+					/>
+				</a>
+		</div>
 </div>
 
-## License
+## <a id='license' style='text-decoration: none; color: inherit;'>📄 License</a>
 Licensed under [MIT](./LICENSE)
