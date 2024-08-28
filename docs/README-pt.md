@@ -133,4 +133,4 @@ Instale a extensão 'Live Server' para o Visual Studio Code, embaixo à direita 
 </div>
 
 ## <a id='license' style='text-decoration: none; color: inherit;'>📄 Licença</a>
-Licenciado via [MIT](./LICENSE)
+Licenciado via [MIT](../LICENSE)
