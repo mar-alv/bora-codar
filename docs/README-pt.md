@@ -47,15 +47,15 @@ Instale a extensão 'Live Server' para o Visual Studio Code, embaixo à direita 
 │   └── ...
 ```
 
-## <a id='technologies' style='text-decoration: none; color: inherit;'>🧰 Tecnologias</a>
-### Componentes
+### <a id='technologies' style='text-decoration: none; color: inherit;'>🧰 Tecnologias</a>
+#### Componentes
 ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 
-### Estilização
+#### Estilização
 ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 [![Phosphor Icons](https://img.shields.io/badge/Phosphor%20Icons-c4e456?style=for-the-badge&logo=phosphoricons&logoColor=black)](https://phosphoricons.com/)
 
-### Utilidades
+#### Utilidades
 [![ApexCharts](https://img.shields.io/badge/ApexCharts-1802FC?style=for-the-badge&logo=apexcharts&logoColor=white)](https://apexcharts.com/)
 [![CodeMirror](https://img.shields.io/badge/CodeMirror-232F3E?style=for-the-badge&logo=codemirror&logoColor=white)](https://codemirror.net/)
 [![CoinOne](https://img.shields.io/badge/CoinOne-326CE5?style=for-the-badge&logo=coinone&logoColor=white)](https://coinone.co.kr/)
@@ -65,7 +65,7 @@ Instale a extensão 'Live Server' para o Visual Studio Code, embaixo à direita 
 [![Toastr](https://img.shields.io/badge/Toastr-CD6E2E?style=for-the-badge&logo=toastr&logoColor=white)](https://github.com/CodeSeven/toastr)
 [![YouTube API](https://img.shields.io/badge/YouTube_API-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://developers.google.com/youtube/)
 
-## <a id='screenshots-prints' style='text-decoration: none; color: inherit;'>📸 Prints e 🎥 Gravações</a>
+### <a id='screenshots-prints' style='text-decoration: none; color: inherit;'>📸 Prints e 🎥 Gravações</a>
 | # | Desafio | Código | Feito em | Prévia |
 | - | ------- | ------ | -------- | ------ |
 | 1 | [Player de Música](https://www.rocketseat.com.br/boracodar/desafios-anteriores/um-player-de-musica-desafio-01) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/1) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/poqQMwO) | 7 de Outubro de 2023 | ![Prévia](https://github.com/mar-alv/bora-codar/blob/main/1/cover.jpg) |
@@ -109,7 +109,7 @@ Instale a extensão 'Live Server' para o Visual Studio Code, embaixo à direita 
 | 39 | [Widget de Avaliação de Produtos](https://www.rocketseat.com.br/boracodar/desafios-anteriores/um-widget-de-avaliacao-de-produto-desafio-39) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/39) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/BavqyaY) | 4 de Outubro de 2023 | ![Prévia](https://github.com/mar-alv/bora-codar/blob/main/39/cover.jpg) |
 | 40 | [Página de Newsletter](https://www.rocketseat.com.br/boracodar/desafios-anteriores/uma-pagina-de-newsletter-desafio-40) | [GitHub](https://github.com/mar-alv/bora-codar/tree/main/40) [CodePen](https://codepen.io/Marcelo-Alvarez-the-sasster/pen/dywgKGd) | 6 de Outubro de 2023 | ![Prévia](https://github.com/mar-alv/bora-codar/blob/main/40/cover.jpg) |
 
-## <a id='author' style='text-decoration: none; color: inherit;'>👤 Autor</a>
+### <a id='author' style='text-decoration: none; color: inherit;'>👤 Autor</a>
 <div style='display: flex; align-items: center;'>
 		<img src='https://github.com/mar-alv.png' alt='Marcelo Alvarez GitHub profile picture' style='width: 150px; border-radius: 50%; margin-right: 20px;'>
 		<div>
@@ -132,5 +132,5 @@ Instale a extensão 'Live Server' para o Visual Studio Code, embaixo à direita 
 		</div>
 </div>
 
-## <a id='license' style='text-decoration: none; color: inherit;'>📄 Licença</a>
+### <a id='license' style='text-decoration: none; color: inherit;'>📄 Licença</a>
 Licenciado via [MIT](../LICENSE)

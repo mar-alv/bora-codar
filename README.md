@@ -24,17 +24,17 @@
 ### <a id='about' style='text-decoration: none; color: inherit;'>❕ About</a>
 [40 coding challenges](https://www.rocketseat.com.br/boracodar) by [Rocketseat](https://www.rocketseat.com.br/) to elevate your portfolio to the next level
 
-### <a id='instructions' style='text-decoration: none; color: inherit;'>📖 Instructions</a>
-#### <a id='instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
+## <a id='instructions' style='text-decoration: none; color: inherit;'>📖 Instructions</a>
+### <a id='instalar' style='text-decoration: none; color: inherit;'>📥 Install</a>
 Paste thet command into a terminal open within a folder of your preference to clone the project
 ```sh
 git clone https://github.com/mar-alv/bora-codar.git
 ```
 
-#### <a id='locally' style='text-decoration: none; color: inherit;'>🚀 Run Locally</a>
+### <a id='locally' style='text-decoration: none; color: inherit;'>🚀 Run Locally</a>
 Install the Visual Studio Code extension 'Live Server', on the bottom right of the IDE, hit 'Go Live' and select which project you would like to test, link example: http://127.0.0.1:5500/bora-codar/1
 
-### <a id='structure' style='text-decoration: none; color: inherit;'>📂 Structure</a>
+## <a id='structure' style='text-decoration: none; color: inherit;'>📂 Structure</a>
 ```
 │ 1-40/
 │   ├── assets/
